@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+/*on affiche les sous menu quand on passe la souri devant*/
+#Menu .menu:hover > ul
+{
+  display:block
+}
+/*on cache les sous menu quand la souries n'est pas devant*/
+#Menu ul .sousMenu
+{
+  display:none;
+}
