@@ -54,9 +54,9 @@ input[type="password"] {
   padding-left: 20px;
   outline: none;
   transition: all 0.30s ease-in-out;
-  border: 1px solid #B8B8B8;
+  border: 1px solid black;
 }
-
+/* Effet de brillance au clique des champs du formulaire */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
