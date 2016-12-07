@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mer 07 Décembre 2016 à 21:08
+-- Généré le :  Mer 07 Décembre 2016 à 22:15
 -- Version du serveur :  5.6.28
 -- Version de PHP :  7.0.10
 
@@ -27,8 +27,8 @@ CREATE TABLE `Utilisateur` (
   `EMAIL` varchar(256) NOT NULL,
   `PASSWORD` varchar(256) NOT NULL,
   `NUMERO` int(11) NOT NULL,
-  `PAYS` int(11) NOT NULL,
-  `VILLE` int(11) NOT NULL,
+  `PAYS` varchar(256) NOT NULL,
+  `VILLE` varchar(256) NOT NULL,
   `CODE_POSTALE` int(11) NOT NULL,
   `ADRESSE` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Table des utilisateurs de Domisep';
