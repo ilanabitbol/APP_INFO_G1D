@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet/dashboard.css">
-
+	
 
 </head>
 <body>
+
 	<div class="admin-panel clearfix">
   <div class="slidebar">
     <div class="logo">
@@ -38,7 +39,8 @@
 
             <ul class="salon">
               <li>Salon</li>
-              <li class="temperature"><span class="count">17</span><a href="">temperature</a></li>
+              <li class="temperature"><span class="count">17</span><a href="">temperature
+              </a></li>
               <li class="humidite"><span class="count">13%</span><a href="">humidité</a></li>
               <li class="luminosité"><span class="count">21 Lux</span><a href="">luminosité</a></li>
             </ul>

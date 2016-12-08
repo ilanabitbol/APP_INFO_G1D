@@ -6,12 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet/form.css">
 </head>
 <body>
-	<?php 
-		include 'modele/connexion.php';//Connexion à la page de donnée.
-	?>
+		
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
-
+		
 		<img  class="logo" src=images/logo_dosmoz.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->
 		<div>
@@ -20,7 +18,8 @@
 		</div>
 		<!--Ajout des formulaires.-->
 		<div>
-			<form id="signup-form" method="post" action="index.php">
+			
+			<form id="signup-form" method="post" action="controleur/formulaire_controleur.php">
 		      <input type="text" placeholder="NOM" name="nom"/>
 			  <input type="text" placeholder="PRENOM" name= "prenom"/>
 			  <input type="email" placeholder="EMAIL" name="email"/>
@@ -30,8 +29,8 @@
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTALE" name="code_postale"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
-			  <button type="button" name="signup-valider" class="submit-button">Sign Up</button> 
-		  </form>
+			  <button type="submit" name="signup-valider" class="submit-button">Sign Up</button> 
+		   </form>
 
 		  <form id="signin-form">
 				<input type="email" placeholder='EMAIL' name="email"/>
@@ -43,7 +42,7 @@
 
 	</div>
 
-  	<script tpye="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+  	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript" src="stylesheet/form.js"></script>
 </body>
 
