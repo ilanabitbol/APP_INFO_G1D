@@ -1,10 +1,7 @@
 <?php 
-echo 'point 1';
 		include 'modele/Connexion.class.php';
 		
-		echo 'point 2';
 		$bdd = new Connexion('localhost','APP_G1D_BASE','root','root');
-		echo 'point 3';
 		var_dump($bdd);
 		die();
 		$nom=$_POST['nom'];
@@ -35,6 +32,6 @@ echo 'point 1';
 				'adresse' =>$adresse
 		));
 		
-		echo 'Utilisateur a bien Ã©tÃ© ajoutÃ© !';
+		echo 'Utilisateur a bien était ajouté !';
 		
 ?>

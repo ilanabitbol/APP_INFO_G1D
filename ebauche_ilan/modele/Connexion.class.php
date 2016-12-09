@@ -3,11 +3,9 @@ Class Connexion{
 	private $pdo;
 	
 	public function __construct($host, $dbname, $user_name,$password) {
-		echo 'cc';
 		$temp='mysql:host='.$host.';dbname='.$dbname.'; charset=utf8';
 		echo $temp;
 		$pdo=new PDO($temp, $user_name, $password);
-		echo 'p4';
 	}
 
 	public function getPdo(){
