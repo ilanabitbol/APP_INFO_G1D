@@ -2,7 +2,6 @@
 
 	
 		$bdd = new PDO('mysql:host=localhost;dbname=APP_G1D_BASE; charset=utf8', 'root', 'root');
-
 		
 		$nom=$_POST['nom'];
 		$prenom=$_POST['prenom'];
@@ -13,7 +12,6 @@
 		$ville=$_POST['ville'];
 		$code_postale=$_POST['code_postale'];
 		$adresse=$_POST['adresse'];
-		 echo "bonjour les azbamiazs";
 	
 		$req = $bdd->prepare("INSERT INTO utilisateur(NOM, PRENOM, EMAIL, PASSWORD, NUMERO, PAYS, VILLE, CODE_POSTALE, ADRESSE) 
 				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postale, :adresse)");
