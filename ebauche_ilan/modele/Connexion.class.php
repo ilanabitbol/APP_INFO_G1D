@@ -1,15 +1,28 @@
 <?php
 Class Connexion{
-
-	public function getDatabase(){
-		try {
-			$bdd = new PDO('mysql:host=localhost;dbname=APP_G1D_BASE; charset=utf8', 'root', 'root');
-			echo "Connexion etablie avec la bade de donnée.";
-		} catch (PDOException $e) {
-			die('Erreur : ' . $e->getMessage());
-		}
-		return $dbb;
+	private $pdo;
+	
+	public function __construct($host, $dbname, $user_name,$password) {
+		echo 'cc';
+		$temp='mysql:host='.$host.';dbname='.$dbname.'; charset=utf8';
+		echo $temp;
+		$pdo=new PDO($temp, $user_name, $password);
+		echo 'p4';
 	}
+
+	public function getPdo(){
+		return $this->pdo;
+	}
+	
+	public function insertion(){
+		
+	}
+	
+	public function selection(){
+		
+	}
+	
 }
+
 
 ?>
