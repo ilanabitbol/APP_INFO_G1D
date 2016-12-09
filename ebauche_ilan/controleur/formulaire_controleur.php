@@ -13,7 +13,7 @@
 		$ville=$_POST['ville'];
 		$code_postale=$_POST['code_postale'];
 		$adresse=$_POST['adresse'];
-		 echo "bonjour les azdamiazs";
+		 echo "bonjour les azbbdamiazs";
 	
 		$req = $bdd->prepare("INSERT INTO utilisateur(NOM, PRENOM, EMAIL, PASSWORD, NUMERO, PAYS, VILLE, CODE_POSTALE, ADRESSE) 
 				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postale, :adresse)");
