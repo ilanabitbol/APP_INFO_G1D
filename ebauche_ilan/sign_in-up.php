@@ -19,7 +19,7 @@
 		<!--Ajout des formulaires.-->
 		<div>
 			
-			<form id="signup-form" method="post" action="controleur/formulaire_controleur.php">
+			<form id="signup-form" method="post" action="controleur/Inscription_controleur.php">
 		      <input type="text" placeholder="NOM" name="nom"/>
 			  <input type="text" placeholder="PRENOM" name= "prenom"/>
 			  <input type="email" placeholder="EMAIL" name="email"/>
@@ -32,10 +32,10 @@
 			  <button type="submit" name="signup-valider" class="submit-button">Sign Up</button> 
 		   </form>
 
-		  <form id="signin-form">
+		  <form id="signin-form" method="post" action="controleur/Connexion_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
 				<input type="password" placeholder="PASSWORD" name="password"/>
-				<button type="button" name="signin-valider"class="submit-button">Sign In</button>
+				<button type="submit" name="signin-valider"class="submit-button">Sign In</button>
 		  </form>
 
 		</div>
