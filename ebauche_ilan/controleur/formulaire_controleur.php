@@ -1,9 +1,7 @@
 <?php 
-		include 'modele/Connexion.class.php';
 		
-		$bdd = new Connexion('localhost','APP_G1D_BASE','root','root');
-		var_dump($bdd);
-		die();
+		$bdd = new PDO('mysql:host=localhost;dbname=APP_G1D_BASE;charset=utf8', 'root', 'root');
+		
 		$nom=$_POST['nom'];
 		$prenom=$_POST['prenom'];
 		$email=$_POST['email'];
@@ -11,27 +9,26 @@
 		$numero=$_POST['numero'];
 		$pays=$_POST['pays'];
 		$ville=$_POST['ville'];
-		$code_postale=$_POST['code_postale'];
+		$code_postal=$_POST['code_postal'];
 		$adresse=$_POST['adresse'];
 	
-		$bdd->insertion($table, $prams);
 		
 		
 		
-		$req = $bdd->prepare("INSERT INTO utilisateur(NOM, PRENOM, EMAIL, PASSWORD, NUMERO, PAYS, VILLE, CODE_POSTALE, ADRESSE) 
-				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postale, :adresse)");
+		$req = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
+				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postal, :adresse)');
 		$req->execute(array(
 				'nom' => $nom,
 				'prenom' => $prenom,
 				'email' => $email,
-				'numero'=> $numero,
 				'password' => $password,
+				'numero'=> $numero,	
 				'pays' => $pays,
 				'ville' => $ville,
-				'code_postale' =>$code_postale,
+				'code_postal' =>$code_postal,
 				'adresse' =>$adresse
 		));
 		
-		echo 'Utilisateur a bien était ajouté !';
+		echo 'Utilisateur a bien etait ajoute !';
 		
 ?>

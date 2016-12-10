@@ -27,7 +27,7 @@
 		      <input type="text" placeholder="NUMERO" name="numero" />
 		      <input type="text" placeholder="PAYS" name="pays"/>
 		      <input type="text" placeholder="VILLE" name="ville"/>
-		      <input type="text" placeholder="CODE POSTALE" name="code_postale"/>
+		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
 			  <button type="submit" name="signup-valider" class="submit-button">Sign Up</button> 
 		   </form>
