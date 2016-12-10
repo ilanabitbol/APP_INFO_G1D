@@ -1,9 +1,8 @@
-<?php 
-		try {
-		$bdd = new PDO('mysql:host=localhost;dbname=APP_G1D_BASE;charset=utf8', 'root', 'root');
-		}catch(Exception $e){
-			echo 'Exception reçue : ', $e->getMessage();
-		}
+<?php 	
+		include_once ('Connexion_Base.class.php');
+			
+		$connexion_base= new Connexion_Base();
+		
 		$nom=$_POST['nom'];
 		$prenom=$_POST['prenom'];
 		$email=$_POST['email'];
@@ -18,7 +17,7 @@
 		
 		
 		//Insertion
-		$req = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
+		$req = $connexion_base->getBdd()->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
 				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postal, :adresse)');
 		$req->execute(array(
 				'nom' => $nom,
