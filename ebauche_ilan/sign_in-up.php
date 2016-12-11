@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet/form.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet/sign_in-up.css">
 </head>
 <body>
-		
+	<?php include 'entete.php'?>
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		
@@ -43,7 +43,7 @@
 	</div>
 
   	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="stylesheet/form.js"></script>
+	<script type="text/javascript" src="stylesheet/sign_in-up.js"></script>
 </body>
 
 </html>

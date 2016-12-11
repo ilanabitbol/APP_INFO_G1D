@@ -1,13 +1,13 @@
 <?php
 class Connexion_Base{
-	private $bdd;
+	private $db;
 	
 	public function __construct(){
-		$this->bdd = new PDO('mysql:host=localhost;dbname=APP_G1D_BASE;charset=utf8', 'root', 'root');
+		$this->db = new PDO('mysql:host=localhost;dbname=APP_G1D_BASE;charset=utf8', 'root', 'root');
 	}
 	
-	public function getBdd(){
-		return $this->bdd;
+	public function getDb(){
+		return $this->db;
 	}
 	
 }

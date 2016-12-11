@@ -17,7 +17,7 @@
 		
 		
 		//Insertion
-		$req = $connexion_base->getBdd()->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
+		$req = $connexion_base->getDb()->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
 				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postal, :adresse)');
 		$req->execute(array(
 				'nom' => $nom,

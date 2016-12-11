@@ -41,7 +41,7 @@
               <li>Salon</li>
               <li class="temperature"><span class="count">17</span><a href="">temperature
               </a></li>
-              <li class="humidite"><span class="count">13&%</span><a href="">humidité</a></li>
+              <li class="humidite"><span class="count">13%</span><a href="">humidité</a></li>
               <li class="luminosité"><span class="count">21 Lux</span><a href="">luminosité</a></li>
             </ul>
 
@@ -56,7 +56,7 @@
 
         <div class="quick-press">
           <h4>Ajout d'un utilisateur</h4>
-          <form action="post" method="">
+          <form action="post" method="post">
             <input type="text" name="Pseudo de l'utilisateur" placeholder="pseudo" />
             <input type="text" name="content" placeholder="mot de passe" />
             <label>
