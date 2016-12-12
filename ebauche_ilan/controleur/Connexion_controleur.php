@@ -18,7 +18,7 @@
 		
 		if (!$resultat)
 		{
-			header("Location: ../Vue/erreuConnexion.php");
+			header("Location: ../Vue/erreurConnexion.php");
 		}
 		else
 		{
