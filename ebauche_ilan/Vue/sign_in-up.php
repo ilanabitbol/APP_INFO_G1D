@@ -34,13 +34,13 @@
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
-			  <button type="submit" name="signup-valider" class="submit-button">Sign Up</button> 
+			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>
 
 		  <form id="signin-form" method="post" action="../controleur/Connexion_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
 				<input type="password" placeholder="PASSWORD" name="password"/>
-				<button type="submit" name="signin-valider"class="submit-button">Sign In</button>
+				<button type="submit" name="signin-valider"class="submit-button">Connexion</button>
 		  </form>
 
 		</div>

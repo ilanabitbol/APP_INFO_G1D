@@ -92,3 +92,8 @@ button:hover {
 #ListeElement{
 	float: right;
 }
+
+.erreur{
+	text-align: center; 
+	color: red; 
+}

@@ -18,12 +18,11 @@
 		
 		if (!$resultat)
 		{
-			echo 'Mauvais email ou mot de passe !';
+			header("Location: http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/eurreuConnexion.php");
 		}
 		else
 		{
 			session_start();
-			$_SESSION['id']= $ID;
 			$_SESSION['email']=$email;
 			print_r($_SESSION);
 				
