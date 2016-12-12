@@ -4,11 +4,11 @@
 // On appelle la session
 session_start();
 
-// On écrase le tableau de session
+// On ï¿½crase le tableau de session
 $_SESSION = array();
 
-// On détruit la session
+// On dï¿½truit la session
 session_destroy();
 
-header("Location: http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/sign_in-up.php");
+header("Location: ../Vue/sign_in-up.php");
 ?>
