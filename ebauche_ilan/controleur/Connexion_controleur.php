@@ -1,5 +1,5 @@
 <?php
-		include_once ('Connexion_Base.class.php');
+		include_once ('../modele/Connexion_Base.class.php');
 			
 		$connexion_base= new Connexion_Base();
 		
@@ -26,5 +26,6 @@
 			$_SESSION['id'] = $resultat['id'];
 			$_SESSION['email'] = $email;
 			echo 'Vous êtes connecté !';
+			echo $_SESSION['email'];
 		}
 ?>
