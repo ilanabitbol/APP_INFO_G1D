@@ -18,14 +18,13 @@
 		
 		if (!$resultat)
 		{
-			header("Location: http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/eurreuConnexion.php");
+			header("Location: ../Vue/erreuConnexion.php");
 		}
 		else
 		{
 			session_start();
 			$_SESSION['email']=$email;
 			print_r($_SESSION);
-				
-			header("Location: http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/dashboard.php");
+			header("Location: ../Vue/dashboard.php");
 		}
 ?>
