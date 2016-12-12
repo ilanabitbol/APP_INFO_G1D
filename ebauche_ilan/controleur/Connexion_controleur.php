@@ -23,6 +23,9 @@
 		else
 		{
 			session_start();
+			$response=$connexion_base->getDb()->query("SELECT nom FROM utilisateur WHERE email='$email'");
+			$nom=$response->fetch();
+			$_SESSION['nom']=$nom;
 			$_SESSION['email']=$email;
 			header("Location: ../Vue/dashboard.php");
 		}

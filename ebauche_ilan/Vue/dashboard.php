@@ -20,7 +20,7 @@ session_start();
     </div>
     <ul>
       <li><a href="#accueil" id="targeted">Accueil</a></li>
-      <li><a href="#">Consommation</a></li>
+      <li><a href="#consommation">Consommation</a></li>
       <li><a href="#media">Gestion</a></li>
       <li><a href="#pages">Profil</a></li>
 
@@ -28,7 +28,7 @@ session_start();
   </div>
   <div class="main">
     <ul class="topbar clearfix">
-      <li><a href="#">q</a></li>
+      <li><a href="#">Bienvenue</a></li>
       <li><a href="#">p</a></li>
       <li><a href="#">o</a></li>
       <li><a href="#">f</a></li>
@@ -36,7 +36,7 @@ session_start();
     </ul>
     <div class="mainContent clearfix">
       <div id="accueil">
-        <h2 class="header"><span class="icon"></span>Accueil</h2>
+        <h2 class="header"><span class="icon"></span>Bonjour</h2>
         <div class="monitor">
           <h4>Right Now</h4>
           <div class="clearfix">
@@ -54,7 +54,7 @@ session_start();
               <li class="temperature"><span class="count">24</span><a href="">temperature</a></li>
               <li class=humidite><span class="count">34%</span><a href="">humidité</a></li>
               <li class="luminosité"><span class="count">34 Lux</span><a href="">luminosité</a></li>
-						</ul>
+			</ul>
           </div>
         </div>
 
@@ -77,40 +77,21 @@ session_start();
             </label>
             <button type="submit" class="submit" name="submit">Enregistrer ! </button>
           </form>
+		 </div>
+        
+        
+      </div>
+      
+      <div id="consommation">
+        
+		          <h4>Ajout d'un utilisateur</h4>
+		
 
-
-        </div>
       </div>
-      <div id="posts">
-        <h2 class="header">posts</h2>
+        
+        
       </div>
-      <div id="media">
-        <h2 class="header">media</h2>
-      </div>
-      <div id="pages">
-        <h2 class="header">pages</h2>
-      </div>
-      <div id="links">
-        <h2 class="header">links</h2>
-      </div>
-      <div id="comments">
-        <h2 class="header">comments</h2>
-      </div>
-      <div id="widgets">
-        <h2 class="header">widgets</h2>
-      </div>
-      <div id="plugins">
-        <h2 class="header">plugins</h2>
-      </div>
-      <div id="users">
-        <h2 class="header">users</h2>
-      </div>
-      <div id="tools">
-        <h2 class="header">tools</h2>
-      </div>
-      <div id="settings">
-        <h2 class="header">settings</h2>
-      </div>
+      
     </div>
     <ul class="statusbar">
       <li>

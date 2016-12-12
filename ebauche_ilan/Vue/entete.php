@@ -20,8 +20,7 @@
 		  <?php 
 		  session_start();
 		  echo 'bienvenue :';
-		  echo $_SESSION['email'];
-		  
+		  echo  $_SESSION['email'];
 		  ?></a>
 		  <a class="link-2" href="../controleur/deconnexion_controleur.php">deconnexion</a>
 		</nav>
