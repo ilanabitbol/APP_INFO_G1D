@@ -25,7 +25,12 @@
 			  <input type="email" placeholder="EMAIL" name="email"/>
 		      <input type="password" placeholder="PASSWORD" name="password"/>
 		      <input type="text" placeholder="NUMERO" name="numero" />
-		      <input type="text" placeholder="PAYS" name="pays"/>
+		      <p>pays : </p>
+		      <select id="ListeElement" onchange="VerifListe();" name="pays"> 
+				   <option value="France">France</option> 
+				   <option value="Allemagne">Allemagne</option> 
+				   <option value="Suisse">Suisse</option> 
+			  </select>
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
