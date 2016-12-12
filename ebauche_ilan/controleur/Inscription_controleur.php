@@ -1,5 +1,5 @@
 <?php 	
-		include_once ('Connexion_Base.class.php');
+		include_once ('../modele/Connexion_Base.class.php');
 			
 		$connexion_base= new Connexion_Base();
 		
@@ -14,7 +14,6 @@
 		$code_postal=$_POST['code_postal'];
 		$adresse=$_POST['adresse'];
 	
-		echo 'gros caca de Pierre';
 		
 		//Insertion
 		$req = $connexion_base->getDb()->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
@@ -30,7 +29,6 @@
 				'code_postal' =>$code_postal,
 				'adresse' =>$adresse
 		));
-		
 		echo 'Utilisateur a bien etait ajoute !';
 		
 ?>
