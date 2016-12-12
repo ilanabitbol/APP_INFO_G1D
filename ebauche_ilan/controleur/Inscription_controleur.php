@@ -14,7 +14,7 @@
 		$code_postal=$_POST['code_postal'];
 		$adresse=$_POST['adresse'];
 	
-		echo 'gros caca de Pierre';
+		echo 'caca de Pierre';
 		
 		//Insertion
 		$req = $connexion_base->getDb()->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
