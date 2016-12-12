@@ -23,9 +23,10 @@
 		else
 		{
 			session_start();
-			$_SESSION['id'] = $resultat['id'];
-			$_SESSION['email'] = $email;
-			echo 'Vous êtes connecté !';
-			echo $_SESSION['email'];
+			$_SESSION['id']= $ID;
+			$_SESSION['email']=$email;
+			print_r($_SESSION);
+				
+			header("Location: http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/dashboard.php");
 		}
 ?>

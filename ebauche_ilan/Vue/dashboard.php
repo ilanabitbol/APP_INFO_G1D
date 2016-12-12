@@ -8,6 +8,10 @@
 
 </head>
 <body>
+<?php 
+session_start();
+?>
+<?php include 'entete.php'?>
 
 	<div class="admin-panel clearfix">
 	<div class="slidebar">
