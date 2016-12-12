@@ -24,7 +24,6 @@
 		{
 			session_start();
 			$_SESSION['email']=$email;
-			print_r($_SESSION);
 			header("Location: ../Vue/dashboard.php");
 		}
 ?>
