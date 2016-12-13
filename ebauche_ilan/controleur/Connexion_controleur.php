@@ -5,7 +5,7 @@
 		
 		
 		$email=$_POST['email'];
-		// Hachage du mot de passe
+		// Hachage du mot de passe de l'utilisateur
 		$password_hache = sha1($_POST['password']);
 		
 		// Vérification des identifiants
