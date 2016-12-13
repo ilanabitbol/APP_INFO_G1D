@@ -16,6 +16,7 @@
 	
 		
 		//Insertion
+		if(isset($_POST['nom'])==true){
 		$req = $connexion_base->getDb()->prepare('INSERT INTO utilisateur(nom, prenom, email, password, numero, pays, ville, code_postal, adresse) 
 				VALUES(:nom, :prenom, :email, :password, :numero, :pays, :ville, :code_postal, :adresse)');
 		$req->execute(array(
@@ -27,8 +28,13 @@
 				'pays' => $pays,
 				'ville' => $ville,
 				'code_postal' =>$code_postal,
-				'adresse' =>$adresse
+				'adresse' =>$adresse,
+				
 		));
 		echo 'Utilisateur a bien etait ajoute !';
+		
+		}else{
+			header("Location: ../Vue/erreurConnexion.php");
+		}
 		
 ?>
