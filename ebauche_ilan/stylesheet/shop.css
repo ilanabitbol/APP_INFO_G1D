@@ -1,0 +1,14 @@
+body{
+	  background-color : #336699;
+	
+}
+
+#container ul { list-style: none; }
+#container .buttons { margin-bottom: 20px; }
+
+#container .list li { width: 100%; border-bottom: 1px dotted #CCC; margin-bottom: 10px; padding-bottom: 10px; }
+
+#container .grid li { float: left; width: 20%; height: 50px; border-right: 1px dotted #CCC; border-bottom: 1px dotted #CCC; padding: 20px; }
+.list{
+	margin: center;
+}

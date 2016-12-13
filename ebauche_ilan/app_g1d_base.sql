@@ -1,11 +1,12 @@
+
 --
--- Database: `APP_G1D_BASE`
+-- Base de données :  `APP_G1D_BASE`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `actionneurs_capteurs`
+-- Structure de la table `actionneurs_capteurs`
 --
 
 CREATE TABLE `actionneurs_capteurs` (
@@ -22,7 +23,7 @@ CREATE TABLE `actionneurs_capteurs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `assistance`
+-- Structure de la table `assistance`
 --
 
 CREATE TABLE `assistance` (
@@ -32,7 +33,7 @@ CREATE TABLE `assistance` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `assistance`
+-- Contenu de la table `assistance`
 --
 
 INSERT INTO `assistance` (`ID`, `email`, `demande`) VALUES
@@ -42,7 +43,30 @@ INSERT INTO `assistance` (`ID`, `email`, `demande`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `commande`
+-- Structure de la table `catalogue`
+--
+
+CREATE TABLE `catalogue` (
+  `ID` int(11) NOT NULL,
+  `nom_produit` varchar(111) NOT NULL,
+  `prix` int(11) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `image` varbinary(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `catalogue`
+--
+
+INSERT INTO `catalogue` (`ID`, `nom_produit`, `prix`, `stock`, `image`) VALUES
+(1, 'hydrometre', 40, 10, ''),
+(2, 'thermometre', 100, 38, ''),
+(3, 'pressiometre', 10, 380, '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commande`
 --
 
 CREATE TABLE `commande` (
@@ -59,7 +83,7 @@ CREATE TABLE `commande` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `donnees`
+-- Structure de la table `donnees`
 --
 
 CREATE TABLE `donnees` (
@@ -72,7 +96,7 @@ CREATE TABLE `donnees` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `piece`
+-- Structure de la table `piece`
 --
 
 CREATE TABLE `piece` (
@@ -84,7 +108,7 @@ CREATE TABLE `piece` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `piece_type`
+-- Structure de la table `piece_type`
 --
 
 CREATE TABLE `piece_type` (
@@ -96,7 +120,7 @@ CREATE TABLE `piece_type` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `type_fonction`
+-- Structure de la table `type_fonction`
 --
 
 CREATE TABLE `type_fonction` (
@@ -107,7 +131,7 @@ CREATE TABLE `type_fonction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- Structure de la table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -124,7 +148,7 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `utilisateur`
+-- Contenu de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`, `pays`, `ville`, `code_postal`, `adresse`) VALUES
@@ -138,11 +162,11 @@ INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`,
 (20, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `actionneurs_capteurs`
+-- Index pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
   ADD PRIMARY KEY (`ID_ac_cap`),
@@ -151,34 +175,40 @@ ALTER TABLE `actionneurs_capteurs`
   ADD KEY `ID_commande` (`ID_commande`);
 
 --
--- Indexes for table `assistance`
+-- Index pour la table `assistance`
 --
 ALTER TABLE `assistance`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `commande`
+-- Index pour la table `catalogue`
+--
+ALTER TABLE `catalogue`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `commande`
 --
 ALTER TABLE `commande`
   ADD PRIMARY KEY (`ID_commande`),
   ADD KEY `ID` (`ID`);
 
 --
--- Indexes for table `donnees`
+-- Index pour la table `donnees`
 --
 ALTER TABLE `donnees`
   ADD PRIMARY KEY (`ID_donnees`),
   ADD KEY `ID_ac_cap` (`ID_ac_cap`);
 
 --
--- Indexes for table `piece`
+-- Index pour la table `piece`
 --
 ALTER TABLE `piece`
   ADD PRIMARY KEY (`ID_piece`),
   ADD KEY `ID` (`ID`);
 
 --
--- Indexes for table `piece_type`
+-- Index pour la table `piece_type`
 --
 ALTER TABLE `piece_type`
   ADD PRIMARY KEY (`ID`),
@@ -186,67 +216,72 @@ ALTER TABLE `piece_type`
   ADD KEY `ID_type` (`ID_type`);
 
 --
--- Indexes for table `type_fonction`
+-- Index pour la table `type_fonction`
 --
 ALTER TABLE `type_fonction`
   ADD PRIMARY KEY (`ID_fonction`);
 
 --
--- Indexes for table `utilisateur`
+-- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `actionneurs_capteurs`
+-- AUTO_INCREMENT pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
   MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `assistance`
+-- AUTO_INCREMENT pour la table `assistance`
 --
 ALTER TABLE `assistance`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `commande`
+-- AUTO_INCREMENT pour la table `catalogue`
+--
+ALTER TABLE `catalogue`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT pour la table `commande`
 --
 ALTER TABLE `commande`
   MODIFY `ID_commande` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `donnees`
+-- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
   MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `piece`
+-- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
   MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `piece_type`
+-- AUTO_INCREMENT pour la table `piece_type`
 --
 ALTER TABLE `piece_type`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `type_fonction`
+-- AUTO_INCREMENT pour la table `type_fonction`
 --
 ALTER TABLE `type_fonction`
   MODIFY `ID_fonction` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `utilisateur`
+-- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables exportées
 --
 
 --
--- Constraints for table `actionneurs_capteurs`
+-- Contraintes pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
   ADD CONSTRAINT `actionneurs_capteurs_ibfk_1` FOREIGN KEY (`ID_commande`) REFERENCES `commande` (`ID_commande`),
@@ -254,25 +289,25 @@ ALTER TABLE `actionneurs_capteurs`
   ADD CONSTRAINT `actionneurs_capteurs_ibfk_3` FOREIGN KEY (`ID_fonction`) REFERENCES `type_fonction` (`ID_fonction`);
 
 --
--- Constraints for table `commande`
+-- Contraintes pour la table `commande`
 --
 ALTER TABLE `commande`
   ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `utilisateur` (`ID`);
 
 --
--- Constraints for table `donnees`
+-- Contraintes pour la table `donnees`
 --
 ALTER TABLE `donnees`
   ADD CONSTRAINT `donnees_ibfk_1` FOREIGN KEY (`ID_ac_cap`) REFERENCES `actionneurs_capteurs` (`ID_ac_cap`);
 
 --
--- Constraints for table `piece`
+-- Contraintes pour la table `piece`
 --
 ALTER TABLE `piece`
   ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `utilisateur` (`ID`);
 
 --
--- Constraints for table `piece_type`
+-- Contraintes pour la table `piece_type`
 --
 ALTER TABLE `piece_type`
   ADD CONSTRAINT `piece_type_ibfk_1` FOREIGN KEY (`ID_piece`) REFERENCES `piece` (`ID_piece`),
