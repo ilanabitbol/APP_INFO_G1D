@@ -8,7 +8,7 @@
 		// Hachage du mot de passe de l'utilisateur
 		$password_hache = sha1($_POST['password']);
 		
-		// Vérification des identifiants
+		// Verification des identifiants
 		$req = $connexion_base->getDb()->prepare('SELECT id FROM utilisateur WHERE email = :email AND password = :password');
 		$req->execute(array(
 				'email' => $email,
