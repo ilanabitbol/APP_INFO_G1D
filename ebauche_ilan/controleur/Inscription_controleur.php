@@ -31,10 +31,10 @@
 				'adresse' =>$adresse,
 				
 		));
-		echo 'Utilisateur a bien etait ajoute !';
-		
+				
+				header("Location: ../Vue/about.php");
 		}else{
-			header("Location: ../Vue/erreurConnexion.php");
+				header("Location: ../Vue/erreurConnexion.php");
 		}
 		
 ?>

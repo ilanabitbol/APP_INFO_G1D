@@ -1,13 +1,11 @@
-
-
 --
--- Base de données :  `APP_G1D_BASE`
+-- Database: `APP_G1D_BASE`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `actionneurs_capteurs`
+-- Table structure for table `actionneurs_capteurs`
 --
 
 CREATE TABLE `actionneurs_capteurs` (
@@ -24,7 +22,27 @@ CREATE TABLE `actionneurs_capteurs` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commande`
+-- Table structure for table `assistance`
+--
+
+CREATE TABLE `assistance` (
+  `ID` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `demande` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `assistance`
+--
+
+INSERT INTO `assistance` (`ID`, `email`, `demande`) VALUES
+(1, 'luca.cohen@hotmail.fr', 'Bla bla bla\r\n				'),
+(2, 'jstaline@gmail.com', 'Joseph (Iossif) Vissarionovitch Djougachvili (en géorgien : იოსებ ბესარიონის ძე ჯუღაშვილი, Iosseb Bessarionis dze Djoughachvili; en russe : Иосиф Виссарионович Джугашвилиprononciation), connu sous le nom de Joseph Staline (Иосиф Сталин), également surnommé par sa propre propagande le Vojd ("Guide") ou Le père des peuples, né à Gori le 18 décembre 1878 — officiellement le 21 décembre 18791 — et mort à Moscou le 5 mars 1953, est un révolutionnaire communiste et homme d\'État soviétique d\'origine géorgienne.\r\n\r\nSecrétaire général du Parti communiste soviétique à partir de 1922, il dirige l\'Union des républiques socialistes soviétiques (URSS) à partir de la fin des années 1920 jusqu\'à sa mort. Il établit un régime de dictature personnelle2 : les historiens lui attribuent, à des degrés divers, la responsabilité de la mort de trois à plus de vingt millions de personnes3.\r\n				');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `commande`
 --
 
 CREATE TABLE `commande` (
@@ -41,7 +59,7 @@ CREATE TABLE `commande` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `donnees`
+-- Table structure for table `donnees`
 --
 
 CREATE TABLE `donnees` (
@@ -54,7 +72,7 @@ CREATE TABLE `donnees` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `piece`
+-- Table structure for table `piece`
 --
 
 CREATE TABLE `piece` (
@@ -66,7 +84,7 @@ CREATE TABLE `piece` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `piece_type`
+-- Table structure for table `piece_type`
 --
 
 CREATE TABLE `piece_type` (
@@ -78,7 +96,7 @@ CREATE TABLE `piece_type` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `type_fonction`
+-- Table structure for table `type_fonction`
 --
 
 CREATE TABLE `type_fonction` (
@@ -89,7 +107,7 @@ CREATE TABLE `type_fonction` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateur`
+-- Table structure for table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -106,22 +124,25 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `utilisateur`
+-- Dumping data for table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`, `pays`, `ville`, `code_postal`, `adresse`) VALUES
-(8, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 4, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
 (9, 'joseph', 'staline', 'jstaline@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'Russie', 'Moscou', 93000, 'rue de stalingrad'),
-(10, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '4dc7c9ec434ed06502767136789763ec11d2c4b7', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
-(11, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
-(12, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc');
+(14, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 2, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
+(15, 'Luca', 'Cohen', 'luca.cohen@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'France', 'Paris', 75008, '3 rue Charcot'),
+(16, 'Luca', 'Cohen', 'luca.cohen@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'France', 'Paris', 75008, '3 rue Charcot'),
+(17, 'Luca', 'Cohen', 'luca.cohen@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'France', 'Paris', 75008, '3 rue Charcot'),
+(18, '', 'Cohen', 'luca.cohen@hotmail.fr', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 3, 'France', 'Paris', 75008, '3 rue Charcot'),
+(19, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
+(20, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `actionneurs_capteurs`
+-- Indexes for table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
   ADD PRIMARY KEY (`ID_ac_cap`),
@@ -130,28 +151,34 @@ ALTER TABLE `actionneurs_capteurs`
   ADD KEY `ID_commande` (`ID_commande`);
 
 --
--- Index pour la table `commande`
+-- Indexes for table `assistance`
+--
+ALTER TABLE `assistance`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `commande`
 --
 ALTER TABLE `commande`
   ADD PRIMARY KEY (`ID_commande`),
   ADD KEY `ID` (`ID`);
 
 --
--- Index pour la table `donnees`
+-- Indexes for table `donnees`
 --
 ALTER TABLE `donnees`
   ADD PRIMARY KEY (`ID_donnees`),
   ADD KEY `ID_ac_cap` (`ID_ac_cap`);
 
 --
--- Index pour la table `piece`
+-- Indexes for table `piece`
 --
 ALTER TABLE `piece`
   ADD PRIMARY KEY (`ID_piece`),
   ADD KEY `ID` (`ID`);
 
 --
--- Index pour la table `piece_type`
+-- Indexes for table `piece_type`
 --
 ALTER TABLE `piece_type`
   ADD PRIMARY KEY (`ID`),
@@ -159,62 +186,67 @@ ALTER TABLE `piece_type`
   ADD KEY `ID_type` (`ID_type`);
 
 --
--- Index pour la table `type_fonction`
+-- Indexes for table `type_fonction`
 --
 ALTER TABLE `type_fonction`
   ADD PRIMARY KEY (`ID_fonction`);
 
 --
--- Index pour la table `utilisateur`
+-- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `actionneurs_capteurs`
+-- AUTO_INCREMENT for table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
   MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `commande`
+-- AUTO_INCREMENT for table `assistance`
+--
+ALTER TABLE `assistance`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `commande`
 --
 ALTER TABLE `commande`
   MODIFY `ID_commande` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `donnees`
+-- AUTO_INCREMENT for table `donnees`
 --
 ALTER TABLE `donnees`
   MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `piece`
+-- AUTO_INCREMENT for table `piece`
 --
 ALTER TABLE `piece`
   MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `piece_type`
+-- AUTO_INCREMENT for table `piece_type`
 --
 ALTER TABLE `piece_type`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `type_fonction`
+-- AUTO_INCREMENT for table `type_fonction`
 --
 ALTER TABLE `type_fonction`
   MODIFY `ID_fonction` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `utilisateur`
+-- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
--- Contraintes pour les tables exportées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `actionneurs_capteurs`
+-- Constraints for table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
   ADD CONSTRAINT `actionneurs_capteurs_ibfk_1` FOREIGN KEY (`ID_commande`) REFERENCES `commande` (`ID_commande`),
@@ -222,25 +254,25 @@ ALTER TABLE `actionneurs_capteurs`
   ADD CONSTRAINT `actionneurs_capteurs_ibfk_3` FOREIGN KEY (`ID_fonction`) REFERENCES `type_fonction` (`ID_fonction`);
 
 --
--- Contraintes pour la table `commande`
+-- Constraints for table `commande`
 --
 ALTER TABLE `commande`
   ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `utilisateur` (`ID`);
 
 --
--- Contraintes pour la table `donnees`
+-- Constraints for table `donnees`
 --
 ALTER TABLE `donnees`
   ADD CONSTRAINT `donnees_ibfk_1` FOREIGN KEY (`ID_ac_cap`) REFERENCES `actionneurs_capteurs` (`ID_ac_cap`);
 
 --
--- Contraintes pour la table `piece`
+-- Constraints for table `piece`
 --
 ALTER TABLE `piece`
   ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `utilisateur` (`ID`);
 
 --
--- Contraintes pour la table `piece_type`
+-- Constraints for table `piece_type`
 --
 ALTER TABLE `piece_type`
   ADD CONSTRAINT `piece_type_ibfk_1` FOREIGN KEY (`ID_piece`) REFERENCES `piece` (`ID_piece`),

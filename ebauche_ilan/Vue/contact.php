@@ -19,9 +19,9 @@
 		<div>
 		
 
-		  <form id="signin-form" method="post" action="controleur/Connexion_controleur.php">
+		  <form id="signin-form" method="post" action="../controleur/Contact_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
-				<textarea id="textarea" rows="6" cols="47">Bla bla bla
+				<textarea id="textarea" rows="6" cols="47" name="demande">Bla bla bla
 				</textarea>
 				<button type="submit" name="signin-valider"class="submit-button">Sign In</button>
 		  </form>
