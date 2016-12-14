@@ -19,6 +19,7 @@
 		  <a class="link-2">
 		  <?php 
 		  session_start();
+//Session start doit etre avant le doctype !!! mal place ( le prof la fait dans sa version je me fais chier en atendant raph)
 		  echo 'Bienvenue boubou';
 		  echo  $_SESSION['email'];
 		  ?></a>
