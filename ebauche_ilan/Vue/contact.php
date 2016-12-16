@@ -21,7 +21,7 @@
 
 		  <form id="signin-form" method="post" action="controleur/Connexion_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
-				<textarea id="textarea" rows="6" cols="47">Bla bla bla
+				<textarea id="textarea" rows="6" cols="47">je baise ilan <3 par l'anus. mais que quand il est sale : et c'est souvent le cas.
 				</textarea>
 				<button type="submit" name="signin-valider"class="submit-button">Sign In</button>
 		  </form>
