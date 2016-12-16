@@ -19,7 +19,7 @@
 		  <a class="link-2">
 		  <?php 
 		  session_start();
-		  echo 'bienvenue  ';
+		  echo 'Bienvenue  ';
 		  echo  $_SESSION['prenom'];
 		  ?></a>
 		  <a class="link-2" href="../controleur/deconnexion_controleur.php">deconnexion</a>
