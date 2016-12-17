@@ -23,7 +23,7 @@
 			header("Location: ../Vue/about.php");
 				
 		}catch( Exception $e){
-				$e->getMessage();
+				echo $e->getMessage();
 				header ("Location: ../Vue/erreurConnexion.php");
 		}
 				

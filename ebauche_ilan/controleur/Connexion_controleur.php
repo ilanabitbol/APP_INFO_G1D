@@ -1,27 +1,20 @@
 <?php
 		include_once ('../modele/Connexion_Base.class.php');
-			
+		include_once ('../modele/Query.class.php');
 		$connexion_base= new Connexion_Base();
+		$query = new Query();
 		
-		
+		//Recuperation des champs remplis dans le form
 		$email=$_POST['email'];
-		// Hachage du mot de passe de l'utilisateur
 		$password_hache = sha1($_POST['password']);
 		
 		// Verification des identifiants
-		$req = $connexion_base->getDb()->prepare('SELECT id FROM utilisateur WHERE email = :email AND password = :password');
-		$req->execute(array(
-				'email' => $email,
-				'password' => $password_hache));
 		
-		$resultat = $req->fetch();
 		
-		if (!$resultat)
+		if (!$query->connexion_query($connexion_base, $email, $password_hache))
 		{
 			header("Location: ../Vue/erreurConnexion.php");
-		}
-		else
-		{
+		}else{
 			session_start();
 			$response=$connexion_base->getDb()->query("SELECT prenom FROM utilisateur WHERE email='$email'");
 			$prenom=$response->fetch();
