@@ -5,28 +5,32 @@
 		$query = new Query();
 		
 		
-		$nom=$_POST['nom'];
-		$prenom=$_POST['prenom'];
-		$email=$_POST['email'];
+		$nom = isset($_POST['nom']) ? $_POST['nom'] : NULL;
+		$prenom = isset($_POST['prenom']) ? $_POST['prenom'] : NULL;
+		$email = isset($_POST['email']) ? $_POST['email'] : NULL;
 		// Hachage du mot de passe
-		$password_hache=sha1($_POST['password']);
-		$numero=$_POST['numero'];
-		$pays=$_POST['pays'];
-		$ville=$_POST['ville'];
-		$code_postal=$_POST['code_postal'];
-		$adresse=$_POST['adresse'];
+		if ( $_POST['password'] != NULL ){
+			$password_hache = sha1($_POST['password']);
+				
+		}else $password_hache = NULL;
+		
+		$numero = isset($_POST['numero']) ? $_POST['numero'] : NULL;
+		$pays = isset($_POST['pays']) ? $_POST['pays'] : NULL;
+		$ville = isset($_POST['ville']) ? $_POST['ville'] : NULL;
+		$code_postal = isset($_POST['code_postal']) ? $_POST['code_postal'] : NULL;
+		$adresse = isset($_POST['adresse']) ? $_POST['adresse'] : NULL;
 			
 		//Insertion
-		try {
-			$query->inscription_query($connexion_base, $nom,  $prenom, $email, $password_hache, $numero, $pays,
-					$ville, $code_postal, $adresse);
+		if ($nom != NULL AND $prenom != NULL AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND
+				$pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL){
+		$query->inscription_query($connexion_base, $nom,  $prenom, $email, $password_hache, $numero, $pays,
+								$ville, $code_postal, $adresse);
 			header("Location: ../Vue/about.php");
-				
-		}catch( Exception $e){
-				echo $e->getMessage();
-				header ("Location: ../Vue/erreurConnexion.php");
 		}
-				
+		else {
+			header ("Location: ../Vue/erreurInscription.php");
+		}		
 		
+
 		
 ?>
