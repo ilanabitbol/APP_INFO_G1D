@@ -30,6 +30,7 @@
 				   <option value="France">France</option> 
 				   <option value="Allemagne">Allemagne</option> 
 				   <option value="Suisse">Suisse</option> 
+				   <option value="Russie">Russie</option>
 			  </select>
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>

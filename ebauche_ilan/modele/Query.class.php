@@ -44,6 +44,15 @@ class Query {
 		return $resultat = $req->fetch();
 		
 	}
+	//Fonction permettant de persister les demandes d'assistances
+	public function assistance_query($connexion_base, $email, $demande){
+		$req = $connexion_base->getDb()->prepare('INSERT INTO assistance(email, demande)
+				VALUES(:email, :demande)');
+		$req->execute(array(
+			'email' => $email,
+			'demande' =>$demande,
+		));
+	}
 	
 	
 }
