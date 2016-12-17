@@ -9,8 +9,6 @@
 		$password_hache = sha1($_POST['password']);
 		
 		// Verification des identifiants
-		
-		
 		if (!$query->connexion_query($connexion_base, $email, $password_hache))
 		{
 			header("Location: ../Vue/erreurConnexion.php");
