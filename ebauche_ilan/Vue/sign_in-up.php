@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/sign_in-up.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheet/styleall.css">
 </head>
 <body>
 	<?php include 'entete.php'?>
 		
-	<div class="container"><!--Creation de l'unique section de la page.-->
+	<div class="container-sign"><!--Creation de l'unique section de la page.-->
 		
 		<img  class="logo" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->

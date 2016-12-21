@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/shop.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheet/styleall.css">
 </head>
 <body>
 	<?php include 'entete.php';
