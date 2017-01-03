@@ -18,9 +18,11 @@
 		  <a class="link-2" href="shop.php">Shop</a>
 		  <a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
 		  <a class="link-2">
-		  <?php 		  
+		  <?php 
+		  if ($_SESSION!= NULL) {
 		  echo 'Bienvenue  ';
 		  echo  $_SESSION['prenom'];
+		  }
 		  ?></a>
 		  <a class="link-2" href="../controleur/deconnexion_controleur.php">Deconnexion</a>
 		</nav>
