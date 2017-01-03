@@ -12,11 +12,6 @@
 <body>
 		
 		<nav id="nav-2">
-		  <a class="link-2" href="dashboard.php">Dashboard</a>
-		  <a class="link-2" href="about.php">About</a>
-		  <a class="link-2" href="contact.php">Contact</a>
-		  <a class="link-2" href="shop.php">Shop</a>
-		  <a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
 		  <a class="link-2">
 		  <?php 
 		  if ($_SESSION!= NULL) {
@@ -24,5 +19,10 @@
 		  echo  $_SESSION['prenom'];
 		  }
 		  ?></a>
+		  <a class="link-2" href="dashboard.php">Dashboard</a>
+		  <a class="link-2" href="about.php">About</a>
+		  <a class="link-2" href="contact.php">Contact</a>
+		  <a class="link-2" href="shop.php">Shop</a>
+		  <a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
 		  <a class="link-2" href="../controleur/deconnexion_controleur.php">Deconnexion</a>
 		</nav>
