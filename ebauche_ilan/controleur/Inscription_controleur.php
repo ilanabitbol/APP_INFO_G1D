@@ -8,7 +8,7 @@
 		//Recuperation et control des champs du form
 		$nom = isset($_POST['nom']) ? htmlspecialchars($_POST['nom']) : NULL;
 		$prenom = isset($_POST['prenom']) ? htmlspecialchars($_POST['prenom']) : NULL;
-		$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
+		$email = isset($_POST['email']) ? filter_war($email, FILTER_VALIDATE_EMAIL) ? htmlspecialchars($_POST['email']): NULL : NULL;
 		// Hachage du mot de passe
 		if ( $_POST['password'] != NULL ){
 			$password_hache = sha1(htmlspecialchars($_POST['password']));

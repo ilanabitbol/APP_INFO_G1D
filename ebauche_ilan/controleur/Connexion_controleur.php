@@ -5,7 +5,7 @@
 		$query = new Query();
 		
 		//Recuperation et control des champs remplis dans le form
-		$email=isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
+		$email=isset($_POST['email']) ? filter_var($email, FILTER_VALIDATE_EMAIL) ? htmlspecialchars($_POST['email']) : NULL : NULL;
 		if( $_POST['password'] != NULL ){
 			$password_hache = sha1(htmlspecialchars($_POST['password']));
 		}else $password_hache = NULL;
