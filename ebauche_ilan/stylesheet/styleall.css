@@ -56,17 +56,18 @@ form {
   border-radius: 5px;
 }
 
-/*contact.css*/
-.container-contact {
+.container {
   width: 400px;
   padding: 50px;
-  margin-top: 111px;
+  margin: auto;
+  margin-top: 40px;
   box-sizing: border-box;
   background-color: white;
-  margin: auto;
   border-radius: 5px;
   box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
 }
+/*contact.css*/
+
 /* mise en place de tous les détails (couleurs,placement,taille,...) des id contact-button */
 #contact-button{
   margin-left:115px;
@@ -86,7 +87,7 @@ form {
 /*position de toutes les id textarea*/
 #textarea-contact{
 	border: 2px solid black;
-	
+	margin-left:-25px;
 }
 
 /*sign_in-up.css
@@ -103,24 +104,13 @@ Définition de la place,de la taille , et de la couleur des boutons*/
   font-size: 1.3em;
   margin-bottom: 10px;
 }
-/*surement à modifier en relation avec tous les container*/
-.container-sign {
-  width: 400px;
-  padding: 50px;
-  margin-top: 1px;
-  box-sizing: border-box;
-  background-color: white;
-  margin: auto;
-  border-radius: 5px;
-  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
-}
 /*Placement du bouton signin*/
 #signin-button {
   margin-left: 20px;
 }
 /*placement du texte dans la liste déroulante*/
 #ListeElement{
-	float: right;
+	margin-left: 100px;
 }
 /*définition de la couleur et de la position du texte*/
 .erreur{
@@ -139,7 +129,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-weight: bold;
-  text-align: center;
+  margin-left: 20px;
 }
 /*texte en relief et avec une ombre*/
 .embossedtext {

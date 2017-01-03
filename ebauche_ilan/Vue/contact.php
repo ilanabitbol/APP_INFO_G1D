@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/styleall.css">
-</head>
-<body>
-	<?php include 'entete.php'?>
+<?php include 'header.php'?>
 		
-	<div class="container-contact"><!--Creation de l'unique section de la page.-->
+	<div class="container"><!--Creation de l'unique section de la page.-->
 		
 		<img  class="logo" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->
@@ -29,9 +21,5 @@
 		</div>
 
 	</div>
-	
-  	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="../stylesheet/contact.js"></script>
-</body>
+<?php include 'footer.php'?>	
 
-</html>

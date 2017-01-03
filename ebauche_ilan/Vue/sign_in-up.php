@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/styleall.css">
-</head>
-<body>
-	<?php include 'entete.php'?>
+	<?php include 'header.php'?>
 		
-	<div class="container-sign"><!--Creation de l'unique section de la page.-->
+	<div class="container"><!--Creation de l'unique section de la page.-->
 		
 		<img  class="logo" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->
@@ -31,6 +23,8 @@
 				   <option value="Allemagne">Allemagne</option> 
 				   <option value="Suisse">Suisse</option> 
 				   <option value="Russie">Russie</option>
+				   <option value="Espagne">Espagne</option>
+				   <option value="Italie">Italie</option>
 			  </select>
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>
@@ -47,9 +41,4 @@
 		</div>
 
 	</div>
-
-  	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="../stylesheet/sign_in-up.js"></script>
-</body>
-
-</html>
+<?php include 'footer.php'?>
