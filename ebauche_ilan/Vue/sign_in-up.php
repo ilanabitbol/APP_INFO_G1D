@@ -27,7 +27,7 @@
 				   <option value="Italie">Italie</option>
 			  </select>
 		      <input type="text" placeholder="VILLE" name="ville"/>
-		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>
+		      <input type="text" placeholder="CODE POSTAL" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
 			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>
@@ -41,4 +41,6 @@
 		</div>
 
 	</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="../stylesheet/sign_in-up.js"></script>
 <?php include 'footer.php'?>
