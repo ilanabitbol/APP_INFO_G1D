@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/styleall.css">
-</head>
-<body>
-	<?php include 'entete.php';
+	<?php include 'header.php';
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
 		// lecture dans la table catalogue
@@ -25,9 +17,4 @@
 		</div>
 		<?php }
 		$reponse->closeCursor(); // Termine le traitement de la requête
-?>
-	  
-</body>
-
-
-</html>
+		 include 'footer.php'?>

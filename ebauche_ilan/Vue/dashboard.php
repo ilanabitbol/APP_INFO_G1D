@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/dashboard.css">
-	
-
-</head>
-<body>
-<?php 
-session_start();
-?>
-<?php include 'entete.php'?>
+<?php include 'header.php'?>
 
 	<div class="admin-panel clearfix">
 	<div class="slidebar">
@@ -105,7 +92,4 @@ session_start();
     </ul>
   </div>
 </div>
-
-</body>
-
-</html>
+<?php include 'footer.php'?>

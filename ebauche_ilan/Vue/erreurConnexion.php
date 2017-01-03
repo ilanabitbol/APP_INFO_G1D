@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/styleall.css">
-</head>
-<body>
-	<?php include 'entete.php'?>
+	<?php include 'header.php'?>
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		
@@ -48,9 +40,5 @@
 		</div>
 
 	</div>
+<?php include 'footer.php'?>
 
-  	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="../stylesheet/sign_in-up.js"></script>
-</body>
-
-</html>
