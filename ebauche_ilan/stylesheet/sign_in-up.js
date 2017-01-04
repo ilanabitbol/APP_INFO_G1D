@@ -1,8 +1,8 @@
 init();
 
 function init() {
-  $("#signup-button").css("border-bottom", "3px solid black");
-  $("#signup-form").css("display", "block");
+  $("#signin-button").css("border-bottom", "3px solid black");
+  $("#signin-form").css("display", "block");
 }
 
 $("#signin-button").on("click", function() {
