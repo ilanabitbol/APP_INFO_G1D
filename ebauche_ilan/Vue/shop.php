@@ -20,7 +20,7 @@
 						  echo 'Son prix est de : '.$donnes['prix'].' euros TTC'.'<br />';
 						  echo 'Il en reste '.$donnes['stock'].'<br />'; 
 					?>
-				<button class="buttons">acheter</button>
+				<button href="/link/to/page2 class="buttons">acheter</button>
 					
 				</li>
 					
