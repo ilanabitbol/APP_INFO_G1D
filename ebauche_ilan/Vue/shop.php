@@ -17,10 +17,13 @@
 			<ul class="list">
 		        <li><?php 
 		        		  echo 'Voici le produit : '.$donnes['nom_produit'].'<br />';
-						  echo 'Son prix est de :'.$donnes['prix'].'<br />';
+						  echo 'Son prix est de : '.$donnes['prix'].' euros TTC'.'<br />';
 						  echo 'Il en reste '.$donnes['stock'].'<br />'; 
 					?>
+				<button class="buttons">acheter</button>
+					
 				</li>
+					
     		</ul>
 		</div>
 		<?php }
