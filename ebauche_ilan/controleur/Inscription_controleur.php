@@ -4,20 +4,21 @@
 		$connexion_base= new Connexion_Base();
 		$query = new Query();
 		
-			
-		//Recuperation et control des champs du form
-		$nom = isset($_POST['nom']) ? htmlspecialchars($_POST['nom']) : NULL;
-		$prenom = isset($_POST['prenom']) ? htmlspecialchars($_POST['prenom']) : NULL;
-		$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
+		
+		$nom = isset($_POST['nom']) ? $_POST['nom'] : NULL;
+		$prenom = isset($_POST['prenom']) ? $_POST['prenom'] : NULL;
+		$email = isset($_POST['email']) ? $_POST['email'] : NULL;
 		// Hachage du mot de passe
 		if ( $_POST['password'] != NULL ){
-			$password_hache = sha1(htmlspecialchars($_POST['password']));
+			$password_hache = sha1($_POST['password']);
+				
 		}else $password_hache = NULL;
-		$numero = isset($_POST['numero']) ? htmlspecialchars($_POST['numero']) : NULL;
-		$pays = isset($_POST['pays']) ? htmlspecialchars($_POST['pays']) : NULL;
-		$ville = isset($_POST['ville']) ? htmlspecialchars($_POST['ville']) : NULL;
-		$code_postal = isset($_POST['code_postal']) ? htmlspecialchars($_POST['code_postal']) : NULL;
-		$adresse = isset($_POST['adresse']) ? htmlspecialchars($_POST['adresse']) : NULL;
+		
+		$numero = isset($_POST['numero']) ? $_POST['numero'] : NULL;
+		$pays = isset($_POST['pays']) ? $_POST['pays'] : NULL;
+		$ville = isset($_POST['ville']) ? $_POST['ville'] : NULL;
+		$code_postal = isset($_POST['code_postal']) ? $_POST['code_postal'] : NULL;
+		$adresse = isset($_POST['adresse']) ? $_POST['adresse'] : NULL;
 			
 		//Insertion
 		if ($nom != NULL AND $prenom != NULL AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND

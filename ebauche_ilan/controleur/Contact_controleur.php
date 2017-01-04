@@ -4,12 +4,12 @@
 		$connexion_base = new Connexion_Base();
 		$query = new Query();
 
-		$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
-		$demande = isset($_POST['demande']) ? htmlspecialchars($_POST['demande']) : NULL;
+		$email=$_POST['email'];
+		$demande=$_POST['demande'];
+	
 		
 		//Insertion
-		if( $email != NULL AND $demande != NULL){
 		$query->assistance_query($connexion_base,$email,$demande);
 		header("Location: ../Vue/about.php");
-		}
+		
 ?>
