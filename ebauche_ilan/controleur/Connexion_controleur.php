@@ -5,9 +5,10 @@
 		$query = new Query();
 		
 		//Recuperation des champs remplis dans le form
-		$email=$_POST['email'];
-		$password_hache = sha1($_POST['password']);
-		
+		$email=isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
+		if( $_POST['password'] != NULL ){
+			$password_hache = sha1(htmlspecialchars($_POST['password']));
+ 		}else $password_hache = NULL;		
 		// Verification des identifiants
 		if (!$query->connexion_query($connexion_base, $email, $password_hache))
 		{
