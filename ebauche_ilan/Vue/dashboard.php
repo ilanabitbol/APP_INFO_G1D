@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,9 +9,7 @@
 
 </head>
 <body>
-<?php 
-session_start();
-?>
+
 <?php include 'entete.php'?>
 
 	<div class="admin-panel clearfix">
@@ -64,16 +63,16 @@ session_start();
             <input type="text" name="Pseudo de l'utilisateur" placeholder="pseudo" />
             <input type="text" name="content" placeholder="mot de passe" />
             <label>
-                <input type="checkbox" name="piece_bouton" value="A accès à : ">
-                Pièce 1
+                <input type="checkbox" name="piece_bouton" value="Acces: ">
+                Piece 1
+            </label>
+            <label>
+                <input type="checkbox" name="piece_bouton" value="Acces: ">
+                Piece 2
             </label>
             <label>
                 <input type="checkbox" name="piece_bouton" value="A accès à : ">
-                Pièce 2
-            </label>
-            <label>
-                <input type="checkbox" name="piece_bouton" value="A accès à : ">
-                Pièce 3
+                Piece 3
             </label>
             <button type="submit" class="submit" name="submit">Enregistrer ! </button>
           </form>

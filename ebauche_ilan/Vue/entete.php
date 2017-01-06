@@ -12,7 +12,7 @@
 <body>
 		
 		<nav id="nav-2">
-		  <a class="link-2" href="dashboard.php">Dashboard</a>
+		  <a class="link-2" href="maMaison.php">Maison</a>
 		  <a class="link-2" href="about.php">About</a>
 		  <a class="link-2" href="contact.php">Contact</a>
 		  <a class="link-2" href="shop.php">Shop</a>
