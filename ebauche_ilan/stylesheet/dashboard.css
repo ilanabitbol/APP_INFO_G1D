@@ -16,7 +16,7 @@ body {
 	width: 990px;
 	margin: 50px auto;
 }
-/*slidebar侧边栏*/
+/*slidebarä¾§è¾¹æ �*/
 .slidebar {
 	width: 20%;
 	min-height: 690px;
@@ -51,7 +51,7 @@ body {
 	right: 20px;
 	-webkit-font-smoothing: antialiased;
 }
-/*插入icon图标*/
+/*æ�’å…¥iconå›¾æ ‡*/
 .slidebar li:nth-child(1):before {content: "\63";}
 .slidebar li:nth-child(2):before {content: "\64";}
 .slidebar li:nth-child(3):before {content: "\62";}
@@ -93,7 +93,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-/*topbar顶部按钮栏*/
+/*topbaré¡¶éƒ¨æŒ‰é’®æ �*/
 .topbar li {
 	float: right;
 	list-style: none;
@@ -132,7 +132,7 @@ body {
 	-ms-transition:opacity 200ms linear;
 	transition:opacity 200ms linear;
 }
-/*通过opacity来切换不同的选项卡*/
+/*é€šè¿‡opacityæ�¥åˆ‡æ�¢ä¸�å�Œçš„é€‰é¡¹å�¡*/
 .mainContent>div:target {
 	opacity: 1;
 }
@@ -231,7 +231,7 @@ body {
 	border: none;
 	text-indent: 10px;
 }
-/*统一各浏览器下placeholder内的字体样式*/
+/*ç»Ÿä¸€å�„æµ�è§ˆå™¨ä¸‹placeholderå†…çš„å­—ä½“æ ·å¼�*/
 .quick-press input[type="text"]::-webkit-input-placeholder {font-size: 14px;}
 .quick-press input[type="text"]:-moz-input-placeholder {font-size: 14px;}
 .quick-press input[type="text"]::-moz-input-placeholder {font-size: 14px;}
@@ -309,7 +309,7 @@ body {
 	background: -ms-linear-gradient(top,rgb(255,255,255),rgb(245,245,245));
 	background: linear-gradient(top,rgb(255,255,255),rgb(245,245,245));
 }
-/*statusbar底部功能按钮*/
+/*statusbaråº•éƒ¨åŠŸèƒ½æŒ‰é’®*/
 .statusbar {
 	position: absolute;
 	bottom: 0;
