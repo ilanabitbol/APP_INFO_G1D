@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/contact.css">
 </head>
 <body>
-	<?php include 'entete.php'?>
+	<?php include 'entete.php' ?>
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		
@@ -29,9 +29,6 @@
 		</div>
 
 	</div>
-	
-  	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="../stylesheet/contact.js"></script>
 </body>
 
 </html>
