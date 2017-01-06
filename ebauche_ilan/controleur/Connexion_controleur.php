@@ -19,6 +19,6 @@
 			$prenom=$response->fetch();
 			$_SESSION['prenom']=$prenom['prenom'];
 			$_SESSION['email']=$email;
-			header("Location: ../Vue/dashboard.php");
+			header("Location: ../Vue/maMaison.php");
 		}
 ?>

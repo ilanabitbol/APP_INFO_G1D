@@ -10,6 +10,11 @@ class Query {
 	private $ville;
 	private $code_postal;
 	private $adresse;
+        private $date_actuelle;
+        private $id_piece;
+        private $id_user;
+        private $id_sensor;
+        private $new_data_sensor;
 	//	//
 	
 	//Constructeur
@@ -53,7 +58,29 @@ class Query {
 			'demande' =>$demande,
 		));
 	}
+        
+        //Fonction de requete sur les data d'une piece pour un utilisateur
+	public function datasensor_query($connexion_base, $id_user, $date_actuelle, $id_piece){
+		$req = $connexion_base->getDb()->query('SELECT donnees.date_donnees, donnees.valeur, actionneurs_capteurs. etat, actionneurs_capteurs.batterie
+                                                        FROM piece, donnees, actionneurs_capteurs
+                                                        WHERE piece.ID = :id_user AND donnees.date_donnees = :date_actuelle AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = :id_piece
+                                                        ');
+		
+		
+	}
 	
+        //Fonction de maj des donnees d'un capteur
+	public function majdatasensor_query($connexion_base, $id_sensor, $date_actuelle, $new_data_sensor){
+		$req = $connexion_base->getDb()->prepare('INSERT INTO donnees(valeur, date_donnees, ID_ac_cap)
+                                                          VALUES(:new_data_sensor, :date_actuelle, :id_sensor)
+                                                        ');
+		$req->execute(array(
+			'new_data_sensor' => $new_data_sensor,
+			'date_actuelle' =>$date_actuelle,
+                        'id_sensor'=>$id_sensor,
+		));
+		
+	}
 	
 }
 

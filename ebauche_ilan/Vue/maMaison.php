@@ -6,7 +6,9 @@
 		<title>dosmoz</title>
 	</head>
 <body>
-<section>
+	<?php include 'entete.php' ?>
+	
+	<section>
 		<div id="icon-wrapper">
 			<a href="map.html">
 			<div class="icons">

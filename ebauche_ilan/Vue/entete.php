@@ -10,19 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/entete.css">
 </head>
 <body>
-		
 		<nav id="nav-2">
-<<<<<<< HEAD
-		<?php 
-=======
-		  <a class="link-2" href="maMaison.php">Maison</a>
-		  <a class="link-2" href="about.php">About</a>
-		  <a class="link-2" href="contact.php">Contact</a>
-		  <a class="link-2" href="shop.php">Shop</a>
-		  <a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
-		  
 		  <?php 
->>>>>>> refs/heads/ilanAbitbol
 		  	if ($_SESSION['prenom']){?>
 		  		<a class="link-2">
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
@@ -30,8 +19,11 @@
 		  <?php } ?>
 		  <?php 
 		  	if ($_SESSION['prenom']){?>
-		  		<a class="link-2" href="dashboard.php">Dashboard</a>
+		  		<a class="link-2" href="maMaison.php">Maison</a>
 		  <?php } ?>
+		  <a class="link-2" href="shop.php">Shop</a>		  
+		  
+		  
 		  <a class="link-2" href="about.php">About</a>
 		  <a class="link-2" href="contact.php">Contact</a>
 		  <a class="link-2" href="shop.php">Shop</a>
