@@ -33,7 +33,7 @@
 				   <option value="Russie">Russie</option>
 			  </select>
 		      <input type="text" placeholder="VILLE" name="ville"/>
-		      <input type="text" placeholder="CODE POSTALE" name="code_postal"/>
+		      <input type="text" placeholder="CODE POSTAL" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
 			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>

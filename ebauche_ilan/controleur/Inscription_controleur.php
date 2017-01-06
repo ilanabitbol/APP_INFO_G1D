@@ -28,7 +28,7 @@
 			header("Location: ../Vue/about.php");
 		}
 		else {
-			header ("Location: ../Vue/erreurInscription.php");
+			header("Location: ../Vue/erreurInscription.php");
 		}		
 		
 

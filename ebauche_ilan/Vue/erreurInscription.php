@@ -35,14 +35,14 @@
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTAL" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
+		      <h3 class="erreur">ERREUR</h3>
+			  <h3 class="erreur">veuillez renseigner tous les champs d'inscription</h3>
 			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>
 
 		  <form id="signin-form" method="post" action="../controleur/Connexion_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
 				<input type="password" placeholder="PASSWORD" name="password"/>
-				<h3 class="erreur">ERREUR</h3>
-				<h3 class="erreur">Veuillez renseigner tous les champs d'inscription</h3>
 				<button type="submit" name="signin-valider"class="submit-button">Connexion</button>
 		  </form>
 
@@ -51,7 +51,7 @@
 	</div>
 
   	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="../stylesheet/sign_in-up.js"></script>
+	<script type="text/javascript" src="../stylesheet/erreurInscription.js"></script>
 </body>
 
 </html>
