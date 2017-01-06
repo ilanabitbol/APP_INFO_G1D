@@ -18,7 +18,10 @@
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
 		  		</a>
 		  <?php } ?>
-		  <a class="link-2" href="dashboard.php">Dashboard</a>
+		  <?php 
+		  	if ($_SESSION['prenom']){?>
+		  		<a class="link-2" href="dashboard.php">Dashboard</a>
+		  <?php } ?>
 		  <a class="link-2" href="about.php">About</a>
 		  <a class="link-2" href="contact.php">Contact</a>
 		  <a class="link-2" href="shop.php">Shop</a>
