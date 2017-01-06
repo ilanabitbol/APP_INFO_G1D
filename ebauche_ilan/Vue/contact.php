@@ -21,8 +21,7 @@
 
 		  <form id="signin-form" method="post" action="../controleur/Contact_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
-				<textarea name="demande" id="textarea" rows="6" cols="47">Ecrivez ici votre demande.
-				</textarea>
+				<textarea name="demande" id="textarea" rows="6" cols="40" placeholder='Ecrivez ici votre demande.'></textarea>
 				<button type="submit" name="signin-valider"class="submit-button">Envoyez</button>
 		  </form>
 
