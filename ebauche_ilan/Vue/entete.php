@@ -12,19 +12,24 @@
 <body>
 		
 		<nav id="nav-2">
-		  <a class="link-2" href="dashboard.php">Dashboard</a>
-		  <a class="link-2" href="about.php">About</a>
-		  <a class="link-2" href="contact.php">Contact</a>
-		  <a class="link-2" href="shop.php">Shop</a>
-		  <a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
-		  
-		  <?php 
+		<?php 
 		  	if ($_SESSION['prenom']){?>
 		  		<a class="link-2">
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
 		  		</a>
+		  <?php } ?>
+		  <a class="link-2" href="dashboard.php">Dashboard</a>
+		  <a class="link-2" href="about.php">About</a>
+		  <a class="link-2" href="contact.php">Contact</a>
+		  <a class="link-2" href="shop.php">Shop</a>
+		  <?php 
+		  	if (empty($_SESSION['prenom'])){?>
+		  		<a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
+		  <?php } ?>
+		  <?php 
+		  	if ($_SESSION['prenom']){?>
 		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Deconnexion</a>
-		  <?php } ?>	
+		  <?php } ?>
 		  
 		</nav>
 
