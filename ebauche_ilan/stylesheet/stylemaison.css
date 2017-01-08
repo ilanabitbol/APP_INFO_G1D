@@ -1,51 +1,20 @@
-.grid {
-  		overflow: hidden;
-			padding: 0.5em 0 0 0.5em;
-			max-width: 76em;
-			margin: 0 auto;
-		}
-		.grid li {
-			padding: 0 0.5em 0.5em 0;
-		}
-		.grid li > div {
-			background: #808080;
-			color: #fff;
-			padding: 7em 2em;
-			text-align: center;
-		}
-		.grid li.title > div {
-			padding: 1em;
-		}
-		.grid li.wide {
-			width: 100%;
-		}
-		.grid li a {
-			color: #fff;
-		}	
-				
-		@media all and (min-width: 40em) {
-			.grid li {
-				float: left;
-				width: 33.3333333%;
-			}
-			.grid li.title {
-				width: 100%;
-			}
-			.grid li.wide {
-				width: 66.666666%;
-			}
-		}
-		@media all and (min-width: 60em) {
-			.grid li {
-				width: 25%;
-			}
-			.grid li.title {
-				width: 25%;
-			}
-			.grid li.title > div {
-				padding: 7em 2em;
-			}
-			.grid li.wide {
-				width: 50%;
-			}
-		}
+p {
+  background: #336699;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+section {
+  display: inline-block;
+  width: 30%;
+}
+

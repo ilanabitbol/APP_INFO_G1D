@@ -15,9 +15,10 @@
 			header("Location: ../Vue/erreurConnexion.php");
 		}else{
 			session_start();
-			$response=$connexion_base->getDb()->query("SELECT prenom FROM utilisateur WHERE email='$email'");
-			$prenom=$response->fetch();
-			$_SESSION['prenom']=$prenom['prenom'];
+			$response=$connexion_base->getDb()->query("SELECT prenom, ID FROM utilisateur WHERE email='$email'");
+			$resultat=$response->fetch();
+			$_SESSION['ID']=$resultat['ID'];
+			$_SESSION['prenom']=$resultat['prenom'];
 			$_SESSION['email']=$email;
 			header("Location: ../Vue/maMaison.php");
 		}
