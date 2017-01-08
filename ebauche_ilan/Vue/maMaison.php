@@ -1,48 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../stylesheet/maMaison.css">
-		<title>dosmoz</title>
-	</head>
-<body>
-	<?php include 'entete.php' ?>
-	
-	<section>
-		<div id="icon-wrapper">
-			<a href="map.html">
-			<div class="icons">
-				<div class="icon-slide-container">
-					<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-map.jpg">
-				</div>
-			</div>
-			</a>
-		
-			<a href="kite-map.php">
-			<div class="icons2">
-				<div class="icon-slide-container">
-					<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/add-beach.jpg">
-				</div>
-			</div>
-			</a>
-		
-			<a href="location.php">
-			<div class="icons3">
-				<div class="icon-slide-container">
-				<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-all.jpg">
-				</div>
-			</div>
-			</a>
-		
-			<a href="feedback.html">
-			<div class="icons4">
-				<div class="icon-slide-container">
-				<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/feedback.jpg">
-				</div>
-			</div>
-			</a>
-		</div>
-	</section>
-</body>
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Block With Section Titles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+   <link rel="stylesheet" type ="text/css" href="../stylesheet/stylemaison.css">
+  
+
+  
+</head>
+
+<body>
+  <!--Pattern HTML-->
+  <section id="pattern" class="pattern">
+  	<ul class="grid">
+			<li class="title">
+				<div>
+					Salon
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">Temperature</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">Pression</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">Humidité</a>
+				</div>
+			</li>
+			<li class="title">
+				<div>
+					Cuisine
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">1</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">2</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">3</a>
+				</div>
+			</li>
+			<li class="title">
+				<div>
+					Section title
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">1</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">2</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">3</a>
+				</div>
+			</li>
+
+		</ul>
+	</section>
+	<!--End Pattern HTML-->
+  
+</body>
 </html>
