@@ -15,6 +15,7 @@ class Query {
         private $id_user;
         private $id_sensor;
         private $new_data_sensor;
+        private $nom_piece; 
 	//	//
 	
 	//Constructeur
@@ -81,6 +82,15 @@ class Query {
 		));
 		
 	}
+	
+	//fonction permetant d'ajouter une salle
+	public function ajout_salle($connexion_base,$nom_piece){
+		$req = $connexion_base->getDb()->prepare('INSERT INTO piece (nom_piece)
+				VALUES(:nom_piece)'); 
+		$req->execute(array(
+				'nom_piece'=>$nom_piece,)); 
+	}
+
 	
 }
 
