@@ -15,6 +15,7 @@ class Query {
         private $id_user;
         private $id_sensor;
         private $new_data_sensor;
+        private $adresse_mac; 
 	//	//
 	
 	//Constructeur
@@ -82,6 +83,13 @@ class Query {
 		
 	}
 	
+	public function ajout_capteur($connexion_base, $adresse_mac){
+		$req = $connexion_base->getDb()->prepare('INSERT INTO actionneurs_capteurs(adresse_mac) VALUES(:adresse_mac)'); 
+		
+		$req->execute(array(
+				'adresse_mac' => $adresse_mac,				
+		));
+	}
 }
 
 
