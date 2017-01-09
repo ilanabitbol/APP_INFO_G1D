@@ -33,7 +33,7 @@
 		  <?php } ?>
 		  <?php 
 		  	if ($_SESSION['prenom']){?>
-		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Deconnexion</a>
+		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Déconnexion</a>
 		  <?php } ?>
 		  
 		</nav>
