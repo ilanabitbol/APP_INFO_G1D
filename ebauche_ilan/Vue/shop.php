@@ -1,3 +1,4 @@
+<?php include 'entete.php';?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/shop.css">
 </head>
 <body>
-	<?php include 'entete.php';
+<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
 		// lecture dans la table catalogue

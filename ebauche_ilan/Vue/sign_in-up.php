@@ -1,3 +1,4 @@
+<?php include 'entete.php'?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/sign_in-up.css">
 </head>
 <body>
-	<?php include 'entete.php'?>
+	
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		

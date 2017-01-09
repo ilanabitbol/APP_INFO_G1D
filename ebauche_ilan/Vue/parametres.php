@@ -1,3 +1,4 @@
+<?php include 'entete.php' ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheet/parametres.css">
 </head>
 <body>
-	<?php include 'entete.php' ?>
 		
 	<div class="container">
 	

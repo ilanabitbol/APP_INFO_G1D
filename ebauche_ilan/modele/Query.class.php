@@ -84,7 +84,7 @@ class Query {
 	}
 	
 	//Fonction d'ajout d'une piece
-	public function newpiece_query($connexion_base, $id_user, $nom_piece){
+	public function newpiece_query($connexion_base, $nom_piece, $id_user){
 		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID)
                                                           VALUES(:nom_piece, :id_user)
                                                         ');

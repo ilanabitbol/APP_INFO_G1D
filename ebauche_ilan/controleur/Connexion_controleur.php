@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php	
 		include_once ('../modele/Connexion_Base.class.php');
 		include_once ('../modele/Query.class.php');
 		$connexion_base= new Connexion_Base();
@@ -14,7 +17,6 @@
 		{
 			header("Location: ../Vue/erreurConnexion.php");
 		}else{
-			session_start();
 			$response=$connexion_base->getDb()->query("SELECT prenom, ID FROM utilisateur WHERE email='$email'");
 			$resultat=$response->fetch();
 			$_SESSION['ID']=$resultat['ID'];
