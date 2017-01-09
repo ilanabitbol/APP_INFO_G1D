@@ -13,6 +13,7 @@
 		<nav id="nav-2">
 		  <?php 
 		  	if ($_SESSION['prenom']){?>
+		  		<a class='link-2' href='parametres.php'><img  class="logo" src=../images/settings.png alt="Parametres"></a>
 		  		<a class="link-2">
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
 		  		</a>
