@@ -5,9 +5,9 @@
 	<title>Dosmoz form</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/about.css">
 </head>
-
 <body>
-		<?php include 'entete.php'?>
+	<?php include 'entete.php' ?>
+	
 		<div class="container">
 			  <div class="circle embossed">
 			    <p class="embossedtext">Dosmoz</p>
