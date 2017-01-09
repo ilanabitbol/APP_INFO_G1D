@@ -10,12 +10,12 @@ class Query {
 	private $ville;
 	private $code_postal;
 	private $adresse;
-        private $date_actuelle;
-        private $id_piece;
-        private $id_user;
-        private $id_sensor;
-        private $new_data_sensor;
-        private $adresse_mac; 
+    private $date_actuelle;
+    private $id_piece;
+    private $id_user;
+    private $id_sensor;
+    private $new_data_sensor;
+    private $nom_piece;
 	//	//
 	
 	//Constructeur
@@ -83,13 +83,18 @@ class Query {
 		
 	}
 	
-	public function ajout_capteur($connexion_base, $adresse_mac){
-		$req = $connexion_base->getDb()->prepare('INSERT INTO actionneurs_capteurs(adresse_mac) VALUES(:adresse_mac)'); 
-		
+	//Fonction d'ajout d'une piece
+	public function newpiece_query($connexion_base, $id_user, $nom_piece){
+		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID)
+                                                          VALUES(:nom_piece, :id_user)
+                                                        ');
 		$req->execute(array(
-				'adresse_mac' => $adresse_mac,				
+				'nom_piece' => $nom_piece,
+				'id_user' =>$id_user,
 		));
+	
 	}
+	
 }
 
 
