@@ -26,7 +26,6 @@
 		  
 		  <a class="link-2" href="about.php">About</a>
 		  <a class="link-2" href="contact.php">Contact</a>
-		  <a class="link-2" href="shop.php">Shop</a>
 		  <?php 
 		  	if (empty($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
