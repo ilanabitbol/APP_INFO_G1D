@@ -37,7 +37,7 @@
 			  <p> <a href="shop.php">AJOUTEZ CAPTEUR</a> <br> <br> </p>
 			 </section>
   		</header>
-  		<<?php }
+  		<?php }
 		$reponse->closeCursor(); // Termine le traitement de la requête
 		?>
   <!--Pattern HTML-->
