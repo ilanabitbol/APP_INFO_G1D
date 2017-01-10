@@ -15,7 +15,7 @@
 			
 			  <div class="content embossed">
 			    <p class="embossedtext">
-			    Dosmoz est un projet realise par une des equipes de Mohai a la demande de DomIsep. Une equipe de 6 grands apprentis ingenieurs a coucu ce produit.
+			    Dosmoz est un projet r&Eacutealis&Eacute par une des &Eacutequipes de Mohai &Agrave la demande de DomIsep. Une &Eacutequipe de 6 grands apprentis ing&Eacutenieurs a con&ccedilu ce produit.
 			  </div>
 </div>
 		

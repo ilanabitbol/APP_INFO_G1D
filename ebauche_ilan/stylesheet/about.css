@@ -2,13 +2,14 @@ body {
   background-color : #336699;
 
 }
+
 .container {
   max-width: 600px;
   margin : auto;
 }
 
 p {
-  font-family: 'Open Sans', Sans-sérif;
+  font-family: 'Verdana', Sans-sérif;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-weight: bold;
