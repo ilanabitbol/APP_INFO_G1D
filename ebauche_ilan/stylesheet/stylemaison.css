@@ -1,6 +1,5 @@
 body {
   background-color : #336699;
-
 }
 
 p {
@@ -10,6 +9,7 @@ p {
   display: block;
   font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
   padding: 24px 15px;
+  font-family: verdana;
   text-align: center;
 }
 
@@ -31,7 +31,7 @@ div {
 button{
   margin: auto;
   width: 300px;
-  height: 40px;
+  height: 60px;
   border: none;
   box-sizing: border-box;
   background-color: #5175C0;
@@ -44,8 +44,8 @@ button{
 #salle{
   position: relative;
   margin: auto;
-  width: 80%;
-  height: 40px;
+  width: 300px;
+  height: 60px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -66,6 +66,7 @@ footer {
   margin: 5% 1% 10px 35px;
   
 }
+
 section {
   display: inline-block;
   width: 43%;

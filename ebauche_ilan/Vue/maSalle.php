@@ -16,9 +16,10 @@
 		// lecture dans la table catalogue
 		$reponse= $connexion_base->getDb()->query( "SELECT xxxxxxx FROM piece WHERE ID='{$_SESSION['ID']}' ");?>*/
  <header>
+ 	<div class="container">
  			
  			<section>
-  				<p><a href = "maMaison.php"><?php echo 'Retour';?></a></p>
+  				<a href = "maMaison.php"><button id='salle'><?php echo 'Retour';?></button></a>
   			</section>
   			
   			<section>
@@ -37,8 +38,9 @@
 			  <p> Mouvement <br> Non <br> </p>
 			 </section>
 			 <section>
-			  <p> <a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">AJOUTEZ CAPTEUR</a> <br> <br> </p>
+			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
 			 </section>
+	</div>
  </header>
  
  </body>
