@@ -29,6 +29,7 @@
 		      <input type="text" placeholder="VILLE" name="ville"/>
 		      <input type="text" placeholder="CODE POSTAL" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
+		      <p><input type="checkbox" required /> J'ai lu et accepte les <a href="">Conditions g&eacuten&eacuterales d'utilisation</a></p>
 			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>
 
