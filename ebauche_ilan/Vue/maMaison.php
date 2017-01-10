@@ -17,7 +17,7 @@
 		// lecture dans la table catalogue
 		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");?>
 		
-		<p><a href="ajout_piece.php">ajouter une salle</a></p>
+		<p><a onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">ajouter une salle</a></p>
 		<?php while($donnes = $reponse->fetch()){?>
 		<header>
   			<p><?php echo $donnes['nom_piece'];?></p>
