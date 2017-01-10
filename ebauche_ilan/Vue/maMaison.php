@@ -17,31 +17,18 @@
 		// lecture dans la table catalogue
 		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");?>
 		
+		
 		<p><a onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">ajouter une salle</a></p>
-		<?php while($donnes = $reponse->fetch()){?>
 		<header>
-  			<p><?php echo $donnes['nom_piece'];?></p>
-  			  <section>
-  				 <p>Humidité <br> 32% <br> </p>
- 			 </section>
-  
-			  <section>
-			   <p> Température <br> 18° <br> </p>
-			  </section>
-			    
-			 <section>
-			  <p> Luminosité <br> 10Lux <br> </p>
-			 </section>
-			
-			 <section>
-			  <p> Mouvement <br> Non <br> </p>
-			 </section>
-			 <section>
-			  <p> <a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">AJOUTEZ CAPTEUR</a> <br> <br> </p>
-			 </section>
-  		</header>
+		<?php while($donnes = $reponse->fetch()){?>
+		
+			<section>
+  			<p><a href = "maSalle.php"><?php echo $donnes['nom_piece'];?></a></p>
+  			</section>
+  		
   		<?php }
   		?>
+  		</header>
   <!--Pattern HTML-->
 
 
