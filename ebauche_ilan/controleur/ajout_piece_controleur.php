@@ -17,22 +17,25 @@ $nom_piece = isset($_POST['nom_piece']) ? $_POST['nom_piece'] : NULL ;
 $id_user = $_SESSION['ID'];
 ?>
 
-<?php
-if ($nom_piece != NULL && $id_user != NULL){
-	$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID) VALUES(:nom_piece, :id_user) ');
-	$req->execute(array(
-			'nom_piece' => $nom_piece,
-			'id_user' =>$id_user,
-	));?>
-	<div class="container"><!--Creation de l'unique section de la page.-->
-		<p class='msg'>Votre salle a bien été ajoutée !</p>
+<div class="container"><!--Creation de l'unique section de la page.-->
+	
+	<?php
+	if ($nom_piece != NULL && $id_user != NULL){
+		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID) VALUES(:nom_piece, :id_user) ');
+		$req->execute(array(
+				'nom_piece' => $nom_piece,
+				'id_user' =>$id_user,
+		));?>
+			<p>Votre salle a bien été ajoutée !</p>
+	<?php 	
+	}
+	else {?>
+			<p>Erreur, le nom choisi est invalide !</p>
+	<?php 
+	}
+	?>
+	<div>
+		<a href='maMaison.php'><button id='param-button' onclick='window.close()'>Fermer</button></a>
 	</div>
-<?php 	
-}
-else {?>
-	<div class="container"><!--Creation de l'unique section de la page.-->
-		<p class='msg'>Erreur, le nom choisi est invalide !</p>
-	</div>
-<?php 
-}
-?>
+
+</div>
