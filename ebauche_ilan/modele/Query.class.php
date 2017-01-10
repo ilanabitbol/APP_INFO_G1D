@@ -85,11 +85,27 @@ class Query {
 	
 	//Fonction d'ajout d'une piece
 	public function newpiece_query($connexion_base, $nom_piece, $id_user){
+		
+		
 		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID)
                                                           VALUES(:nom_piece, :id_user)
                                                         ');
 		$req->execute(array(
 				'nom_piece' => $nom_piece,
+				'id_user' =>$id_user,
+		));
+	
+	}
+	
+	//Fonction d'ajout d'une piece
+	public function ajout_capteur($connexion_base, $adresse_mac, $id_user){
+	
+	
+		$req = $connexion_base->getDb()->prepare('INSERT INTO actionneurs_capteurs(adresse_mac, ID)
+                                                          VALUES(:adresse_mac, :id_user)
+                                                        ');
+		$req->execute(array(
+				'adresse_mac' => $adresse_mac,
 				'id_user' =>$id_user,
 		));
 	
