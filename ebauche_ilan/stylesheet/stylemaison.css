@@ -1,5 +1,10 @@
+body {
+  background-color : #336699;
+
+}
+
 p {
-  background: #336699;
+  background: #5175C0;
   border-radius: 6px;
   color: #fff;
   display: block;
@@ -7,19 +12,63 @@ p {
   padding: 24px 15px;
   text-align: center;
 }
+
+div {
+	margin-left: 7%;
+}
+
+.container {
+  width: 800px;
+  padding: 50px;
+  margin-top: 111px;
+  box-sizing: border-box;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+
+button{
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#salle{
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1.3em;
+  outline: none;
+}
+
+
+button:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
 header,
 section,
 aside,
 footer {
-  margin: 1.5% 1.5% 24px 1.5%;
+  margin: 5% 1% 10px 35px;
   
 }
 section {
   display: inline-block;
-  width: 30%;
+  width: 43%;
 }
 
-a.href='maMaison.php':hover{
-	box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
-}
 

@@ -1,4 +1,4 @@
-<?php include 'entete.php' ?>
+<?php include 'entete.php';?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
