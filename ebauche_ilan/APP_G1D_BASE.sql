@@ -1,25 +1,45 @@
-
-
---
--- Base de données :  `APP_G1D_BASE`
---
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `actionneurs_capteurs`
 --
 
 CREATE TABLE `actionneurs_capteurs` (
   `ID_ac_cap` int(11) NOT NULL,
   `adresse_mac` varchar(50) NOT NULL,
-  `etat` int(11) NOT NULL,
-  `batterie` int(11) NOT NULL,
-  `prix` int(11) NOT NULL,
-  `ID_commande` int(11) NOT NULL,
+  `etat` int(11) DEFAULT NULL,
+  `batterie` int(11) DEFAULT NULL,
+  `ID_commande` int(11) DEFAULT NULL,
   `ID_piece` int(11) NOT NULL,
   `ID_fonction` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `actionneurs_capteurs`
+--
+
+INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `adresse_mac`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
+(5, '3A:4F:45:5T', NULL, NULL, NULL, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `catalogue`
+--
+
+CREATE TABLE `catalogue` (
+  `ID` int(11) NOT NULL,
+  `nom_produit` varchar(111) NOT NULL,
+  `prix` int(11) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `image` varbinary(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `catalogue`
+--
+
+INSERT INTO `catalogue` (`ID`, `nom_produit`, `prix`, `stock`, `image`) VALUES
+(1, 'hydrometre', 40, 10, ''),
+(2, 'thermometre', 100, 38, ''),
+(3, 'pressiometre', 10, 380, '');
 
 -- --------------------------------------------------------
 
@@ -63,6 +83,14 @@ CREATE TABLE `piece` (
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `piece`
+--
+
+INSERT INTO `piece` (`ID_piece`, `nom_piece`, `ID`) VALUES
+(1, 'chambre', 13),
+(2, 'salon', 13);
+
 -- --------------------------------------------------------
 
 --
@@ -85,6 +113,15 @@ CREATE TABLE `type_fonction` (
   `ID_fonction` int(11) NOT NULL,
   `nom_fonction` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `type_fonction`
+--
+
+INSERT INTO `type_fonction` (`ID_fonction`, `nom_fonction`) VALUES
+(1, 'Température'),
+(2, 'Humidité'),
+(3, 'Luminosité');
 
 -- --------------------------------------------------------
 
@@ -114,7 +151,8 @@ INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`,
 (9, 'joseph', 'staline', 'jstaline@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'Russie', 'Moscou', 93000, 'rue de stalingrad'),
 (10, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '4dc7c9ec434ed06502767136789763ec11d2c4b7', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
 (11, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
-(12, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc');
+(12, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
+(13, 'POILLEUX', 'Corentin', 'c.poilleux@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 9876, 'France', 'Les Pavillons-sous-Bois', 93320, '25 Allée Jean Baptiste Clément');
 
 --
 -- Index pour les tables exportées
@@ -128,6 +166,12 @@ ALTER TABLE `actionneurs_capteurs`
   ADD KEY `ID_type` (`ID_fonction`),
   ADD KEY `ID_piece` (`ID_piece`),
   ADD KEY `ID_commande` (`ID_commande`);
+
+--
+-- Index pour la table `catalogue`
+--
+ALTER TABLE `catalogue`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Index pour la table `commande`
@@ -178,7 +222,12 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
-  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pour la table `catalogue`
+--
+ALTER TABLE `catalogue`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `commande`
 --
@@ -193,7 +242,7 @@ ALTER TABLE `donnees`
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `piece_type`
 --
@@ -203,12 +252,12 @@ ALTER TABLE `piece_type`
 -- AUTO_INCREMENT pour la table `type_fonction`
 --
 ALTER TABLE `type_fonction`
-  MODIFY `ID_fonction` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_fonction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Contraintes pour les tables exportées
 --
