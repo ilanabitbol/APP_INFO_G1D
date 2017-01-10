@@ -46,13 +46,15 @@ form {
 }
 #textarea{
 	border: 2px solid black;	
+	width:300px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: calc(100% - 40px - 20px);
-  margin-left: 110px;
+  margin-left: 10%;
+  margin-bottom: 5%;
   line-height: 30px;
   padding-left: 20px;
   outline: none;
