@@ -13,7 +13,7 @@
 	  	<form id="signin-form" method="post" action="../controleur/ajout_piece_controleur.php">
 
 	 		<input type="text" placeholder="nom de la piece" name="nom_piece"/>
-	 		<button type="submit" name="nom_piece" class="submit-button">ajouter</button>
+	 		<button type="submit" name="bouton" class="submit-button">ajouter</button>
 
 	 	</form>
 	</div>
