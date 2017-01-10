@@ -11,7 +11,7 @@
 	<div class="container">
 	
 		<div>
-		  <button id="param-button">Profil</button>
+		  <button id="param-button" onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Profil</button>
 		</div>
 	
 		<div>

@@ -5,12 +5,12 @@ body {
 .container {
   width: 400px;
   padding: 50px;
-  margin-top: 111px;
+  margin-top: 1px;
   box-sizing: border-box;
   background-color: white;
   margin: auto;
   border-radius: 5px;
-  box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
 }
 
 p {
@@ -22,10 +22,10 @@ p {
 }
 
 .logo {
-   margin: auto;
+   margin-left: 110px;
 }
 #contact-button{
-  margin: auto;
+  margin-left: 115px;
   width: 300px
   height: 40px;
   border: none;
@@ -53,7 +53,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: calc(100% - 40px - 20px);
-  margin: auto;
+  margin-left: 110px;
   line-height: 30px;
   padding-left: 20px;
   outline: none;

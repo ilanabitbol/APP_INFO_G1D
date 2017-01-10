@@ -16,6 +16,11 @@
 		// lecture dans la table catalogue
 		$reponse= $connexion_base->getDb()->query( "SELECT xxxxxxx FROM piece WHERE ID='{$_SESSION['ID']}' ");?>*/
  <header>
+ 			
+ 			<section>
+  				<p><a href = "maMaison.php"><?php echo 'Retour';?></a></p>
+  			</section>
+  			
   			<section>
   				 <p>Humidité <br> 32% <br> </p>
  			 </section>

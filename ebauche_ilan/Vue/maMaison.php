@@ -20,6 +20,7 @@
 		
 		<p><a onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">ajouter une salle</a></p>
 		<header>
+	
 		<?php while($donnes = $reponse->fetch()){?>
 		
 			<section>
