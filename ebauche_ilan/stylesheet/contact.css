@@ -14,10 +14,8 @@ body {
 }
 
 p {
-  font-family: 'Verdana', Sans-sérif;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-weight: bold;
+  font-family: verdana;
+  color: #5175C0;
   text-align: center;
 }
 

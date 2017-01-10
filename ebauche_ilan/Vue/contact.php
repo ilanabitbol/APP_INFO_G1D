@@ -14,7 +14,7 @@
 		<img  class="logo" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->
 		<div>
-		  <p>Contact</p>
+		  <p class='contact'>Contact</p>
 		</div>
 		<!--Ajout des formulaires.-->
 		<div>
