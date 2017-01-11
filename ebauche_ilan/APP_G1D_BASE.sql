@@ -1,8 +1,16 @@
+--
+-- Base de données :  `APP_G1D_BASE`
+--
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `actionneurs_capteurs`
 --
 
 CREATE TABLE `actionneurs_capteurs` (
   `ID_ac_cap` int(11) NOT NULL,
+  `nom_capteur` varchar(50) NOT NULL,
   `adresse_mac` varchar(50) NOT NULL,
   `etat` int(11) DEFAULT NULL,
   `batterie` int(11) DEFAULT NULL,
@@ -15,8 +23,14 @@ CREATE TABLE `actionneurs_capteurs` (
 -- Contenu de la table `actionneurs_capteurs`
 --
 
-INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `adresse_mac`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
-(5, '3A:4F:45:5T', NULL, NULL, NULL, 1, 1);
+INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `nom_capteur`, `adresse_mac`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
+(6, '', '3A:4F:45:5T', NULL, NULL, NULL, 7, 3),
+(7, '', '3A:4F:45:5T', NULL, NULL, NULL, 7, 3),
+(8, '', '33', NULL, NULL, NULL, 6, 2),
+(9, '', '33', NULL, NULL, NULL, 6, 3),
+(10, 'thermometre', '33:44:44', NULL, NULL, NULL, 6, 2),
+(11, 'hydrometre', '33:44:55', NULL, NULL, NULL, 6, 3),
+(12, 'thermometre', '33334', NULL, NULL, NULL, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +103,11 @@ CREATE TABLE `piece` (
 
 INSERT INTO `piece` (`ID_piece`, `nom_piece`, `ID`) VALUES
 (1, 'chambre', 13),
-(2, 'salon', 13);
+(2, 'salon', 13),
+(5, 'cuisine', 8),
+(6, 'salon', 8),
+(7, 'toilette', 8),
+(8, 'douche', 8);
 
 -- --------------------------------------------------------
 
@@ -149,9 +167,6 @@ CREATE TABLE `utilisateur` (
 INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`, `pays`, `ville`, `code_postal`, `adresse`) VALUES
 (8, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 4, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
 (9, 'joseph', 'staline', 'jstaline@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'Russie', 'Moscou', 93000, 'rue de stalingrad'),
-(10, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '4dc7c9ec434ed06502767136789763ec11d2c4b7', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
-(11, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
-(12, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
 (13, 'POILLEUX', 'Corentin', 'c.poilleux@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 9876, 'France', 'Les Pavillons-sous-Bois', 93320, '25 Allée Jean Baptiste Clément');
 
 --
@@ -222,7 +237,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
-  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT pour la table `catalogue`
 --
@@ -242,7 +257,7 @@ ALTER TABLE `donnees`
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `piece_type`
 --
