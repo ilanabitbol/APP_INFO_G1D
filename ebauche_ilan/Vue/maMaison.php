@@ -14,7 +14,6 @@
   	<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
-		// lecture dans la table catalogue
 		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
 	?>
 	<div class='container'>		

@@ -1,4 +1,9 @@
-<?php include 'entete.php';?>
+<?php include 'entete.php';
+
+		include_once ('../modele/Connexion_Base.class.php');
+		$connexion_base= new Connexion_Base();
+		$reponse= $connexion_base->getDb()->query( "SELECT * FROM actionneurs_capteurs WHERE ID_piece='{$_SESSION['ID_piece_unique']}' ");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,21 +15,22 @@
  </head>
  
  <body>
- 		<?php
-		include_once ('../modele/Connexion_Base.class.php');
-		$connexion_base= new Connexion_Base();
-		// lecture dans la table catalogue
-		$reponse= $connexion_base->getDb()->query( "SELECT xxxxxxx FROM piece WHERE ID='{$_SESSION['ID']}' ");?>
+ 		
  <header>
  	<div class="container">
  			
  			<section>
   				<a href = "maMaison.php"><button id='salle'><?php echo 'Retour';?></button></a>
   			</section>
-  			
-  			<section>
-  				 <p>Humidité <br> 32% <br> </p>
- 			 </section>
+  			<?php while($donnes = $reponse->fetch()){?>
+		
+			<section>
+			 	<p> <?php echo $donnes['nom_capteur'];?> <br> <?php echo $donnes['adresse_mac'];?> <br> Température : 18°</p>
+  			</section>
+  		
+  			<?php }
+  			?>
+
   
 			  <section>
 			   <p> Température <br> 18° <br> </p>

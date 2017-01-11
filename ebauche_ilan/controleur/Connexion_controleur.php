@@ -22,6 +22,13 @@ session_start();
 			$_SESSION['ID']=$resultat['ID'];
 			$_SESSION['prenom']=$resultat['prenom'];
 			$_SESSION['email']=$email;
+			
+			$response=$connexion_base->getDb()->query("SELECT ID_piece FROM piece WHERE ID='{$_SESSION['ID']}'");
+			while ($resultat=$response->fetch()){
+				$_SESSION['ID_piece'][]=$resultat['ID_piece'];
+			}
+			
+				
 			header("Location: ../Vue/maMaison.php");
 		}
 ?>

@@ -12,7 +12,10 @@
 	  	<form id="signin-form" method="post" action="../controleur/ajout_capteur_controleur.php">
 
 	 		<input type="text" placeholder="adresse mac" name="adresse_mac"/>
-	 		<button type="submit" name="boutton" class="submit-button">ajouter</button>
+	 		<input type="text" placeholder="nom capteur" name="nom_capteur"/>
+	 		<input type="text" placeholder="nom piece" name="nom_piece"/>
+	 		<input type="text" placeholder="fonction du capteur" name="fonction"/>
+	 		<button type="submit" name="boutton" class="submit-button">Ajouter</button>
 
 	 	</form>
 	</div>

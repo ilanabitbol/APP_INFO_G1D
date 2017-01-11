@@ -1,4 +1,5 @@
-
+<?php session_start();
+	print_r($_SESSION['ID_piece']);?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
