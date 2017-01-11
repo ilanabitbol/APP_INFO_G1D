@@ -21,7 +21,9 @@
 						  echo 'Son prix est de : '.$donnes['prix'].' euros TTC'.'<br />';
 						  echo 'Il en reste '.$donnes['stock'].'<br />'; 
 					?>
-				<button href="../Vue/about.php" class="buttons">acheter</button>
+				<form action="../Vue/paiement.php">
+    				<input type="submit" value="Acheter" class="buttons">
+				</form>
 					
 				</li>
 					
