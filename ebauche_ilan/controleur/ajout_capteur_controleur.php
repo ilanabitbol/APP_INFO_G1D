@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dosmoz form</title>
+<link rel="stylesheet" type="text/css" href="../stylesheet/contact.css">
+
+</head>
+<body>
+<div class="container"><!--Creation de l'unique section de la page.-->
+
 <?php
 	session_start(); 
 	include_once ('../modele/Connexion_Base.class.php');
@@ -23,3 +34,11 @@
 		));
 	
 ?>
+
+<p>Votre capteur a bien été ajoutée !</p>
+	<div>
+		<a href='maMaison.php'><button id='param-button' onclick='window.close()'>Fermer</button></a>
+	</div>
+</div>
+</body>
+</html>

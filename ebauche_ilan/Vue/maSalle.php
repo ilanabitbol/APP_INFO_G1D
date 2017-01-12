@@ -44,7 +44,7 @@
 			  <p> Mouvement <br> Non <br> </p>
 			 </section>
 			 <section>
-			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
+			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 550px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
 			 </section>
 	</div>
  </header>
