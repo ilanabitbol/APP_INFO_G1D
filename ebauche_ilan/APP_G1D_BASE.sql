@@ -12,6 +12,7 @@ CREATE TABLE `actionneurs_capteurs` (
   `ID_ac_cap` int(11) NOT NULL,
   `nom_capteur` varchar(50) NOT NULL,
   `adresse_mac` varchar(50) NOT NULL,
+  `donnees` varchar(50) NOT NULL,
   `etat` int(11) DEFAULT NULL,
   `batterie` int(11) DEFAULT NULL,
   `ID_commande` int(11) DEFAULT NULL,
@@ -23,14 +24,9 @@ CREATE TABLE `actionneurs_capteurs` (
 -- Contenu de la table `actionneurs_capteurs`
 --
 
-INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `nom_capteur`, `adresse_mac`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
-(6, '', '3A:4F:45:5T', NULL, NULL, NULL, 7, 3),
-(7, '', '3A:4F:45:5T', NULL, NULL, NULL, 7, 3),
-(8, '', '33', NULL, NULL, NULL, 6, 2),
-(9, '', '33', NULL, NULL, NULL, 6, 3),
-(10, 'thermometre', '33:44:44', NULL, NULL, NULL, 6, 2),
-(11, 'hydrometre', '33:44:55', NULL, NULL, NULL, 6, 3),
-(12, 'thermometre', '33334', NULL, NULL, NULL, 6, 1);
+INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `nom_capteur`, `adresse_mac`, `donnees`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
+(15, 'thermometre', '55:55:66', '1000', NULL, NULL, NULL, 10, 1),
+(16, 'hydrometre', '44:66:99', '20', NULL, NULL, NULL, 10, 2);
 
 -- --------------------------------------------------------
 
@@ -85,6 +81,14 @@ CREATE TABLE `donnees` (
   `ID_ac_cap` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `donnees`
+--
+
+INSERT INTO `donnees` (`ID_donnees`, `valeur`, `date_donnees`, `ID_ac_cap`) VALUES
+(1, 55, '2017-01-12', 11),
+(3, 330, '2017-01-12', 10);
+
 -- --------------------------------------------------------
 
 --
@@ -102,12 +106,7 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`ID_piece`, `nom_piece`, `ID`) VALUES
-(1, 'chambre', 13),
-(2, 'salon', 13),
-(5, 'cuisine', 8),
-(6, 'salon', 8),
-(7, 'toilette', 8),
-(8, 'douche', 8);
+(10, 'Salon', 8);
 
 -- --------------------------------------------------------
 
@@ -237,7 +236,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
-  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pour la table `catalogue`
 --
@@ -252,12 +251,12 @@ ALTER TABLE `commande`
 -- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
-  MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `piece_type`
 --
