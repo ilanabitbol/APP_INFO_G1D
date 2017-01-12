@@ -25,24 +25,25 @@
   			<?php while($donnes = $reponse->fetch()){?>
 		
 			<section>
-			 	<p> <?php echo $donnes['nom_capteur'];?> <br> <?php echo $donnes['adresse_mac'];?> <br> Température : 18°</p>
+			 	<p> <?php echo $donnes['nom_capteur'];?> <br> <?php echo $donnes['adresse_mac'];?> <br> 
+               		<?php switch ($donnes['ID_fonction']){
+               			case '1':
+               			echo $donnes['donnees'] . ' °';
+               			break;
+               			case '2':
+               			echo $donnes['donnees'] . ' %';
+               			break;
+               			case '3':
+               			echo $donnes['donnees'] . ' Lux';
+               			break;
+               		}
+               		?>
+               			
+               </p>
   			</section>
   		
   			<?php }
   			?>
-
-  
-			  <section>
-			   <p> Température <br> 18° <br> </p>
-			  </section>
-			    
-			 <section>
-			  <p> Luminosité <br> 10Lux <br> </p>
-			 </section>
-			
-			 <section>
-			  <p> Mouvement <br> Non <br> </p>
-			 </section>
 			 <section>
 			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
 			 </section>
