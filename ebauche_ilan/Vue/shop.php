@@ -17,30 +17,34 @@
 		<div id="container">
 			<ul class="list">
 		        <li><?php 
-		        		  echo 'Voici le produit : '.$donnes['nom_produit'].'<br />';
-						  echo 'Son prix est de : '.$donnes['prix'].' euros TTC'.'<br />';
-						  echo 'Il en reste '.$donnes['stock'].'<br />'; 
-					?>
-				
-				<?php 
 					switch ($donnes['nom_produit'])
 					{
 						case 'hydrometre':?>
-				  		<img alt="hydrometre" src="../images/hydrometre.jpg"/>
+				  		<img alt="hydrometre" src="../images/rain.png"/>
 				  		<?php break;?>
 				<?php 
 						case 'thermometre':?>
-						<img alt="thermometre" src="../images/thermometre.jpg"/>
+						<img alt="thermometre" src="../images/temperature.png"/>
 						<?php break;?>
 				<?php 
 						case 'pressiometre':?>
-						<img alt="pressiometre" src="../images/pressiometre.jpg">
+						<img alt="pressiometre" src="../images/meter.png">
 						<?php break;?>
 						
 				<?php }?>
 				<form action="../Vue/paiement.php">
     				<input type="submit" value="Acheter" class="buttons">
 				</form>
+		        
+		        
+		        
+		        <?php 
+		        		  echo 'Produit : '.$donnes['nom_produit'].'<br />';
+						  echo 'Prix: '.$donnes['prix'].' euros TTC'.'<br />';
+						  echo 'Stock'.$donnes['stock'].'<br />'; 
+					?>
+				
+				
 					
 				</li>
 					

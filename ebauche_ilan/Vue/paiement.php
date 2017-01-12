@@ -23,7 +23,7 @@
 		<div class="form-group">
 				<label for="PaymentAmount">Montant</label>
 			<div class="amount-placeholder">
-				<span>$</span>
+				
 				<span>500.00</span>
 			</div>
 		</div>
@@ -51,15 +51,15 @@
 		</div>
 		</div>
 		<div class="zip-code-group form-group">
-			<label for="ZIPCode">ZIP/Postal code</label>
+			
 			<div class="input-container">
-				<input id="ZIPCode" class="form-control" type="text" maxlength="10"></input>
+				
 				<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
 			</div>
 		</div>
 		<button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
 			<span class="submit-button-lock"></span>
-			<span class="align-middle">Pay $500.00</span>
+			<span class="align-middle">payer</span>
 		</button>
 		</form>
 	</div>
