@@ -21,6 +21,23 @@
 						  echo 'Son prix est de : '.$donnes['prix'].' euros TTC'.'<br />';
 						  echo 'Il en reste '.$donnes['stock'].'<br />'; 
 					?>
+				
+				<?php 
+					switch ($donnes['nom_produit'])
+					{
+						case 'hydrometre':?>
+				  		<img alt="hydrometre" src="../images/hydrometre.jpg"/>
+				  		<?php break;?>
+				<?php 
+						case 'thermometre':?>
+						<img alt="thermometre" src="../images/thermometre.jpg"/>
+						<?php break;?>
+				<?php 
+						case 'pressiometre':?>
+						<img alt="pressiometre" src="../images/pressiometre.jpg">
+						<?php break;?>
+						
+				<?php }?>
 				<form action="../Vue/paiement.php">
     				<input type="submit" value="Acheter" class="buttons">
 				</form>
@@ -29,7 +46,8 @@
 					
     		</ul>
 		</div>
-		<?php }
+		<?php 
+		}
 		$reponse->closeCursor(); // Termine le traitement de la requête
 ?>
 	  
