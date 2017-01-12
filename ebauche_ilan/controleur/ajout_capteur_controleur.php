@@ -24,7 +24,6 @@
 	$resultat=$response->fetch();
 	$id_piece = $resultat['ID_piece'];
 	$_SESSION['ID_piece_unique']=$id_piece;
-	echo $id_piece;
 	$req = $connexion_base->getDb()->prepare('INSERT INTO actionneurs_capteurs(nom_capteur,adresse_mac, ID_piece, ID_fonction) VALUES(:nom_capteur, :adresse_mac, :ID_piece, :ID_fonction) ');
 		$req->execute(array(
 				'nom_capteur' => $nom_capteur,

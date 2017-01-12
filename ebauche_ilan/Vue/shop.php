@@ -40,8 +40,8 @@
 		        
 		        <?php 
 		        		  echo 'Produit : '.$donnes['nom_produit'].'<br />';
-						  echo 'Prix: '.$donnes['prix'].' euros TTC'.'<br />';
-						  echo 'Stock'.$donnes['stock'].'<br />'; 
+						  echo 'Prix : '.$donnes['prix'].' euros TTC'.'<br />';
+						  echo 'Stock : '.$donnes['stock'].'<br />'; 
 					?>
 				
 				
