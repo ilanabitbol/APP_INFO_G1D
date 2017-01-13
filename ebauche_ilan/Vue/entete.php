@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,13 +11,14 @@
 <body>
 		<nav id="nav-2">
 		  <?php 
-		  	if ($_SESSION['prenom']){?>
+		  	if (isset($_SESSION['prenom'])){?>
+		  		<a class='link-2' href='parametres.php'><img  class="logo" src=../images/settings.png alt="Parametres"></a>
 		  		<a class="link-2">
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
 		  		</a>
 		  <?php } ?>
 		  <?php 
-		  	if ($_SESSION['prenom']){?>
+		  	if (isset($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="maMaison.php">Maison</a>
 		  <?php } ?>
 		  <a class="link-2" href="shop.php">Shop</a>		  
@@ -26,14 +26,13 @@
 		  
 		  <a class="link-2" href="about.php">About</a>
 		  <a class="link-2" href="contact.php">Contact</a>
-		  <a class="link-2" href="shop.php">Shop</a>
 		  <?php 
 		  	if (empty($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
 		  <?php } ?>
 		  <?php 
-		  	if ($_SESSION['prenom']){?>
-		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Deconnexion</a>
+		  	if (isset($_SESSION['prenom'])){?>
+		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Déconnexion</a>
 		  <?php } ?>
 		  
 		</nav>

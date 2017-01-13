@@ -1,48 +1,46 @@
+<?php include 'entete.php';?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../stylesheet/maMaison.css">
-		<title>dosmoz</title>
-	</head>
-<body>
-	<?php include 'entete.php' ?>
-	
-	<section>
-		<div id="icon-wrapper">
-			<a onclick="window.open('ajoutSalle.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">
-			<div class="icons">
-				<div class="icon-slide-container">
-					<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/add-beach.jpg">
-				</div>
-			</div>
-			</a>
-		
-			<a href="kite-map.php">
-			<div class="icons2">
-				<div class="icon-slide-container">
-					<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-map.jpg">
-				</div>
-			</div>
-			</a>
-		
-			<a href="location.php">
-			<div class="icons3">
-				<div class="icon-slide-container">
-				<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-all.jpg">
-				</div>
-			</div>
-			</a>
-		
-			<a href="feedback.html">
-			<div class="icons4">
-				<div class="icon-slide-container">
-				<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/feedback.jpg">
-				</div>
-			</div>
-			</a>
-		</div>
-	</section>
-</body>
+<head>
+  <meta charset="UTF-8">
+  <title>dosmoz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+   <link rel="stylesheet" type ="text/css" href="../stylesheet/stylemaison.css">
+ </head>
+
+<body>
+  	
+  	<?php
+		include_once ('../modele/Connexion_Base.class.php');
+		$connexion_base= new Connexion_Base();
+		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece, ID_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
+	?>
+	<div class='container'>		
+		<header>
+			<button onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Ajouter une piece</button>
+			<button onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
+		</header>
+		
+<!-- 		<header> -->
+		
+	
+		<?php while($donnes = $reponse->fetch()){?>
+		
+			<section>	
+  			<form action="maSalle.php" method="POST">
+  			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
+  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="buttons" />' ?>
+  			</form>
+  			
+  			<?php $_SESSION['nom_piece']=$donnes['nom_piece']?>
+  			</section>
+  		
+  		<?php }
+  		?>
+<!--   		</header> -->
+  	</div>
+  		
+</body>
+>>>>>>> refs/heads/integration_corentin
 </html>

@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php	
 		include_once ('../modele/Connexion_Base.class.php');
 		include_once ('../modele/Query.class.php');
 		$connexion_base= new Connexion_Base();
@@ -14,11 +17,18 @@
 		{
 			header("Location: ../Vue/erreurConnexion.php");
 		}else{
-			session_start();
-			$response=$connexion_base->getDb()->query("SELECT prenom FROM utilisateur WHERE email='$email'");
-			$prenom=$response->fetch();
-			$_SESSION['prenom']=$prenom['prenom'];
+			$response=$connexion_base->getDb()->query("SELECT prenom, ID FROM utilisateur WHERE email='$email'");
+			$resultat=$response->fetch();
+			$_SESSION['ID']=$resultat['ID'];
+			$_SESSION['prenom']=$resultat['prenom'];
 			$_SESSION['email']=$email;
+			
+			$response=$connexion_base->getDb()->query("SELECT ID_piece FROM piece WHERE ID='{$_SESSION['ID']}'");
+			while ($resultat=$response->fetch()){
+				$_SESSION['ID_piece'][]=$resultat['ID_piece'];
+			}
+			
+				
 			header("Location: ../Vue/maMaison.php");
 		}
 ?>

@@ -1,0 +1,112 @@
+body {
+  background-color : #336699;
+}
+
+p {
+  background: #5175C0;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  font-family: verdana;
+  text-align: center;
+}
+
+div {
+	margin-left: 7%;
+}
+
+.container {
+  width: 800px;
+  padding: 50px;
+  margin-top: 111px;
+  box-sizing: border-box;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+
+button{
+  margin: auto;
+  width: 250px;
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#container .buttons {
+	position: relative;
+	margin-left: 50px;
+	margin-top: 0.0003px;
+	
+}
+
+input[type=submit] {
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+input[type=submit]:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+#salle{
+  position: relative;
+  margin: auto;
+  width: 250px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1.3em;
+  outline: none;
+}
+
+#boutons_salle{
+  position: relative;
+  margin: center;
+  width: 300px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+header{
+  position: relative;
+  margin-left: 14%;
+}
+
+section,
+aside,
+footer {
+  margin: 5% 1% 10px 35px;
+  
+}
+
+section {
+  display: inline-block;
+  width: 43%;
+}
+
+

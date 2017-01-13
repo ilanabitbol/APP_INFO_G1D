@@ -1,3 +1,4 @@
+<?php include 'entete.php' ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,9 +6,8 @@
 	<title>Dosmoz form</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/about.css">
 </head>
-
 <body>
-		<?php include 'entete.php'?>
+	
 		<div class="container">
 			  <div class="circle embossed">
 			    <p class="embossedtext">Dosmoz</p>
@@ -15,7 +15,7 @@
 			
 			  <div class="content embossed">
 			    <p class="embossedtext">
-			    Dosmoz est un projet realise par une des equipes de Mohai a la demande de DomIsep. Une equipe de 6 grands apprentis ingenieurs a coucu ce produit.
+			    Dosmoz est un projet r&Eacutealis&Eacute par une des &Eacutequipes de Mohai &Agrave la demande de DomIsep. Une &Eacutequipe de 6 grands apprentis ing&Eacutenieurs a con&ccedilu ce produit.
 			  </div>
 </div>
 		

@@ -1,33 +1,27 @@
 body {
   background-color : #336699;
-
 }
 
 .container {
   width: 400px;
   padding: 50px;
-  margin-top: 111px;
+  margin-top: 1px;
   box-sizing: border-box;
   background-color: white;
   margin: auto;
   border-radius: 5px;
-  box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  font-family: verdana;
+  color: #5175C0;
+  text-align: center;
 }
 
 .logo {
-   margin-left: 60px;
+   margin-left: 55px;
 }
-#contact-button{
-  margin-left:115px;
-  height: 40px;
-  border: none;
-  box-sizing: border-box;
-  background-color: white;
-  border-bottom: 3px solid white;
-  font-size: 1.3em;
-  margin-bottom: 10px;
-}
-
 
 
 form {
@@ -40,14 +34,16 @@ form {
   display: block;
 }
 #textarea{
-	border: 2px solid black;
-	
+	border: 2px solid black;	
+	width:300px;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: calc(100% - 40px - 20px);
-  margin: 20px;
+  margin-left: 10%;
+  margin-bottom: 5%;
   line-height: 30px;
   padding-left: 20px;
   outline: none;
@@ -62,21 +58,30 @@ input[type="password"]:focus {
   border: 1px solid rgba(138, 123, 179, 1);
 }
 
-
-
 label {
   line-height: 18px;
   padding-left: 5px;
 }
 
+#param-button{
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 10px;
+}
+
 .submit-button {
   width: 120px;
   height: 40px;
-  margin-left: -60px;
+  margin-left: 30%;
   margin-top: 40px;
   position: relative;
-  top: 50%;
-  left: 50%;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -87,4 +92,8 @@ label {
 button:hover {
   color: rgba(138, 123, 179, 0.8);
   border: 1px solid rgba(138, 123, 179, 0.8);
+}
+
+#param-button:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
 }
