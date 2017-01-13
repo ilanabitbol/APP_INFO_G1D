@@ -14,26 +14,31 @@
   	<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
-		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
+		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece, ID_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
 	?>
 	<div class='container'>		
-		<div>
-			<button onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Ajouter une piece</button>
-			
-			<button onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
-		</div>
-		
 		<header>
+			<button onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Ajouter une piece</button>
+			<button onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
+		</header>
+		
+<!-- 		<header> -->
+		
 	
 		<?php while($donnes = $reponse->fetch()){?>
 		
-			<section>
-  			<a href = "maSalle.php"><button id="salle"><?php echo $donnes['nom_piece'];?></button></a>
+			<section>	
+  			<form action="maSalle.php" method="POST">
+  			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
+  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="buttons" />' ?>
+  			</form>
+  			
+  			<?php $_SESSION['nom_piece']=$donnes['nom_piece']?>
   			</section>
   		
   		<?php }
   		?>
-  		</header>
+<!--   		</header> -->
   	</div>
   		
 </body>

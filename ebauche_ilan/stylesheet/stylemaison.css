@@ -30,7 +30,7 @@ div {
 
 button{
   margin: auto;
-  width: 300px;
+  width: 250px;
   height: 60px;
   border: none;
   box-sizing: border-box;
@@ -41,10 +41,32 @@ button{
   margin-bottom: 10px;
 }
 
+#container .buttons {
+	position: relative;
+	margin-left: 50px;
+	margin-top: 0.0003px;
+	
+}
+
+input[type=submit] {
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+input[type=submit]:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
 #salle{
   position: relative;
   margin: auto;
-  width: 300px;
+  width: 250px;
   height: 60px;
   border: 1px solid black;
   border-radius: 5px;
@@ -54,12 +76,27 @@ button{
   outline: none;
 }
 
+#boutons_salle{
+  position: relative;
+  margin: center;
+  width: 300px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
 
 button:hover {
   box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
 }
 
-header,
+header{
+  position: relative;
+  margin-left: 14%;
+}
+
 section,
 aside,
 footer {
