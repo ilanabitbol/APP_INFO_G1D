@@ -42,25 +42,30 @@ body{
   border-radius: 5px;
   font-size: 0.8em;
   font-family: verdana;
-  color: black;
+  color: white;
   margin-bottom: 10px;
 }
 
 #image{
+  display: inline-block;
+  margin-top: 40px;
+  width: 43%;
   position: relative;
   margin-left: 50px;
+/*   margin-left: 50px; */
 }
 
 #infos{
-  margin-left: 200px;
-  width: 200px;
+  display: inline-block;
+  width: 43%;
   border: none;
   box-sizing: border-box;
   background-color: #5175C0;
   border-radius: 5px;
   font-size: 0.8em;
   font-family: verdana;
-  color: black;
+  color: white;
+  
 }
 
 input[type=submit] {
@@ -74,6 +79,11 @@ input[type=submit] {
   font-size: 1.3em;
   color: #5175C0;
   margin-bottom: 10px;
+}
+
+section {
+  display: inline-block;
+  width: 43%;
 }
 
 input[type=submit]:hover {
