@@ -34,7 +34,7 @@ $nom_piece_supprimer= isset($_POST['nom_piece_supprimer']) ? $_POST['nom_piece_s
 	if ($nom_piece_supprimer != NULL){
 		$req = $connexion_base->getDb()->query("DELETE FROM piece
 		WHERE nom_piece='$nom_piece_supprimer' AND ID='{$_SESSION['ID']}'");?>
-		<p> Votre piece est supprimee </p>
+		<p> Votre pi&egravece a bien été supprimée !</p>
 	<?php }?>
 
 
