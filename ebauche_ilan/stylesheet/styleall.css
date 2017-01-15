@@ -243,25 +243,36 @@ nav {
 	margin: center;
 }
 /*mise en place du footer*/
-/*#footer ul{
-	list-style-type: none;
-    margin: 0;
+#footer {
+	margin: auto;
+    width: 90%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
+}
+#footer ul #nav1{
+	/*list-style: none;*/
+    margin: auto;
     padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+    overflow: auto;
+    background-color: #5175C0;
+    display:inline;
 }
 #footer li{
-	float:left;
+	/*float:left;*/
+	display:inline;
+	list-style: none;
 }
 #footer li a{
-	display: block;
+	display:inline-block;
     color: white;
+    margin: 0 30px;
     text-align: center;
-    padding: 16px;
+   /* padding: 16px;*/
     text-decoration: none;
 }
 #footer li a:hover {
-    background-color: #111111;
-}*/
+    background-color: #5175C0;
+}
 /*dashboard.css*/
 /*mise en place d'un nouveau dashboard?? code trouver sur internet c'est sur !!! a modofier*/

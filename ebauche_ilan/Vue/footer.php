@@ -1,34 +1,28 @@
 <footer class="footer" style="text-align:center;">
 <nav id="nav-2">
   <div id="footer">
-  	<div class="row">
-  		<div class="col1">
+  		<div class="col1" align="left">
   		<h2> Nous contacter</h2>
-  		<ul>
-            <li><a href="adresse http du faq" class="footerlist_link">FAQ</a></li>
-     		<li><a href="envoi_mail.php" class="footerlist_link">Webdesigner</a></li>
-      		<li><a href="contact.php" class="footerlist_link">Service après vente</a></li>
-      	</ul>
-  		</div>
-  		<div class="col2">
-  		<!-- Mettre les bons liens,href!! Les liens seront à remplir par domisep -->
+  		<ul id="nav1"><!-- permet de supprimer les espaces blanc que l'on pourrait appercevoir
+  		 --><li><a href="adresse http du faq" class="footerlist_link">FAQ</a></li><!--
+     	 --><li><a href="envoi_mail.php" class="footerlist_link">Webdesigner</a></li><!--
+     	 --><li><a href="contact.php" class="footerlist_link">Service après vente</a></li>
+  		</ul>
+  		<!-- Mettre les bons liens,href!! Les liens seront Ã  remplir par domisep -->
   		<h2> L'entreprise</h2>
-  		<ul>
+  		<ul id="nav2">
      		<li><a href="" class="footerlist_link">Recrutement</a></li>
       		<li><a href="descritpion de l'entreprise domisep" class="footerlist_link">Société</a></li>
       		<li><a href="" class="footerlist_link">Mentions légales</a></li>
       	</ul>
-  		</div>
-  		<div class="col3">
   		<!-- A voir avec le client quels produits decrire pour attirer le client ... tous les produits ne sont pas a decrire -->
   		<h2> Nos produits</h2>
-  		<ul>
+  		<ul id="nav3">
             <li><a href="description du produit 1" class="footerlist_link">Produit 1</a></li>
      		<li><a href="description du produit 2" class="footerlist_link">Produit 2</a></li>
       		<li><a href="description du produit 3" class="footerlist_link">Produit 3</a></li>
       		<li><a href="description du produit 4" class="footerlist_link">Produit 4</a></li>
       	</ul>
-  		</div>
   	</div>
     <!-- Liens vers le site avec langue europeenne !! traduction du site a faire par domisep -->
     <div class="ligne_bas">
@@ -37,8 +31,8 @@
 				   <li><a href="adresse http du site en fr" class="footerlist_link">Français</a></li> 
 				   <li><a href="adresse http du site en de" class="footerlist_link">Deutsch</a></li> 
 				   <li><a href="adresse http du site en en" class="footerlist_link">English</a></li> 
-				   <li><a href="adresse http du site en russe" class="footerlist_link">Pусский</a></li>
-				   <li><a href="adresse http du site en es" class="footerlist_link">Español</a></li>
+				   <li><a href="adresse http du site en russe" class="footerlist_link">PÑƒÑ�Ñ�ÐºÐ¸Ð¹</a></li>
+				   <li><a href="adresse http du site en es" class="footerlist_link">EspaÃ±ol</a></li>
 				   <li><a href="adresse http du site en it" class="footerlist_link">Italiano</a></li>
 			  	</ul>
      </div>   
