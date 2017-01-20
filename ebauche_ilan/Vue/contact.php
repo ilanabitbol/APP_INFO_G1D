@@ -11,7 +11,7 @@
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		
-		<img  class="logo" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
+		<img  class="logo" src=../images/logo_dosmoz_contact.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->
 		<div>
 		  <p class='contact'>CONTACT</p>
