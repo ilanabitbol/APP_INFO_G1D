@@ -17,23 +17,20 @@
 		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
 	?>
 	<div class='container'>		
-		<div>
+		<div class='command_buttons'>
 			<button onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Ajouter une piece</button>
 			
 			<button onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
 		</div>
-		
-		<header>
-	
+		<div class='command_buttons'>
 		<?php while($donnes = $reponse->fetch()){?>
 		
 			<section>
   			<a href = "maSalle.php"><button id="salle"><?php echo $donnes['nom_piece'];?></button></a>
   			</section>
-  		
   		<?php }
   		?>
-  		</header>
+  		</div>
   	</div>
   		
 </body>

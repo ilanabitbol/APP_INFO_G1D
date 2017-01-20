@@ -34,15 +34,17 @@ form {
   display: block;
 }
 #textarea{
-	border: 2px solid black;	
+	border: 2px solid black;
+	margin-left: -2%;	
 	width:300px;
+	border-radius: 3px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: calc(100% - 40px - 20px);
-  margin-left: 10%;
+  margin-left: 6%;
   margin-bottom: 5%;
   line-height: 30px;
   padding-left: 20px;

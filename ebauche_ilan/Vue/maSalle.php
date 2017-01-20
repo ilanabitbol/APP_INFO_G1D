@@ -16,12 +16,12 @@
  
  <body>
  		
- <header>
  	<div class="container">
  			
- 			<section>
-  				<a href = "maMaison.php"><button id='salle'><?php echo 'Retour';?></button></a>
-  			</section>
+ 			<div class='command_buttons'>
+  				<a href = "maMaison.php"><button id='retour'><?php echo 'Retour';?></button></a>
+			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 550px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
+			 </div>
   			<?php while($donnes = $reponse->fetch()){?>
 		
 			<section>
@@ -44,10 +44,6 @@
   		
   			<?php }
   			?>
-			 <section>
-			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 550px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
-			 </section>
 	</div>
- </header>
  
  </body>

@@ -19,8 +19,7 @@ div {
 
 .container {
   width: 800px;
-  padding: 50px;
-  margin-top: 111px;
+  padding: 40px;
   box-sizing: border-box;
   background-color: white;
   margin: auto;
@@ -28,8 +27,12 @@ div {
   box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
 }
 
+.command_buttons{
+	margin-left: 6%;
+}
+
 button{
-  margin: auto;
+  margin-left:6%;
   width: 250px;
   height: 60px;
   border: none;
@@ -39,6 +42,18 @@ button{
   font-size: 1.3em;
   color: white;
   margin-bottom: 10px;
+}
+
+#retour{
+  margin-left:6%;
+  width: 250px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1.3em;
+  outline: none;
 }
 
 #container .buttons {
@@ -64,10 +79,9 @@ input[type=submit]:hover {
 }
 
 #salle{
-  position: relative;
-  margin: auto;
-  width: 250px;
-  height: 60px;
+  margin-left:0px;
+  width: 100%;
+  height: 40px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -107,6 +121,8 @@ footer {
 section {
   display: inline-block;
   width: 43%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 
