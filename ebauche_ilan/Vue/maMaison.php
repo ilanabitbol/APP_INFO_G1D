@@ -22,7 +22,7 @@
 			
 			<button onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
 		</div>
-		<div class='command_buttons'>
+		<div class='room_buttons'>
 		<?php while($donnes = $reponse->fetch()){?>
 		
 			<section>

@@ -13,12 +13,8 @@ p {
   text-align: center;
 }
 
-div {
-	margin-left: 7%;
-}
-
 .container {
-  width: 800px;
+  width: 60%;
   padding: 40px;
   box-sizing: border-box;
   background-color: white;
@@ -28,12 +24,20 @@ div {
 }
 
 .command_buttons{
-	margin-left: 6%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 50px;
+}
+
+.room_buttons{
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 button{
-  margin-left:6%;
-  width: 250px;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
   height: 60px;
   border: none;
   box-sizing: border-box;
@@ -41,12 +45,12 @@ button{
   border-radius: 5px;
   font-size: 1.3em;
   color: white;
-  margin-bottom: 10px;
 }
 
 #retour{
-  margin-left:6%;
-  width: 250px;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
   height: 60px;
   border: 1px solid black;
   border-radius: 5px;
@@ -59,8 +63,7 @@ button{
 #container .buttons {
 	position: relative;
 	margin-left: 50px;
-	margin-top: 0.0003px;
-	
+	margin-top: 0.0003px;	
 }
 
 input[type=submit] {
@@ -111,7 +114,6 @@ header{
   margin-left: 14%;
 }
 
-section,
 aside,
 footer {
   margin: 5% 1% 10px 35px;
@@ -120,9 +122,11 @@ footer {
 
 section {
   display: inline-block;
-  width: 43%;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 45.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
