@@ -31,7 +31,7 @@
 				'ID_piece' =>$id_piece,
 				'ID_fonction' =>$fonction,
 		));
-	
+
 ?>
 
 <p>Votre capteur a bien été ajoutée !</p>
