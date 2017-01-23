@@ -10,9 +10,10 @@
 </head>
 <body>
 		<nav id="nav-2">
+			<a class="circleENTETE"><img class="logoDMZ" src=../images/logo_dosmoz.jpg height=40 width=40></a>
 		  <?php 
 		  	if (isset($_SESSION['prenom'])){?>
-		  		<a class='link-2' href='parametres.php'><img  class="logo" src=../images/settings.png alt="Parametres"></a>
+		  		<a class='link-2' href='parametres.php'><img  class="logoPARAM" src=../images/settings.png alt="Parametres"></a>	
 		  		<a class="link-2">
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
 		  		</a>
@@ -21,9 +22,7 @@
 		  	if (isset($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="maMaison.php">Maison</a>
 		  <?php } ?>
-		  <a class="link-2" href="shop.php">Shop</a>		  
-		  
-		  
+		  <a class="link-2" href="shop.php">Shop</a>
 		  <a class="link-2" href="about.php">About</a>
 		  <a class="link-2" href="contact.php">Contact</a>
 		  <?php 
@@ -34,7 +33,6 @@
 		  	if (isset($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Déconnexion</a>
 		  <?php } ?>
-		  
 		</nav>
 
 </body>

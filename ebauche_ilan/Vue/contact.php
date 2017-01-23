@@ -20,7 +20,7 @@
 		<div>
 		
 
-		  <form id="signin-form" method="post" action="../controleur/Contact_controleur.php">
+		  <form id="contact-form" method="post" action="../controleur/Contact_controleur.php">
 				<input type="email" placeholder='EMAIL' name="email"/>
 				<textarea name="demande" id="textarea" rows="6" cols="40" placeholder='Ecrivez ici votre demande.'></textarea>
 				<button type="submit" name="signin-valider"class="submit-button">Envoyer</button>

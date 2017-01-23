@@ -29,8 +29,7 @@ form {
   border-radius: 5px;
 }
 
-#signin-form,
-#signup-form{
+#contact-form{
   display: block;
 }
 #textarea{
