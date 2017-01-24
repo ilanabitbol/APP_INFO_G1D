@@ -25,15 +25,15 @@
 											switch ($donnes['nom_produit'])
 											{
 												case 'hydrometre':?>
-										  		<img alt="hydrometre" src="../images/rain.png"/>
+										  		<img alt="hydrometre" src="../images/anemometre.png"/>
 										  		<?php break;?>
 										<?php 
 												case 'thermometre':?>
-												<img alt="thermometre" src="../images/temperature.png"/>
+												<img alt="thermometre" src="../images/station.png"/>
 												<?php break;?>
 										<?php 
 												case 'pressiometre':?>
-												<img alt="pressiometre" src="../images/meter.png">
+												<img alt="pressiometre" src="../images/thermostat.png">
 												<?php break;?>
 												
 										<?php }?>
