@@ -7,24 +7,26 @@
 </head>
 <body>
 
-<?php include ('../controleur/ajout_capteur_controleur.php');?>
+<?php include ('../controleur/suppression_capteur_controleur.php');?>
 
 	<div class="container">
 		
 		<a href = "maSalle.php"><button id='salle'>Retour</button></a>
-		<form id="signin-form" method="POST" action="../controleur/ajout_capteur_controleur.php">
+		<form id="signin-form" method="POST" action="../controleur/suppression_capteur_controleur.php">
 			<select  name="liste_capteur" >
 			<?php 
 				while($donnes_cap = $reponse_cap->fetch()){
-				echo '<option value="'.$donnes_cap['nom_fonction'].'"> '.$donnes_cap['nom_fonction'].'</option>';
+				echo '<option value="'.$donnes_cap['nom_fonction'].'"> Capteur :'.$donnes_cap['nom_fonction'].'   Adresse Mac :'.$donnes_cap['adresse_mac'].'</option>';
+				
 				}
 				
 			?>
 			</select>
 			
 			<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
-			<input type="text" placeholder="adresse mac" name="adresse_mac"/>
-			<button type="submit" name="boutton" class="submit-button">Ajouter</button>
+			
+			
+			<button type="submit" name="boutton" class="submit-button">Supprimer</button>
 		</form>
 		
 		
@@ -35,4 +37,4 @@
 
 </body>
 
-</html>		
+</html>

@@ -14,7 +14,7 @@
   	<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
-		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
+		$reponse= $connexion_base->getDb()->query( "SELECT nom_piece, ID_piece FROM piece WHERE ID='{$_SESSION['ID']}' ");
 	?>
 	<div class='container'>		
 		<div class='command_buttons'>
@@ -25,8 +25,11 @@
 		<div class='room_buttons'>
 		<?php while($donnes = $reponse->fetch()){?>
 		
-			<section>
-  			<a href = "maSalle.php"><button id="salle"><?php echo $donnes['nom_piece'];?></button></a>
+			<section>	
+  			<form action="maSalle.php" method="POST">
+  			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
+  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="buttons" />' ?>
+  			</form>
   			</section>
   		<?php }
   		?>

@@ -2,7 +2,11 @@
 
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
-		$reponse= $connexion_base->getDb()->query( "SELECT * FROM actionneurs_capteurs WHERE ID_piece='{$_SESSION['ID_piece_unique']}' ");
+		$reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac, MAX(donnees.date_donnees) AS last_date, donnees.valeur, actionneurs_capteurs. etat, actionneurs_capteurs.batterie
+                                                        FROM piece, donnees, actionneurs_capteurs, type_fonction
+                                                        WHERE piece.ID = "'.$_SESSION['ID'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
+														GROUP BY donnees.ID_ac_cap
+                                                        ');
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,28 +22,34 @@
  		
  	<div class="container">
  			
- 			<div class='command_buttons'>
-  				<a href = "maMaison.php"><button id='retour'><?php echo 'Retour';?></button></a>
-			  	<a onclick="window.open('ajout_capteur.php', 'dosmoz', 'height = 550px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');"><button>Ajouter un capteur</button></a>
-			 </div>
+ 			<div class="command-buttons">
+  				<a href = "maMaison.php"><button id='salle'>Retour</button></a>
+  				<form action='ajout_capteur.php' method='POST'>
+  					<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
+  					<input type="submit" value= "Ajouter un capteur" class="buttons" />
+  				</form>
+  				
+  				<form action='suppression_capteur.php' method='POST'>
+  					<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
+  					<input type="submit" value= "Supprimer un capteur" class="buttons" />
+  				</form>
+  				
+  			</div>
+  			
   			<?php while($donnes = $reponse->fetch()){?>
-		
 			<section>
-			 	<p> <?php echo $donnes['nom_capteur'];?> <br> <?php echo $donnes['adresse_mac'];?> <br> 
-               		<?php switch ($donnes['ID_fonction']){
-               			case '1':
-               			echo $donnes['donnees'] . ' °';
-               			break;
-               			case '2':
-               			echo $donnes['donnees'] . ' %';
-               			break;
-               			case '3':
-               			echo $donnes['donnees'] . ' Lux';
-               			break;
-               		}
-               		?>
-               			
-               </p>
+			<p>
+				<table border="1px solid white">
+					<thead>
+						<tr><th>Type de capteur</th> <td><?php echo $donnes['nom_fonction'];?></td></tr>
+						<tr><th>Adresse mac</th> <td><?php echo $donnes['adresse_mac'];?></td></tr>
+						<tr><th>Mesure</th> <td><?php echo $donnes['valeur'];?></td></tr>
+						<tr><th>Date</th> <td><?php echo $donnes['last_date'];?></td></tr>
+						<tr><th>Batterie</th> <td><?php echo $donnes['batterie'];?></td></tr>
+						<tr><th>Etat</th> <td><?php echo $donnes['etat'];?></td></tr>
+					</thead>
+				</table>
+			 </p>
   			</section>
   		
   			<?php }

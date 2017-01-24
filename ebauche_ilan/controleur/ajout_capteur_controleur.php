@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Dosmoz form</title>
-<link rel="stylesheet" type="text/css" href="../stylesheet/contact.css">
-
-</head>
-<body>
-<div class="container"><!--Creation de l'unique section de la page.-->
-
 <?php
 	session_start(); 
 	include_once ('../modele/Connexion_Base.class.php');
@@ -16,28 +5,39 @@
 	$connexion_base= new Connexion_Base();
 	$query = new Query();
 	
-	$nom_piece = isset($_POST['nom_piece']) ? $_POST['nom_piece'] : NULL ;
+	$reponse_cap= $connexion_base->getDb()->query("SELECT nom_fonction FROM type_fonction");
+	
+	
+	
 	$adresse_mac = isset($_POST['adresse_mac']) ? $_POST['adresse_mac'] : NULL ;
-	$nom_capteur = isset($_POST['nom_capteur']) ? $_POST['nom_capteur'] : NULL ;
-	$fonction = isset($_POST['fonction']) ? $_POST['fonction'] : NULL ;
-	$response = $connexion_base->getDb()->query("SELECT ID_piece FROM piece WHERE nom_piece='$nom_piece' AND ID='{$_SESSION['ID']}'");
-	$resultat=$response->fetch();
-	$id_piece = $resultat['ID_piece'];
-	$_SESSION['ID_piece_unique']=$id_piece;
-	$req = $connexion_base->getDb()->prepare('INSERT INTO actionneurs_capteurs(nom_capteur,adresse_mac, ID_piece, ID_fonction) VALUES(:nom_capteur, :adresse_mac, :ID_piece, :ID_fonction) ');
+	$fonction = isset($_POST['liste_capteur']) ? $_POST['liste_capteur'] : NULL ;
+	
+	
+	
+	// Recuperation de lid de la piece
+	$id_piece = $_POST['ID_piece'];
+	
+	
+	
+	//on cherche l'id de la fonction correspondant
+	$response1 = $connexion_base->getDb()->query('SELECT ID_fonction FROM type_fonction WHERE nom_fonction="'.$fonction.'"');
+	$resultat1=$response1->fetch();
+	$id_fonction = $resultat1['ID_fonction'];
+	
+	
+	
+	//On fait l'insertion ds la table
+	if($adresse_mac!=NULL && $id_piece!=NULL && $id_fonction!=NULL){
+	$req = $connexion_base->getDb()->prepare('INSERT INTO actionneurs_capteurs(adresse_mac,ID_piece ,ID_fonction) VALUES(:adresse_mac, :ID_piece, :ID_fonction) ');
 		$req->execute(array(
-				'nom_capteur' => $nom_capteur,
 				'adresse_mac' => $adresse_mac,
 				'ID_piece' =>$id_piece,
-				'ID_fonction' =>$fonction,
+				'ID_fonction' =>$id_fonction,
 		));
-	
-?>
-
-<p>Votre capteur a bien Ã©tÃ© ajoutÃ©e !</p>
-	<div>
-		<a href='maMaison.php'><button id='param-button' onclick='window.close()'>Fermer</button></a>
-	</div>
-</div>
-</body>
-</html>
+		?>
+		<p>Votre capteur a bien été ajouté !</p>
+		<div>
+		<a href='../Vue/maMaison.php'><button id='param-button' >Fermer</button></a>
+		</div><?php 
+	}
+	?>
