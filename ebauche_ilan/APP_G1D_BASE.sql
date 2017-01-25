@@ -1,7 +1,3 @@
---
--- Base de données :  `APP_G1D_BASE`
---
-
 -- --------------------------------------------------------
 
 --
@@ -10,9 +6,7 @@
 
 CREATE TABLE `actionneurs_capteurs` (
   `ID_ac_cap` int(11) NOT NULL,
-  `nom_capteur` varchar(50) NOT NULL,
   `adresse_mac` varchar(50) NOT NULL,
-  `donnees` varchar(50) NOT NULL,
   `etat` int(11) DEFAULT NULL,
   `batterie` int(11) DEFAULT NULL,
   `ID_commande` int(11) DEFAULT NULL,
@@ -24,9 +18,10 @@ CREATE TABLE `actionneurs_capteurs` (
 -- Contenu de la table `actionneurs_capteurs`
 --
 
-INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `nom_capteur`, `adresse_mac`, `donnees`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
-(15, 'thermometre', '55:55:66', '1000', NULL, NULL, NULL, 10, 1),
-(16, 'hydrometre', '44:66:99', '20', NULL, NULL, NULL, 10, 2);
+INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `adresse_mac`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
+(5, '3A:4F:45:5T', NULL, NULL, NULL, 1, 1),
+(11, 'AHAHHA', NULL, NULL, NULL, 1, 2),
+(12, 'bobobobo', NULL, NULL, NULL, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -77,7 +72,7 @@ CREATE TABLE `commande` (
 CREATE TABLE `donnees` (
   `ID_donnees` int(11) NOT NULL,
   `valeur` double NOT NULL,
-  `date_donnees` date NOT NULL,
+  `date_donnees` datetime NOT NULL,
   `ID_ac_cap` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -86,8 +81,11 @@ CREATE TABLE `donnees` (
 --
 
 INSERT INTO `donnees` (`ID_donnees`, `valeur`, `date_donnees`, `ID_ac_cap`) VALUES
-(1, 55, '2017-01-12', 11),
-(3, 330, '2017-01-12', 10);
+(1, 16, '2017-01-20 00:00:00', 5),
+(2, 8, '2017-01-20 00:00:00', 11),
+(7, 24, '2017-01-20 06:12:00', 11),
+(8, 21, '2017-01-23 00:00:00', 11),
+(9, 57, '2017-01-22 08:00:18', 12);
 
 -- --------------------------------------------------------
 
@@ -106,7 +104,9 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`ID_piece`, `nom_piece`, `ID`) VALUES
-(10, 'Salon', 8);
+(1, 'chambre', 13),
+(2, 'salon', 13),
+(5, 'salle de bain', 13);
 
 -- --------------------------------------------------------
 
@@ -166,6 +166,9 @@ CREATE TABLE `utilisateur` (
 INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`, `pays`, `ville`, `code_postal`, `adresse`) VALUES
 (8, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 4, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
 (9, 'joseph', 'staline', 'jstaline@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 3, 'Russie', 'Moscou', 93000, 'rue de stalingrad'),
+(10, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '4dc7c9ec434ed06502767136789763ec11d2c4b7', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
+(11, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
+(12, 'Abitbol', 'Ilan', 'fosfor12345@hotmail.fr', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 5, 'France', 'Neuilly-sur-seine', 92200, '28 boulevard du général Leclerc'),
 (13, 'POILLEUX', 'Corentin', 'c.poilleux@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 9876, 'France', 'Les Pavillons-sous-Bois', 93320, '25 Allée Jean Baptiste Clément');
 
 --
@@ -251,12 +254,12 @@ ALTER TABLE `commande`
 -- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
-  MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `piece_type`
 --

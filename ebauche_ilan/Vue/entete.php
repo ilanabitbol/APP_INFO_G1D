@@ -22,12 +22,12 @@
 		  	if (isset($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="maMaison.php">Maison</a>
 		  <?php } ?>
-		  <a class="link-2" href="shop.php">Shop</a>
-		  <a class="link-2" href="about.php">About</a>
-		  <a class="link-2" href="contact.php">Contact</a>
+		  <a class="link-2" href="../Vue/shop.php">Shop</a>
+		  <a class="link-2" href="../Vue/about.php">About</a>
+		  <a class="link-2" href="../Vue/contact.php">Contact</a>
 		  <?php 
 		  	if (empty($_SESSION['prenom'])){?>
-		  		<a class="link-2" href="sign_in-up.php">Connexion-Inscription</a>
+		  		<a class="link-2" href="../Vue/sign_in-up.php">Connexion-Inscription</a>
 		  <?php } ?>
 		  <?php 
 		  	if (isset($_SESSION['prenom'])){?>
