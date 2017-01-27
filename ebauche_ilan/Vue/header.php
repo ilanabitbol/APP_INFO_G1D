@@ -8,14 +8,12 @@ session_start();
 	<title>Dosmoz form</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/entete.css">
 </head>
-<body>
-		
+<body>	
 		<nav id="nav-2">
-		<!-- <img  class="logotest" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">   a metre en place dans la barre du haut-->
 		  <?php 
 		  	if (isset($_SESSION['prenom'])){?>
 		  		<a class='link-2' href='parametres.php'><img  class="logo" src=../images/settings.png alt="Parametres"></a>
-		  		<a class="link-2"><!-- A quoi sert ceci?? -->
+		  		<a class="link-2">
 		  		<?php echo 'Bienvenue ' . $_SESSION['prenom'];?>
 		  		</a>
 		  <?php } ?>

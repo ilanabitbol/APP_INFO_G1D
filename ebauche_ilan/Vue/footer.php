@@ -8,7 +8,7 @@
 	  		<ul id="nav1"><!-- permet de supprimer les espaces blanc que l'on pourrait appercevoir
 	  		 --><li><a href="adresse http du faq" class="footerlist_link">FAQ</a></li><!--
 	     	 --><li><a href="envoi_mail.php" class="footerlist_link">Par e-mail</a></li><!--
-	     	 --><li><a href="contact.php" class="footerlist_link">Adresse postale</a></li>
+	     	 --><li><a href="https://www.google.fr/maps/place/ISEP/@48.824529,2.2798536,15z/data=!4m5!3m4!1s0x0:0xe0d3eb2ad501cb27!8m2!3d48.824529!4d2.2798536" class="footerlist_link" target="_blank">Adresse postale</a></li>
 	  		</ul>
 	  		<!-- Mettre les bons liens,href!! Les liens seront ÃƒÂ  remplir par domisep -->
 	  		<h2> L'entreprise</h2>

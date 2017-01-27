@@ -20,12 +20,11 @@ p {
 }
 
 .logo {
-   margin-left: 55px;
+   margin-left:-50px;
 }
 
 
 form {
-  /*   border: 1px solid black; */
   border-radius: 5px;
 }
 
@@ -38,8 +37,7 @@ form {
 }
 
 input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="email"]{
   width: calc(100% - 40px - 20px);
   margin-left: 10%;
   margin-bottom: 5%;
@@ -52,30 +50,18 @@ input[type="password"] {
 /* Effet de brillance au clique des champs du formulaire */
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="password"]:focus {
-  box-shadow: 0 0 5px rgba(138, 123, 179, 0.8);
-  border: 1px solid rgba(138, 123, 179, 1);
+input[type="text"]:hover,
+input[type="email"]:hover{
+  box-shadow: 0 0 5px #99CDFF;
+  border: 1px solid #99CDFF;
+}
+textarea:focus,
+textarea:hover{
+  box-shadow: 0 0 15px #99CDFF;
+  border: 15px solid #99CDFF;
 }
 
-label {
-  line-height: 18px;
-  padding-left: 5px;
-}
-
-#param-button{
-  margin: auto;
-  width: 300px;
-  height: 40px;
-  border: none;
-  box-sizing: border-box;
-  background-color: #5175C0;
-  border-radius: 5px;
-  font-size: 1.3em;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.submit-button {
+.send_button {
   width: 120px;
   height: 40px;
   margin-left: 30%;
@@ -91,15 +77,4 @@ label {
 button:hover {
   color: rgba(138, 123, 179, 0.8);
   border: 1px solid rgba(138, 123, 179, 0.8);
-}
-
-#param-button:hover {
-  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
-}
-.list-service{
-	background-color: red;
-	
-}
-.mg-16-px{
-	margin-left:10px;
 }

@@ -6,12 +6,12 @@
 		$query = new Query();
 
 		$email=$_POST['email'];
-		$demande=$_POST['demande'];
+		$message=$_POST['message'];
 	
 		
 		//Insertion
 		
-		$query->assistance_query($connexion_base,$email,$demande);
+		$query->assistance_query($connexion_base,$email,$message);
 		header("Location: ../Vue/envoi_mail.php");
 		
 ?>

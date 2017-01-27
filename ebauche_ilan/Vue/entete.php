@@ -24,7 +24,7 @@
 		  <?php } ?>
 		  <a class="link-2" href="../Vue/shop.php">Shop</a>
 		  <a class="link-2" href="../Vue/about.php">About</a>
-		  <a class="link-2" href="../Vue/contact.php">Contact</a>
+		  <a class="link-2" href="../Vue/envoi_mail.php">Contact</a>
 		  <?php 
 		  	if (empty($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="../Vue/sign_in-up.php">Connexion-Inscription</a>
