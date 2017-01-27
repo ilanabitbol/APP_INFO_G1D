@@ -25,7 +25,7 @@
 		<div class='room_buttons'>
 		<?php while($donnes = $reponse->fetch()){?>
 		
-			<section>	
+			<section class="rooms">	
   			<form action="maSalle.php" method="POST">
   			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
   			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="buttons" />' ?>

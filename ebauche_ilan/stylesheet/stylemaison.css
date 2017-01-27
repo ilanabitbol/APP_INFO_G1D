@@ -75,6 +75,7 @@ input[type=submit] {
   font-size: 1.3em;
   outline: none;
 }
+
 input[type=submit]:hover {
   transition: 0.2s;
   box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
@@ -98,19 +99,20 @@ table {
   width: 100%;
   border: none;
   box-sizing: border-box;
-  background-color: #5175C0;
+  background-color: white;
+  border: 2px solid #5175C0;
   border-radius: 5px;
   font-size: 0.8em;
   font-family: verdana;
-  color: white;
+  color: #336699;
 }
 
 th {
-  border-bottom: 1px solid grey;	
+  border-bottom: 1px solid #5175C0;	
 }
 
 td {
-  border-bottom: 1px solid grey;	
+  border-bottom: 1px solid #5175C0;
 }
 
 button:hover {
@@ -138,8 +140,43 @@ section {
   margin-bottom: 10px;
 }
 
-form {
-	
-  margin-bottom: 10px;
+.ajout-suppression {
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 96%;
 }
 
+form {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+select {
+  width: 40%;
+  margin: 20px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  transition: 0.2s;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+input[type="text"] {
+  width: 40%;
+  margin: 20px;
+  line-height: 30px;
+  padding-left: 20px;
+  outline: none;
+  transition: 0.2s;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,input[type="text"]:hover,
+select:hover {
+  box-shadow: 0 0 5px #99CDFF;
+  border: 1px solid #99CDFF;
+}
