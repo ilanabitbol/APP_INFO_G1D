@@ -23,7 +23,7 @@
  	<div class="container">
  			
  			<div class="command-buttons">
-  				<a href = "maMaison.php"><button id='salle'>Retour</button></a>
+  				<a href = "maMaison.php"><button id="salle">Retour</button></a>
   				<form action='ajout_capteur.php' method='POST'>
   					<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
   					<input type="submit" value= "Ajouter un capteur" class="buttons" />
@@ -37,9 +37,8 @@
   			</div>
   			
   			<?php while($donnes = $reponse->fetch()){?>
-			<section>
-			<p>
-				<table border="1px solid white">
+			<section class="tab">
+				<table>
 					<thead>
 						<tr><th>Type de capteur</th> <td><?php echo $donnes['nom_fonction'];?></td></tr>
 						<tr><th>Adresse mac</th> <td><?php echo $donnes['adresse_mac'];?></td></tr>
@@ -49,7 +48,6 @@
 						<tr><th>Etat</th> <td><?php echo $donnes['etat'];?></td></tr>
 					</thead>
 				</table>
-			 </p>
   			</section>
   		
   			<?php }
