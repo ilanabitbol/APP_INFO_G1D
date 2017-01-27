@@ -20,7 +20,7 @@
 		  <?php } ?>
 		  <?php 
 		  	if (isset($_SESSION['prenom'])){?>
-		  		<a class="link-2" href="maMaison.php">Maison</a>
+		  		<a class="link-2" href="Vue/maMaison.php">Maison</a>
 		  <?php } ?>
 		  <a class="link-2" href="Vue/shop.php">Shop</a>
 		  <a class="link-2" href="Vue/about.php">About</a>
