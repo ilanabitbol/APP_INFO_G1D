@@ -1,5 +1,6 @@
 <?php 
-sessionstart();
+include("entete.php");
+session_start();
 ?>
 <section id="contact" class="home-section2 text-center">
 		<div class="heading-contact">
@@ -68,7 +69,7 @@ sessionstart();
                     </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
-                            Send Message</button>
+                            Envoyer</button>
                     </div>
                 </div>
                 </form>
@@ -88,7 +89,7 @@ sessionstart();
 
 				<address>
 				  <strong>Email</strong><br>
-				  <a href="mailto:#">xavier@arviset.fr</a>
+				  <a href="mailto:#">app.g1d.2019@gmail.com</a>
 				</address>
 			</div>
 		</div>
