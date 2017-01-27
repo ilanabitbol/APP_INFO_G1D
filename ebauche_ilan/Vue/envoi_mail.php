@@ -24,7 +24,7 @@ session_start();
 			<?php unset($_SESSION['errors']); endif;?>
 			<?php if(array_key_exists('success', $_SESSION)): ?>
 			<div class="alert alert-success">
-				Votre email a bien &#233t&#233 envoyÃ©
+				Votre email a bien &#233t&#233 envoy&#233
 			</div>
 			<?php endif;?>
 		
