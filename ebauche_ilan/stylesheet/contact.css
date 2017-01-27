@@ -37,26 +37,30 @@ form {
 	margin-left: -2%;	
 	width:300px;
 	border-radius: 3px;
+	transition: 0.2s;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="email"] {
   width: calc(100% - 40px - 20px);
   margin-left: 6%;
   margin-bottom: 5%;
   line-height: 30px;
   padding-left: 20px;
   outline: none;
-  transition: all 0.30s ease-in-out;
+  transition: 0.2s;
   border: 1px solid black;
+  border-radius: 2px;
 }
-/* Effet de brillance au clique des champs du formulaire */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  box-shadow: 0 0 5px rgba(138, 123, 179, 0.8);
-  border: 1px solid rgba(138, 123, 179, 1);
+
+/* Effet de brillance au clic des champs du formulaire */
+input[type="email"]:focus,input[type="email"]:hover  {
+  box-shadow: 0 0 5px #99CDFF;
+  border: 1px solid #99CDFF;
+}
+
+#textarea:focus, #textarea:hover {
+  box-shadow: 0 0 5px #99CDFF;
+  border: 2px solid #99CDFF;
 }
 
 label {
