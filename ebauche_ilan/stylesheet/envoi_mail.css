@@ -1,0 +1,105 @@
+body {
+  background-color : #336699;
+}
+
+.container {
+  width: 400px;
+  padding: 50px;
+  margin-top: 1px;
+  box-sizing: border-box;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  font-family: verdana;
+  color: #5175C0;
+  text-align: center;
+}
+
+.logo {
+   margin-left: 55px;
+}
+
+
+form {
+  /*   border: 1px solid black; */
+  border-radius: 5px;
+}
+
+#contact-form{
+  display: block;
+}
+#message{
+	border: 2px solid black;	
+	width:300px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 40px - 20px);
+  margin-left: 10%;
+  margin-bottom: 5%;
+  line-height: 30px;
+  padding-left: 20px;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border: 1px solid black;
+}
+/* Effet de brillance au clique des champs du formulaire */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 5px rgba(138, 123, 179, 0.8);
+  border: 1px solid rgba(138, 123, 179, 1);
+}
+
+label {
+  line-height: 18px;
+  padding-left: 5px;
+}
+
+#param-button{
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  width: 120px;
+  height: 40px;
+  margin-left: 30%;
+  margin-top: 40px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+
+button:hover {
+  color: rgba(138, 123, 179, 0.8);
+  border: 1px solid rgba(138, 123, 179, 0.8);
+}
+
+#param-button:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+.list-service{
+	background-color: red;
+	
+}
+.mg-16-px{
+	margin-left:10px;
+}
