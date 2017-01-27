@@ -18,12 +18,12 @@ if(!empty($errors)){
 
     $_SESSION['errors'] = $errors;
     $_SESSION['inputs'] = $_POST;
-    header('Location: index.php#contact');
+    header('Location: envoi_mail.php');
 
 }else{
 
     $_SESSION['success'] = 1;
-    $to = 'thomas.caquineau@gmail.com';
+    $to = 'app.g1d.2019@gmail.com';
     $message = $_POST['message'];
     $headers = 'From:'.$_POST['email'];
     $nom = 'Nom'.$_POST['nom'];
@@ -36,6 +36,6 @@ if(!empty($errors)){
     $finalMessage .= "Message :  " . $_POST['message'] . "\n";
 
     mail($to, 'Formulaire de contact',  $finalMessage, $headers);
-    header('Location: index.php#contact');
+    header('Location: envoi_mail.php');
 
 }

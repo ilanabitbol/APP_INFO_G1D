@@ -12,6 +12,6 @@
 		//Insertion
 		
 		$query->assistance_query($connexion_base,$email,$demande);
-		header("Location: ../Vue/about.php");
+		header("Location: ../Vue/envoi_mail.php");
 		
 ?>
