@@ -34,7 +34,21 @@ p {
 	margin-right: 2%;
 }
 
-button{
+.buttons {
+  transition: 0.2s;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: black;
+}
+
+button {
   transition: 0.2s;
   margin-left:2%;
   margin-right:2%;
