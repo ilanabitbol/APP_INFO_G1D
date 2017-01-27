@@ -23,6 +23,7 @@
   outline: none;
   font-size: 1.3em;
   margin-bottom: 10px;
+  transition: 0.2s;
 }
 
 #signin-button {
@@ -47,18 +48,20 @@ input[type="password"] {
   line-height: 30px;
   padding-left: 20px;
   outline: none;
-  transition: all 0.30s ease-in-out;
+  transition: 0.2s;
   border: 1px solid black;
 }
 /* Effet de brillance au clique des champs du formulaire */
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="password"]:focus {
-  box-shadow: 0 0 5px rgba(138, 123, 179, 0.8);
-  border: 1px solid rgba(138, 123, 179, 1);
+input[type="password"]:focus,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+  box-shadow: 0 0 5px #99CDFF;
+  border: 1px solid #99CDFF;
+  transition: 0.2s;
 }
-
-
 
 label {
   line-height: 18px;
@@ -78,12 +81,15 @@ label {
   background-color: white;
   font-size: 1.3em;
   outline: none;
+  transition: 0.2s;
 }
 
 button:hover {
   color: rgba(138, 123, 179, 0.8);
   border: 1px solid rgba(138, 123, 179, 0.8);
+  transition: 0.2s;
 }
+
 #ListeElement{
 	float: right;
 }
