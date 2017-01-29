@@ -7,7 +7,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/entete.css">
+	<?php if(isset($_SESSION['admin'])){?>
+		<link rel="stylesheet" type="text/css" href="../stylesheet/adminEnTete.css">
+		
+	<?php }
+	else{?>
+		<link rel="stylesheet" type="text/css" href="../stylesheet/entete.css">
+		
+	<?php }?>
+	
 </head>
 <body>
 		<nav id="nav-2">
