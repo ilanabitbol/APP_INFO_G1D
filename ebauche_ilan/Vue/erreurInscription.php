@@ -36,7 +36,8 @@
 		      <input type="text" placeholder="CODE POSTAL" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
 		      <h3 class="erreur">ERREUR</h3>
-			  <h3 class="erreur">veuillez renseigner tous les champs d'inscription</h3>
+			  <h3 class="erreur">Veuillez renseigner tous les champs d'inscription. Cet <?php $_SESSION['same_email']?> existe déja.</h3>
+
 			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>
 

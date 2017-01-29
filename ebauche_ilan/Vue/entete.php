@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -33,6 +34,14 @@
 		  	if (isset($_SESSION['prenom'])){?>
 		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Déconnexion</a>
 		  <?php } ?>
+		  <?php  if (isset($_SESSION['admin'])){?>
+		  		<a class="link-2">
+		  		<?php echo 'Bienvenue ' . $_SESSION['admin'];?>
+		  		</a>
+		  		<a class="link-2" href="../Vue/admin.php">Installations</a>
+		  		<a class="link-2" href="../controleur/deconnexion_controleur.php">Déconnexion</a>
+		  <?php }
+		  	?>
 		</nav>
 
 </body>
