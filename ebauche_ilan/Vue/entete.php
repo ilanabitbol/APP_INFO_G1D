@@ -33,6 +33,7 @@
 		  <?php } ?>
 		  <a class="link-2" href="../Vue/shop.php">Shop</a>
 		  <a class="link-2" href="../Vue/about.php">About</a>
+		  <a class="link-2" href="../Vue/accueil.php">Accueil</a>
 		  <a class="link-2" href="../Vue/envoi_mail.php">Contact</a>
 		  <?php 
 		  	if (empty($_SESSION['prenom'])){?>
