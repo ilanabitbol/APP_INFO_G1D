@@ -49,9 +49,10 @@ session_start();
 				  <a href="https://www.google.fr/maps/place/ISEP/@48.824529,2.2798536,15z/data=!4m5!3m4!1s0x0:0xe0d3eb2ad501cb27!8m2!3d48.824529!4d2.2798536" class="footerlist_link" target="_blank">10 Rue de Vanves, Issy-les-Moulineaux,France</a><br>
 				</address>	
 </div>
-<footer><?php include 'footer.php';?></footer>
+
 
 </body>
+<footer><?php include 'footer.php';?></footer>
 </html>
 <?php
 unset($_SESSION['success']);
