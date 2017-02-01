@@ -1,280 +1,51 @@
-/*choix de la couleur de fond de toutes nos pages*/
-footer {
-	background-color: #336699;
-	margin: 0px;
-}
-/*test*/
-/*dashboardbody {
-	background-color: rgb(220,220,220);
-	padding: 0;
-	margin: 0;
-	font-size: 16px;
-	font-family: sans-serif;
-}*/
-/*mise en page du logo(class)*/
-.logo {
-	margin-left: 60px;
-}
-/*Mise en page de tous les inputs de type email,text,password*/
-input[type="text"], input[type="email"], input[type="password"] {
-	width: calc(100% - 40px - 20px);
-	margin: 20px;
-	line-height: 30px;
-	padding-left: 20px;
-	outline: none;
-	transition: all 0.30s ease-in-out;
-	border: 1px solid black;
-}
-/* Effet de brillance au clique des champs du formulaire */
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus
-	{
-	box-shadow: 0 0 5px rgba(138, 123, 179, 0.8);
-	border: 1px solid rgba(138, 123, 179, 1);
-}
-/*zone de focus*/
-label {
-	line-height: 18px;
-	padding-left: 5px;
-}
-/*couleur grise qui se met en place lorsque la souris est au-dessus du bouton*/
-button:hover {
-	color: rgba(138, 123, 179, 0.8);
-	border: 1px solid rgba(138, 123, 179, 0.8);
+
+body {
+  background-image :url("../images/background.png");
+  background-attachment: fixed;
 }
 
-.submit-button {
-	width: 120px;
-	height: 40px;
-	margin-left: -60px;
-	margin-top: 40px;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: white;
-	font-size: 1.3em;
-	outline: none;
-}
-/*Définition de la taille des form*/
-form {
-	/*   border: 1px solid black; */
-	border-radius: 5px;
-}
-
-.container {
-	width: 400px;
-	padding: 50px;
-	margin: auto;
-	margin-top: 40px;
-	box-sizing: border-box;
-	background-color: white;
-	border-radius: 5px;
-	box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
-}
-/*contact.css*/
-
-/* mise en place de tous les détails (couleurs,placement,taille,...) des id contact-button */
-#contact-button {
-	margin-left: 115px;
-	height: 40px;
-	border: none;
-	box-sizing: border-box;
-	background-color: white;
-	border-bottom: 3px solid white;
-	font-size: 1.3em;
-	margin-bottom: 10px;
-}
-/* mise en place de tous les détails (couleurs,placement,taille,...) des id contact-button */
-#contact-designer-button {
-	margin-left: 95px;
-	height: 40px;
-	border: none;
-	box-sizing: border-box;
-	background-color: white;
-	border-bottom: 3px solid white;
-	font-size: 1.3em;
-	margin-bottom: 10px;
-}
-/*mise page de toutes les id signup et signin form*/
-#signin-form, #signup-form {
-	display: none;
-}
-/*position de toutes les id textarea*/
-#textarea-contact {
-	border: 2px solid black;
-	margin-left: -25px;
-}
-
-/*sign_in-up.css
-Définition de la place,de la taille , et de la couleur des boutons*/
-#signin-button, #signup-button {
-	width: 130px;
-	height: 40px;
-	border: none;
-	box-sizing: border-box;
-	background-color: white;
-	border-bottom: 3px solid white;
-	outline: none;
-	font-size: 1.3em;
-	margin-bottom: 10px;
-}
-/*Placement du bouton signin*/
-#signin-button {
-	margin-left: 20px;
-}
-/*placement du texte dans la liste déroulante*/
-#ListeElement {
-	margin-left: 100px;
-}
-/*définition de la couleur et de la position du texte*/
-.erreur {
-	text-align: center;
-	color: red;
-}
-
-/*about.css*/
-.container-about {
-	max-width: 600px;
-	margin: auto;
-}
-/*Paramètres généraux de la police dans toutes les balises p */
-p {
-	font-family: 'Open Sans', Sans-sérif;
-	text-transform: uppercase;
-	letter-spacing: 0.25em;
-	font-weight: bold;
-	margin-left: 20px;
-}
-/*texte en relief et avec une ombre*/
-.embossedtext {
-	color: rgba(255, 255, 255, 0.7);
-	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
-}
-/*définition de l'encadrement */
-.embossed {
-	border: 3px solid rgba(255, 255, 255, 0.6);
-	box-shadow: inset -2px 2px 1px rgba(0, 0, 0, 0.2), -2px 2px 1px
-		rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-}
-/*Définition d'un cercle */
-.circle {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	margin: 30px auto;
-}
-/*Définition du texte contenu dans le cercle*/
-.circle p {
-	padding-top: 53px;
-	padding-left: 6px;
-	font-size: 30px;
-}
-
-/*taille du contenu*/
-.content {
-	font-size: 18px;
-	padding: 15px;
-}
-/*Inutile il me semble ... a verifier*/
-.fa {
-	padding: 10px 15px 0;
-}
-/*entete.css*/
-/*Definition de la barre de menu*/
 nav {
-	margin-top: 10px;
-	padding: 24px;
-	text-align: center;
-	font-family: Raleway;
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: #5175C0;
+  /*position:fixed;*/
 }
-/*definition de la couleur de la barre de menu*/
+
 #nav-2 {
-	background: #5175C0;
+  margin-top: 10px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: #5175C0;
+  text-align: center;
+  line-height: 500%;
+  /*position:fixed;*/
 }
-/*Definition de la police utilisée dans la barre de menu de l'entete*/
-.link-2 {
-	transition: 0.7s;
-	color: #ffffff;
-	font-family: 'Open Sans', Sans-sérif;
-	font-size: 20px;
-	text-decoration: none;
-	border-right: 2px dotted transparent;
-	padding: 30px 8px 0 10px;
-	margin: 0 10px;
+#nav-3 {
+  text-align: center;
+  line-height: 500%;
+  margin-top: 100px;
 }
-/*definition de la visualisation lorsque la souris est au dessus*/
-.link-2:hover {
-	border-right: 2px dotted #ffffff;
-	padding-bottom: 24px;
-}
-/*shop.css*/
-/*Commentaire a ajouter*/
-/*on ne met pas en place le style de liste dans ce contenu*/
-#container ul {
-	list-style: none;
-}
-/*positionnement des bouttons dans ce contenu*/
-#container .buttons {
-	margin-bottom: 20px;
-}
-/*Definition de la position, de la taille ,des bordures de la liste*/
-#container .list li {
-	width: 100%;
-	border-bottom: 1px dotted #CCC;
+
+#logoPARAM {
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 10px;
-	padding-bottom: 10px;
-}
-/*Definition de la position, de la taille , des bordures de la grille*/
-#container .grid li {
-	float: left;
-	width: 20%;
-	height: 50px;
-	border-right: 1px dotted #CCC;
-	border-bottom: 1px dotted #CCC;
-	padding: 20px;
-}
-/*positionnement de la liste*/
-.list {
-	margin: center;
-}
-/*mise en place du footer*/
-#footer {
-	margin: auto;
-	width: 90%;
-	border: 3px solid green;
-	padding: 10px;
-	text-align: center;
+	margin-top: 10px;
 }
 
-#footer ul #nav1 {
-	/*list-style: none;*/
-	margin: auto;
-	padding: 0;
-	overflow: auto;
-	background-color: #5175C0;
-	display: inline;
+
+.link-2 {
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Verdana', sans-sherif;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 0px 8px 0px 8px;
 }
 
-#footer li {
-	/*float:left;*/
-	display: inline;
-	list-style: none;
+.link-2:hover {
 }
 
-#footer li a {
-	display: inline-block;
-	color: white;
-	margin: 0 30px;
-	text-align: center;
-	/* padding: 16px;*/
-	text-decoration: none;
-}
 
-#footer li a:hover {
-	background-color: #5175C0;
-}
-/*dashboard.css*/
-/*mise en place d'un nouveau dashboard?? code trouver sur internet c'est sur !!! a modofier*/

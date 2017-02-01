@@ -60,6 +60,8 @@
 				$reponse->closeCursor(); // Termine le traitement de la requête
 		?>
 	</div>	  
+			<footer><?php include 'footer.php';?></footer>
+	
 </body>
 
 

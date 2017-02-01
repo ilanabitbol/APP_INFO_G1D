@@ -20,14 +20,10 @@
 			
 			  <div class="content embossed">
 			    <p class="embossedtext">
-			    <?php foreach ($query->getEmail($connexion_base) as $line){
-			    			echo $line['email'];
-			    			
-			    }?>
 			    Clement Dosmoz est un projet r&Eacutealis&Eacute par une des &Eacutequipes de Mohai &Agrave la demande de DomIsep. Une &Eacutequipe de 6 grands apprentis ing&Eacutenieurs a con&ccedilu ce produit.
 			  </div>
 </div>
-		
+		<footer><?php include 'footer.php';?></footer>
 </body>
 
 </html>

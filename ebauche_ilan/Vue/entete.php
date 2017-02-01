@@ -52,7 +52,7 @@
 		  <?php }
 		  	?>
 		</nav>
-
+	
 </body>
 
 </html>

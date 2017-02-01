@@ -25,6 +25,7 @@
 		
 		 	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 			<script type="text/javascript" src="../stylesheet/accueil.js"></script>
+		<footer><?php include 'footer.php';?></footer>
 
 </body>
 
