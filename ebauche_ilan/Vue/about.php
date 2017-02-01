@@ -1,4 +1,9 @@
-<?php include 'entete.php' ?>
+<?php include 'entete.php' ;
+	  include_once ('../modele/Connexion_Base.class.php');
+		include_once ('../modele/Query.class.php');
+		$connexion_base= new Connexion_Base();
+		$query = new Query();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +20,10 @@
 			
 			  <div class="content embossed">
 			    <p class="embossedtext">
+			    <?php foreach ($query->getEmail($connexion_base) as $line){
+			    			echo $line['email'];
+			    			
+			    }?>
 			    Clement Dosmoz est un projet r&Eacutealis&Eacute par une des &Eacutequipes de Mohai &Agrave la demande de DomIsep. Une &Eacutequipe de 6 grands apprentis ing&Eacutenieurs a con&ccedilu ce produit.
 			  </div>
 </div>

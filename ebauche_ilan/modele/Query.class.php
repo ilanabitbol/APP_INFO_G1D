@@ -16,6 +16,7 @@ class Query {
     private $id_sensor;
     private $new_data_sensor;
     private $nom_piece;
+    private $fin;
 	//	//
 	
 	//Constructeur
@@ -41,14 +42,29 @@ class Query {
 		));	
 	}
 	//Fonction permettant d'interroger une ligne de la table en fonction des champs de connexions renseignes par le client
-	public function connexion_query($connexion_base, $email, $password){
-		$req = $connexion_base->getDb()->prepare('SELECT id FROM utilisateur WHERE email = :email AND password = :password');
+	public function  getUtilisateur($connexion_base, $email, $password){
+		$req = $connexion_base->getDb()->prepare('SELECT ID, prenom FROM utilisateur WHERE email = :email AND password = :password');
 		$req->execute(array(
 				'email' => $email,
 				'password' => $password,
 		));
-		return $resultat = $req->fetch();
-		
+		return $resultat = $req->fetch();//retourne un boolean
+	}
+	
+	public function getEmail($connexion_base){
+
+	    $query = "SELECT email
+	              FROM utilisateur";
+	
+	    $param = $tableau;
+	    $requete = $connexion_base->getDb()->prepare($query);
+	    $requete->execute($param);//Remplace les variables marquées par le point d'interogation
+	
+	    $tableau = array();
+	    while ($donnees = $requete->fetch()) {
+	        $tableau[] = $donnees;
+	    }
+	    return $tableau;
 	}
 	//Fonction permettant de persister les demandes d'assistances
 	public function assistance_query($connexion_base, $email, $demande){
@@ -109,6 +125,40 @@ class Query {
 				'id_user' =>$id_user,
 		));
 	
+	}
+	
+	public function getUtilisateurBy($connexion_base,$where,$post)
+	{
+		if ($where == "email") {
+			$requete = $db->prepare('SELECT prenom, ID FROM utilisateur WHERE email=:email');
+			$requete->execute(array(
+					"email" => $post
+			));
+	
+			$donnees = $requete->fetch();
+			$requete->closeCursor();
+			return $donnees;
+		}
+		else if ($where == "nom") {
+			$requete = $db->prepare('SELECT ID,nom, permis_id FROM conducteur WHERE nom=:nom');
+			$requete->execute(array(
+					"nom" => $post
+			));
+	
+			$donnees = $requete->fetch();
+			$requete->closeCursor();
+			return $donnees;
+		}
+		else if ($where == "type") {
+			$requete = $db->prepare('SELECT ID, nom, permis_id FROM conducteur WHERE nom=:nom');
+			$requete->execute(array(
+					"permis_id" => $post
+			));
+	
+			$donnees = $requete->fetch();
+			$requete->closeCursor();
+			return $donnees;
+		}
 	}
 	
 }
