@@ -11,10 +11,15 @@
 		
 		
 		<nav id="nav-3">
-			<a class="link-2" href="../Vue/about.php">Mentions legales</a>
-			<a class="link-2" href="../Vue/about.php">A propos de </a>
-			<a class="link-2" href="../Vue/about.php">Nous contactez</a>
-			
+			<div id="div-1">
+				
+						<a class="link-3" href="../Vue/about.php">Mentions legales</a><br>
+					
+						<a class="link-3" href="../Vue/about.php">Qui sommes nous ? </a><br>
+					
+						<a class="link-3" href="../Vue/about.php">Nous contactez</a><br>
+				
+			</div>	
 		</nav>
 
 </body>
