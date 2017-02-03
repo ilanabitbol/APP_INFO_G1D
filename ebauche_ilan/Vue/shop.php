@@ -24,17 +24,26 @@
 							        	<?php 
 											switch ($donnes['nom_produit'])
 											{
-												case 'hydrometre':?>
-										  		<img alt="hydrometre" class="arrondi" src="../images/anemometre.png"/>
+												case 'Anemometre':?>
+										  		<img alt="Anemometre" class="arrondi" src="../images/anemometre.png"/>
 										  		<?php break;?>
 										<?php 
-												case 'thermometre':?>
-												<img alt="thermometre" class="arrondi" src="../images/station.png"/>
+												case 'Station meteo':?>
+												<img alt="Station meteo" class="arrondi" src="../images/station.png"/>
 												<?php break;?>
 										<?php 
-												case 'pressiometre':?>
-												<img alt="pressiometre" class="arrondi" src="../images/thermostat.png">
+												case 'Thermostat':?>
+												<img alt="Thermostat" class="arrondi" src="../images/thermostat.png">
 												<?php break;?>
+										<?php 
+												case 'Pluviometre':?>
+												<img alt="Pluviometre" class="arrondi" src="../images/Pluvio_shop.jpg">
+												<?php break;?>
+										<?php 
+												case 'Camera':?>
+												<img alt="Camera" class="arrondi" src="../images/camera_shop.jpg">
+												<?php break;?>
+										
 												
 										<?php }?>
 									</section>
