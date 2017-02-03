@@ -12,11 +12,11 @@
 	  
 	  		<ul class="wrapper">
 	    
-			    <li>Thermostat</li>
-			    <li>An&#233mom&#232tre</li>
-			    <li>Cam&#233ra</li>
-			    <li>Pluviom&#232tre</li>
-			    <li>Station m&#233t&#233o</li>
+			    <li class="top_3px">Thermostat</li>
+			    <li class="top_3px">An&#233mom&#232tre</li>
+			    <li class="top_3px">Cam&#233ra</li>
+			    <li class="top_3px">Pluviom&#232tre</li>
+			    <li class="top_3px">Station m&#233t&#233o</li>
 	    
 	 		 </ul>
 
