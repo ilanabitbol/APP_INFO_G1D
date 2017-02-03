@@ -11,15 +11,24 @@
 		
 		
 		<nav id="nav-3">
-			<div id="div-1">
-				
-						<a class="link-3" href="../Vue/about.php">Mentions legales</a><br>
+			
+				<div>
+						<a class="link-2" href="../Vue/about.php">Mentions legales</a>
 					
-						<a class="link-3" href="../Vue/about.php">Qui sommes nous ? </a><br>
+						<a class="link-2" href="../Vue/about.php">Qui sommes nous ?</a>
 					
-						<a class="link-3" href="../Vue/about.php">Nous contactez</a><br>
+						<a class="link-2" href="../Vue/envoi_mail.php">Nous contactez</a>
+				</div>
+				<div>
+						<a class="link-2" href="https://www.facebook.com/">Facebook</a>
+					
+						<a class="link-2" href="https://www.instagram.com/">Instagram</a>
+					
+						<a class="link-2" href="https://www.twitter.com/">Twitter</a>
+				</div>
+
 				
-			</div>	
+			
 		</nav>
 
 </body>
