@@ -17,7 +17,7 @@ html, body {
 
 body {
   background: #eaeaea;
-  font-family: 'Josefin Slab', serif;
+  font-family:'Verdana', sans-sherif;
 }
 
 .perspective {
@@ -45,28 +45,22 @@ body {
   transition: 1s all ease-in-out;
   -webkit-transition: 1s all ease-in-out;
   text-align:center;
-  color:#fff;
+  color:#5175C0;
   cursor:pointer;
   background-size:cover !important;
 }
 
 .wrapper li:nth-of-type(1) {
-  background: url(https://images.unsplash.com/photo-1441260038675-7329ab4cc264?q=80&fm=jpg&s=b1c4700b303adfae30ee320aca07328a) no-repeat center center;
+  background: url(../images/thermostat_vitrine.jpg) no-repeat center center;
 }
 .wrapper li:nth-of-type(2) {
-  background: url(https://images.unsplash.com/photo-1436564989038-18b9958df72b?q=80&fm=jpg&s=63f82ffb3fa7effd45c79e0379dbdee6) no-repeat center center;
+  background: url(../images/anemometre_vitrine.jpg) no-repeat center center;
 }
 .wrapper li:nth-of-type(3) {
-  background: url(https://images.unsplash.com/photo-1436397543931-01c4a5162bdb?q=80&fm=jpg&s=29b3d57347ca107a06e5cfe262f24ef1) no-repeat center center;
+  background: url(../images/camera_vitrine.jpg) no-repeat center center;
 }
 .wrapper li:nth-of-type(4) {
-  background: url(https://images.unsplash.com/photo-1437623889155-075d40e2e59f?q=80&fm=jpg&s=51e3e297c2171808e0610d00b970bf7b) no-repeat center center;
-}
-.wrapper li:nth-of-type(5) {
-  background: url(https://images.unsplash.com/photo-1428954376791-d9ae785dfb2d?q=80&fm=jpg&s=2b9da0d2264050e32ad8ac8213a76a78) no-repeat center center;
-}
-.wrapper li:nth-of-type(6) {
-  background: url(https://images.unsplash.com/photo-1422433555807-2559a27433bd?q=80&fm=jpg&s=f4a3f331eed09d297e2a71e3dfea402d) no-repeat center center;
+  background: url(../images/pluvio_vitrine.jpg) no-repeat center center;
 }
 
 .plier {
@@ -75,7 +69,7 @@ body {
 }
 
 .wrapper li.active {
-  transition-delay:1.2s;
+  transition-delay:1s;
 }
 
 .active{
