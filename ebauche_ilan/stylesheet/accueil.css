@@ -40,14 +40,29 @@ body {
 .wrapper li {
   flex-grow: 1;
   opacity:1;
-  padding:200px 0;
-  font-size:56px;
+  width: 20%;
+  font-size:1.3em;
   transition: 1s all ease-in-out;
   -webkit-transition: 1s all ease-in-out;
   text-align:center;
+  padding-top: 25%;
   color:#5175C0;
   cursor:pointer;
   background-size:cover !important;
+}
+
+.produit {
+  border-radius: 5px;
+  width: 80%;
+  margin-left:10%;
+  margin-right: 10%;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.produit:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+  transition: 0.2s;
 }
 
 .wrapper li:nth-of-type(1) {
