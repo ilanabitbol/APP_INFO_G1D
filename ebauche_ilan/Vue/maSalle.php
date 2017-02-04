@@ -15,7 +15,12 @@
 														GROUP BY donnees.ID_ac_cap
                                                         ');
 		}
-?>
+		$reponse2= $connexion_base->getDb()->query('SELECT    donnees.valeur, donnees.date_donnees
+                                                        FROM piece, donnees, actionneurs_capteurs, type_fonction
+                                                        WHERE piece.ID = "'.$_SESSION['ID'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
+                                                        
+														');
+		?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,6 +64,11 @@
   			</section>
   		
   			<?php }
+  			$reponse->closeCursor();
+  			while($donnes2 = $reponse2->fetch()){
+  					echo $donnes2['valeur']." à la date : ". $donnes2['date_donnees'];?><br><?php
+  			}
+  			$reponse2->closeCursor();
   			?>
 	</div>
  		<footer><?php include 'footer.php';?></footer>
