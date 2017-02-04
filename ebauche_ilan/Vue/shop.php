@@ -28,7 +28,7 @@
 										  		<img alt="Anemometre" class="arrondi" src="../images/anemometre.png"/>
 										  		<?php break;?>
 										<?php 
-												case 'Station meteo':?>
+												case 'Station_meteo':?>
 												<img alt="Station meteo" class="arrondi" src="../images/station.png"/>
 												<?php break;?>
 										<?php 
