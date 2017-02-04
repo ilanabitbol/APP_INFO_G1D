@@ -54,10 +54,19 @@
 											  echo 'Stock : '.$donnes['stock'].'<br />'; 
 										?>
 									</section>
-								</div>		
-								<form action="../Vue/paiement.php">
-						    			<input type="submit" value="Acheter" class="buttons">
-								</form>
+								</div>
+								<?php 
+									if ($_SESSION == NULL){?>
+										<form action="../Vue/sign_in-up.php">
+										<input type="submit" value="Acheter" class="buttons">
+										</form>
+									<?php }else{?>
+										<form action="../Vue/paiement.php">
+										<input type="submit" value="Acheter" class="buttons">
+										</form>
+									<?php }
+									?>
+							
 													
 							</div>
 						</li>
