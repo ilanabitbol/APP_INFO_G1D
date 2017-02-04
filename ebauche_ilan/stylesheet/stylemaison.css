@@ -12,7 +12,37 @@ p {
   font-family: verdana;
   text-align: center;
 }
-
+canvas {
+    display: block;
+    margin: 0 Auto;
+}
+table {
+    width: 400px;
+    margin: 5% auto;
+    border: thin solid black;
+}
+th, td {
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: #B0B0B0;
+}
+thead {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #ddd;
+}
+tfoot {
+    text-align: center;
+    font-style: italic;
+    font-size: .75em;
+}
 .container {
   width: 60%;
   padding: 40px;

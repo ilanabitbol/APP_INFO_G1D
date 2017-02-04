@@ -62,15 +62,28 @@
 					</thead>
 				</table>
   			</section>
-  		
-  			<?php }
-  			$reponse->closeCursor();
-  			while($donnes2 = $reponse2->fetch()){
-  					echo $donnes2['valeur']." à la date : ". $donnes2['date_donnees'];?><br><?php
-  			}
-  			$reponse2->closeCursor();
-  			?>
-	</div>
+  			<?php }?>
+  			<canvas id="tbcanvas" width="400" height="400"></canvas>
+<table>
+    <caption>Stats</caption>
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Données</th>
+        </tr>
+    </thead>
+    <tbody><?php while($donnes2 = $reponse2->fetch()){ ?>
+        <tr>
+            <th scope="row"><?php echo $donnes2['date_donnees'];?></th>
+            <td><?php echo $donnes2['valeur'];?></td>
+        </tr><?php }?>
+    </tbody>
+</table>
+  			
  		<footer><?php include 'footer.php';?></footer>
- 
+   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="../stylesheet/stats.js"></script>
  </body>
+ 
+ </html>
