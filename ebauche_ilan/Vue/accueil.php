@@ -45,7 +45,7 @@
 		</div>
 				<div class="container">
 			  <div class="circle embossed">
-			    <p class="embossedtext">Dosmoz</p>
+			    <p class="embossedtext">Domisep</p>
 			  </div>
 		<div class="content embossed">
 			    	<p class="embossedtext">

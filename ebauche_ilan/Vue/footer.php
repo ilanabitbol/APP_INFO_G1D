@@ -21,11 +21,11 @@
 						<a class="link-2" href="../Vue/envoi_mail.php">Nous contactez</a>
 				</div>
 				<div>
-						<a class="link-2" href="https://www.facebook.com/">Facebook</a>
+						<a class="link-2" target="_blank" href="https://www.facebook.com/">Facebook</a>
 					
-						<a class="link-2" href="https://www.instagram.com/">Instagram</a>
+						<a class="link-2" target="_blank" href="https://www.instagram.com/">Instagram</a>
 					
-						<a class="link-2" href="https://www.twitter.com/">Twitter</a>
+						<a class="link-2" target="_blank" href="https://www.twitter.com/">Twitter</a>
 				</div>
 
 				
