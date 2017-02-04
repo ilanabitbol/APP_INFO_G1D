@@ -60,6 +60,16 @@ body {
   transition: 0.2s;
 }
 
+.achetez {
+  border-radius: 5px;
+  width: 80%;
+  margin-left:10%;
+  margin-right: 10%;
+  margin-top: 130%;
+  background-color: black;
+  transition: 0.2s;
+}
+
 .produit:hover {
   box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
   transition: 0.2s;
