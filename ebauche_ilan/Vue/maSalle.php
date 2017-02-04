@@ -63,22 +63,22 @@
 				</table>
   			</section>
   			<?php }?>
-  			<canvas id="tbcanvas" width="400" height="400"></canvas>
-<table>
-    <caption>Stats</caption>
-    <thead>
-        <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Données</th>
-        </tr>
-    </thead>
-    <tbody><?php while($donnes2 = $reponse2->fetch()){ ?>
-        <tr>
-            <th scope="row"><?php echo $donnes2['date_donnees'];?></th>
-            <td><?php echo $donnes2['valeur'];?></td>
-        </tr><?php }?>
-    </tbody>
-</table>
+				  			<canvas id="tbcanvas" width="400" height="400"></canvas>
+				<table>
+				    <caption>Stats</caption>
+				    <thead>
+				        <tr>
+				            <th scope="col">Date</th>
+				            <th scope="col">Données</th>
+				        </tr>
+				    </thead>
+				    <tbody><?php while($donnes2 = $reponse2->fetch()){ ?>
+				        <tr>
+				            <th scope="row"><?php echo $donnes2['date_donnees'];?></th>
+				            <td><?php echo $donnes2['valeur'];?></td>
+				        </tr><?php }?>
+				    </tbody>
+				</table>
   			
  		<footer><?php include 'footer.php';?></footer>
    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
