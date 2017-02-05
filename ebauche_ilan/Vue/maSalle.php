@@ -3,23 +3,52 @@
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
 		if (isset($_SESSION['admin'])){
-			$reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac, MAX(donnees.date_donnees) AS last_date, donnees.valeur, actionneurs_capteurs. etat, actionneurs_capteurs.batterie
-                                                        FROM piece, donnees, actionneurs_capteurs, type_fonction
-                                                        WHERE piece.ID = "'.$_SESSION['ID_choisis'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
-														GROUP BY donnees.ID_ac_cap
+			$reponse= $connexion_base->getDb()->query('SELECT type_fonction.nom_fonction, donnees.ID_ac_cap, actionneurs_capteurs.adresse_mac, donnees.valeur, donnees.date_donnees, actionneurs_capteurs.etat, actionneurs_capteurs.batterie 
+													FROM type_fonction, actionneurs_capteurs, piece, donnees 
+													JOIN ( 
+													SELECT MAX( donnees.date_donnees ) AS last_date, donnees.ID_ac_cap AS id_cap 
+													FROM donnees
+													GROUP BY donnees.ID_ac_cap 
+													) AS TEMP ON donnees.ID_ac_cap = TEMP.id_cap 
+													AND donnees.date_donnees = TEMP.last_date 
+													WHERE donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND piece.ID = "'.$_SESSION['ID_choisis'].'" 
+													GROUP BY donnees.ID_ac_cap
                                                         ');
 		}else{
-		$reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac, MAX(donnees.date_donnees) AS last_date, donnees.valeur, actionneurs_capteurs. etat, actionneurs_capteurs.batterie
-                                                        FROM piece, donnees, actionneurs_capteurs, type_fonction
-                                                        WHERE piece.ID = "'.$_SESSION['ID'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
-														GROUP BY donnees.ID_ac_cap
-                                                        ');
+		$reponse= $connexion_base->getDb()->query('SELECT type_fonction.nom_fonction, donnees.ID_ac_cap, actionneurs_capteurs.adresse_mac, donnees.valeur, donnees.date_donnees, actionneurs_capteurs.etat, actionneurs_capteurs.batterie 
+													FROM type_fonction, actionneurs_capteurs, piece, donnees 
+													JOIN ( 
+													SELECT MAX( donnees.date_donnees ) AS last_date, donnees.ID_ac_cap AS id_cap 
+													FROM donnees
+													GROUP BY donnees.ID_ac_cap 
+													) AS TEMP ON donnees.ID_ac_cap = TEMP.id_cap 
+													AND donnees.date_donnees = TEMP.last_date 
+													WHERE donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND piece.ID = "'.$_SESSION['ID'].'" 
+													GROUP BY donnees.ID_ac_cap');
 		}
-		$reponse2= $connexion_base->getDb()->query('SELECT    donnees.valeur, donnees.date_donnees
-                                                        FROM piece, donnees, actionneurs_capteurs, type_fonction
-                                                        WHERE piece.ID = "'.$_SESSION['ID'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
-                                                        
+		$reponse_humidite= $connexion_base->getDb()->query('SELECT type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac, 
+				donnees.valeur, donnees.date_donnees
+FROM donnees, actionneurs_capteurs, type_fonction
+WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" 
+				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction 
+				AND type_fonction.nom_fonction = "Humidité"
 														');
+		$reponse_temperature = $connexion_base->getDb()->query('SELECT type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac,
+				donnees.valeur, donnees.date_donnees
+FROM donnees, actionneurs_capteurs, type_fonction
+WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'"
+				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
+				AND type_fonction.nom_fonction = "Temperature"
+														');
+		$reponse_luminosite = $connexion_base->getDb()->query('SELECT type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac,
+				donnees.valeur, donnees.date_donnees
+FROM donnees, actionneurs_capteurs, type_fonction
+WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'"
+				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
+				AND type_fonction.nom_fonction = "Luminosité"
+														');
+		
+		
 		?>
 <!DOCTYPE html>
 <html>
@@ -46,10 +75,10 @@
   				<form action='suppression_capteur.php' method='POST'>
   					<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
   					<input type="submit" value= "Supprimer un capteur" class="buttons" />
-  				</form>
-  				
+  				</form>  				
   			</div>
   			
+	
   			<?php while($donnes = $reponse->fetch()){?>
 			<section class="tab">
 				<table>
@@ -63,37 +92,60 @@
 					</thead>
 				</table>
   			</section>
-  			<?php }?>
+  			<?php }
+  				?>
 				<table>
-				    <caption>Stats</caption>
+				    <caption>Humidité</caption>
 				    <thead>
 				        <tr>
 				            <th scope="col">Date</th>
 				            <th scope="col">Données</th>
 				        </tr>
 				    </thead>
-				    <tbody><?php while($donnes2 = $reponse2->fetch()){ ?>
+				    <tbody><?php while($donnes_humidite = $reponse_humidite->fetch()){ ?>
 				        <tr>
-				            <th scope="row"><?php echo $donnes2['date_donnees'];?></th>
-				            <td><?php echo $donnes2['valeur'];?></td>
+				            <th scope="row"><?php echo $donnes_humidite['date_donnees'];?></th>
+				            <td><?php echo $donnes_humidite['valeur'];?></td>
 				        </tr><?php }?>
 				    </tbody>
 				</table>
-					
-						<div id="tester" style="width:600px;height:250px;"></div>
-						 <script>
-						TESTER = document.getElementById('tester');
-						Plotly.plot( TESTER, [{
-						x: [0.1, 2, 3, 4, 5,10],
-						y: [1, 2, 4, 8, 16,22] }], {
-						margin: { t: 0 } } );
-					</script>
 				
+				<table>
+				    <caption>Luminosité</caption>
+				    <thead>
+				        <tr>
+				            <th scope="col">Date</th>
+				            <th scope="col">Données</th>
+				        </tr>
+				    </thead>
+				    <tbody><?php while($donnes_luminosite = $reponse_luminosite->fetch()){ ?>
+				        <tr>
+				            <th scope="row"><?php echo $donnes_luminosite['date_donnees'];?></th>
+				            <td><?php echo $donnes_luminosite['valeur'];?></td>
+				        </tr><?php }?>
+				    </tbody>
+				</table>
+				
+			   <table>
+				    <caption>Temperature</caption>
+				    <thead>
+				        <tr>
+				            <th scope="col">Date</th>
+				            <th scope="col">Données</th>
+				        </tr>
+				    </thead>
+				    <tbody><?php while($donnes_temperature = $reponse_temperature->fetch()){ ?>
+				        <tr>
+				            <th scope="row"><?php echo $donnes_temperature['date_donnees'];?></th>
+				            <td><?php echo $donnes_temperature['valeur'];?></td>
+				        </tr><?php }?>
+				    </tbody>
+				</table>
+			
+
+    
  		<footer><?php include 'footer.php';?></footer>
 
-
-
-    <script src="../stylesheet/stats.js"></script>
  </body>
  
  </html>
