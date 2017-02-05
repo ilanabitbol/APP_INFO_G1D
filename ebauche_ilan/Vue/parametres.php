@@ -1,4 +1,5 @@
-<?php include 'entete.php';?>
+<?php include 'entete.php';
+session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,13 +12,22 @@
 	<div class="container">
 	
 		<div>
-		  <button id="param-button" onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Profil</button>
+		<form method="POST" action="profil.php">
+		  <button id="param-button">Profil</button>
+		</form>
 		</div>
-	
+		<!--Outil pas encore disponible-->
+		<form method="POST" action="profil.php">
 		<div>
 		  <button id="param-button">Ajouter un utilisateur</button>
 		</div>
-
+		</form>
+		<!--Outil pas encore disponible-->
+		<form method="POST" action="profil.php">
+		<div>
+		  <button id="param-button">Modifier les utilisateurs</button>
+		</div>
+		</form>
 	</div>
 			<footer><?php include 'footer.php';?></footer>
 	

@@ -1,0 +1,35 @@
+.container {
+  width: 620px;
+  padding: 50px;
+  margin-top: 1px;
+  box-sizing: border-box;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+h3{
+	color: #5175C0;
+}
+.profil_list{
+	color: #5175C0;
+	font-size: 20px;
+	font-family: 'Verdana', sans-sherif;
+	text-decoration: none;
+}
+.modif_button {
+  width: 250px;
+  height: 40px;
+  margin-left: 0%;
+  margin-top: 20px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+button:hover {
+  color: rgba(138, 123, 179, 0.8);
+  border: 1px solid rgba(138, 123, 179, 0.8);
+}
