@@ -27,7 +27,8 @@
   <meta charset="UTF-8">
   <title>dosmoz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+	
    <link rel="stylesheet" type ="text/css" href="../stylesheet/stylemaison.css">
  </head>
  
@@ -63,7 +64,6 @@
 				</table>
   			</section>
   			<?php }?>
-				  			<canvas id="tbcanvas" width="400" height="400"></canvas>
 				<table>
 				    <caption>Stats</caption>
 				    <thead>
@@ -79,9 +79,19 @@
 				        </tr><?php }?>
 				    </tbody>
 				</table>
-  			
+					
+						<div id="tester" style="width:600px;height:250px;"></div>
+						 <script>
+						TESTER = document.getElementById('tester');
+						Plotly.plot( TESTER, [{
+						x: [0.1, 2, 3, 4, 5,10],
+						y: [1, 2, 4, 8, 16,22] }], {
+						margin: { t: 0 } } );
+					</script>
+				
  		<footer><?php include 'footer.php';?></footer>
-   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
 
     <script src="../stylesheet/stats.js"></script>
  </body>
