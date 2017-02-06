@@ -50,9 +50,10 @@ session_start();
 				</address>	
 </div>
 
+<footer><?php include 'footer.php';?></footer>
 
 </body>
-<footer><?php include 'footer.php';?></footer>
+
 </html>
 <?php
 unset($_SESSION['success']);

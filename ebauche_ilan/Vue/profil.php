@@ -58,4 +58,9 @@ $reponse= $connexion_base->getDb()->query('SELECT * FROM utilisateur	 WHERE ID =
     </div>
     
 </div>
+
 <footer><?php include 'footer.php';?></footer>
+
+</body>
+
+</html>
