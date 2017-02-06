@@ -1,35 +1,66 @@
 <?php
+session_start();
+/**
+* Controle des informations envoyes lors de l'inscription.
+*/
+//Inclusion de l'object permettant de recuperer la connexion à la base.
+include_once ('../modele/Connexion_Base.class.php');
+include_once ('../modele/Query.class.php');
+$connexion_base= new Connexion_Base();
+$query = new Query();
+//
+//Controle des champs issus du formulaire
+$same_email = false;
+$nom = isset($_POST['nom']) ? htmlspecialchars($_POST['nom']) : NULL;
+$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
+$numero = isset($_POST['numero']) ? htmlspecialchars($_POST['numero']) : NULL;
+$pays = isset($_POST['pays']) ? htmlspecialchars($_POST['pays']) : NULL;
+$ville = isset($_POST['ville']) ? htmlspecialchars($_POST['ville']) : NULL;
+$code_postal = isset($_POST['code_postal']) ? htmlspecialchars($_POST['code_postal']) : NULL;
+$adresse = isset($_POST['adresse']) ? htmlspecialchars($_POST['adresse']) : NULL;
+// Hachage du mot de passe
+if ( $_POST['mdp'] != NULL AND $_POST['confirm_mdp']!=NULL AND $_POST['mdp']== $_POST['confirm_mdp']){
+	$password_hache = sha1(htmlspecialchars($_POST['mdp']));
 
-require('modele/gestion_utilisateur.php');
-$id =  $_SESSION['ID'];
-$reponse = mdp($db,$_SESSION['login']);
-$modification_login = "nom = '".$_POST['nom']."'";
-$modification_adresse = "adresse = '".$_POST['adresse']."'";
-$modification_mot_de_passe = "mot_de_passe = '".sha1($_POST['mdp'])."'";
+}else{ $password_hache = NULL;}
 
-$ligne = $reponse->fetch();
-if(sha1($_POST['old_mdp'])!=$ligne['mot_de_passe'])
-{
-  $_SESSION['erreur'] = "Le Mot de passe est incorrect";
-  header("Location: index.php?page=modification_profil");//Redirection vers la page de profil
-  exit();//Permet l'arret du script
-}
-else
-{
-  if (!empty($_POST['nom']))
-  {
-    modif_profil($modification_login,$id,$db);
-  }
-  if (!empty($_POST['adresse']))
-  {
-    modif_profil($modification_adresse,$id,$db);
-  }
-  if (!empty($_POST['mdp']))
-  {
-    modif_profil($modification_mot_de_passe,$id,$db);
-  }
-}
+if($_POST['old_mdp'] != NULL){
+	$oldpassword_hache = sha1(htmlspecialchars($_POST['old_mdp']));
+}else{ $oldpassword_hache = NULL;}
 
-header("Location: index.php?page=profil");
+echo $_SESSION['ID'];
+
+$response=$connexion_base->getDb()->query('SELECT password FROM utilisateur WHERE ID = "'.$_SESSION['ID'].'"');
+$donnees_user = $response->fetch();		
+
+
+echo "test";
+echo $donnees_user['password'];
+
+if($nom != NULL  AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND $pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL AND $_POST['old_mdp'] == $donnees_user['password']){
+	
+	$req = $connexion_base->getDb()->prepare('UPDATE utilisateur
+												SET nom = :nom, email = :email, numero= :numero, pays = :pays, ville = :ville, code_postal = :code_postal, adresse= :adresse, password= :password
+												WHERE ID= "'.$_SESSION['ID'].'"
+											');
+	$req->execute(array(
+			'nom'=>$nom,
+			'email' => $email,
+			'password' => $password_hache,
+			'numero'=> $numero,
+			'pays' => $pays,
+			'ville' => $ville,
+			'code_postal' =>$code_postal,
+			'adresse' =>$adresse,
+	
+	));
+}else{ echo "erreur ";}
+
+
+
+
+
+
+
 
  ?>
