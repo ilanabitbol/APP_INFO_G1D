@@ -77,11 +77,11 @@
 				}
 				$reponse->closeCursor(); // Termine le traitement de la requête
 		?>
-					<footer><?php include 'footer.php';?></footer>
 		
 	</div>	  
 	
 </body>
 
+<footer><?php include 'footer.php';?></footer>
 
 </html>
