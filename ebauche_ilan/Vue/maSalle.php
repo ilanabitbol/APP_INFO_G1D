@@ -86,7 +86,7 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 						<tr><th>Type de capteur</th> <td><?php echo $donnes['nom_fonction'];?></td></tr>
 						<tr><th>Adresse mac</th> <td><?php echo $donnes['adresse_mac'];?></td></tr>
 						<tr><th>Mesure</th> <td><?php echo $donnes['valeur'];?></td></tr>
-						<tr><th>Date</th> <td><?php echo $donnes['last_date'];?></td></tr>
+						<tr><th>Date</th> <td><?php echo $donnes['date_donnees'];?></td></tr>
 						<tr><th>Batterie</th> <td><?php echo $donnes['batterie'];?></td></tr>
 						<tr><th>Etat</th> <td><?php echo $donnes['etat'];?></td></tr>
 					</thead>
