@@ -10,12 +10,11 @@ nav {
   background: #5175C0;
   /*position:fixed;*/
 }
-#div-1 {
-	position: relative;
-    border: 3px solid #73AD21;
-    margin-right:80%;
-    line-height :100%; 
+
+#divfooter { 
+    height: 50px;
 }
+
 #nav-2 {
   margin-top: 10px;
   padding: 20px 20px 20px 20px;

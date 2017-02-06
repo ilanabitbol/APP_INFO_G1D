@@ -24,6 +24,8 @@ Gr&#226ce &#224 sa forte dimension internationale, elle a su &#233toffer ses eff
   					</p>			  					
   			  </div>
 </div>
+
 <footer><?php include 'footer.php';?></footer>
+
 </body>
 </html>

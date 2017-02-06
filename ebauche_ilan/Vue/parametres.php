@@ -29,7 +29,8 @@ session_start();?>
 		</div>
 		</form>
 	</div>
-			<footer><?php include 'footer.php';?></footer>
+			
+<footer><?php include 'footer.php';?></footer>
 	
 </body>
 

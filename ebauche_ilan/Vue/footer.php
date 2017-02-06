@@ -13,14 +13,14 @@
 		
 		<nav id="nav-3">
 			
-				<div>
-						<a class="link-2" href="../Vue/about.php">Mentions legales</a>
+				<div id="divfooter">
+						<a class="link-2" href="../Vue/about.php">Mentions légales</a>
 					
 						<a class="link-2" href="../Vue/about.php">Qui sommes nous ?</a>
 					
-						<a class="link-2" href="../Vue/envoi_mail.php">Nous contactez</a>
+						<a class="link-2" href="../Vue/envoi_mail.php">Nous contacter</a>
 				</div>
-				<div>
+				<div id="divfooter">
 						<a class="link-2" target="_blank" href="https://www.facebook.com/">Facebook</a>
 					
 						<a class="link-2" target="_blank" href="https://www.instagram.com/">Instagram</a>
