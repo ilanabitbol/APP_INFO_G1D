@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/data.php",
+		url: "http://localhost/APP_INFO_G1D/ebauche_ilan/Vue/data_temperature.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
@@ -16,7 +16,7 @@ $(document).ready(function(){
 				labels: player,
 				datasets : [
 					{
-						label: 'Consommation : ',
+						label: 'Temperature de la maison : ',
 						backgroundColor: 'rgba(200, 200, 200, 0.75)',
 						borderColor: 'rgba(200, 200, 200, 0.75)',
 						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
@@ -26,10 +26,10 @@ $(document).ready(function(){
 				]
 			};
 
-			var ctx = $("#mycanvas");
+			var ctx = $("#mycanvas_temperature");
 
 			var barGraph = new Chart(ctx, {
-				type: 'bar',
+				type: 'line',
 				data: chartdata
 			});
 		},

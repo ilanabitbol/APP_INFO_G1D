@@ -17,14 +17,16 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf('SELECT    donnees.valeur, donnees.date_donnees
-                                                        FROM piece, donnees, actionneurs_capteurs, type_fonction
-                                                        WHERE piece.ID = "'.$_SESSION['ID'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap  AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
-                                                        
+$query_temperature = sprintf('SELECT 
+				donnees.valeur, donnees.date_donnees
+FROM donnees, actionneurs_capteurs, type_fonction
+WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap  
+				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction 
+				AND type_fonction.nom_fonction = "Température"
 														');
 
 //execute query
-$result = $mysqli->query($query);
+$result = $mysqli->query($query_temperature);
 
 //loop through the returned data
 $data = array();
@@ -40,3 +42,7 @@ $mysqli->close();
 
 //now print the data
 print json_encode($data);
+
+
+
+
