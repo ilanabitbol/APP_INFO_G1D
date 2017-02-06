@@ -20,7 +20,7 @@ p {
 }
 
 .logo {
-   margin-left:-50px;
+   margin-left:0%;
 }
 
 
@@ -33,6 +33,7 @@ form {
 }
 #message{
 	border: 2px solid black;	
+	border-radius: 2px;
 	width:300px;
 }
 
@@ -46,6 +47,7 @@ input[type="email"]{
   outline: none;
   transition: all 0.30s ease-in-out;
   border: 1px solid black;
+  border-radius: 2px;
 }
 /* Effet de brillance au clique des champs du formulaire */
 input[type="text"]:focus,
@@ -72,9 +74,11 @@ textarea:hover{
   background-color: white;
   font-size: 1.3em;
   outline: none;
+  transition: 0.2s;
 }
 
 button:hover {
   color: rgba(138, 123, 179, 0.8);
   border: 1px solid rgba(138, 123, 179, 0.8);
+  transition: 0.2s;
 }

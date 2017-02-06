@@ -15,29 +15,19 @@
 	  		<ul class="wrapper">
 	    
 			    <li class="top_3px"><section class="produit">Thermostat</section>
-			   			 <section class="achetez">
-			   			 	<a  href='shop.php'>Achetez</a>	
-			   			 </section>
+			   			 <a  href='shop.php'><button class="acheter">Acheter</button></a>
 			    </li>
 			    <li class="top_3px"><section class="produit">An&#233mom&#232tre</section>
-			    		<section class="achetez">
-			   			 	<a  href='shop.php'>Achetez</a>	
-			   			 </section>
+			    		<a  href='shop.php'><button class="acheter">Acheter</button></a>
 			    </li>
 			    <li class="top_3px"><section class="produit">Cam&#233ra</section>
-			    		<section class="achetez">
-			   			 	<a  href='shop.php'>Achetez</a>	
-			   			 </section>
+			    		<a  href='shop.php'><button class="acheter">Acheter</button></a>
 			    </li>
 			    <li class="top_3px"><section class="produit">Pluviom&#232tre</section>
-			    		<section class="achetez">
-			   			 	<a  href='shop.php'>Achetez</a>	
-			   			 </section>
+			    		<a  href='shop.php'><button class="acheter">Acheter</button></a>
 			    </li>
 			    <li class="top_3px"><section class="produit">Station m&#233t&#233o</section>
-			    		<section class="achetez">
-			   			 	<a  href='shop.php'>Achetez</a>	
-			   			 </section>
+			    		<a  href='shop.php'><button class="acheter">Acheter</button></a>
 			    </li>
 	    
 	 		 </ul>

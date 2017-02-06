@@ -25,6 +25,7 @@ body {
   height: 100%;
   perspective:1000px;
   transform-style: preserve-3d;
+  padding-top: 10px;
 }
 
 .wrapper {
@@ -60,13 +61,22 @@ body {
   transition: 0.2s;
 }
 
-.achetez {
+.acheter {
+  height: 40px;
   border-radius: 5px;
   width: 80%;
   margin-left:10%;
   margin-right: 10%;
-  margin-top: 130%;
-  background-color: black;
+  margin-top: 80%;
+  background-color: #336699;
+  color: white;
+  font-family: verdana;
+  font-size:1.3em;
+  transition: 0.2s;
+}
+
+.acheter:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
   transition: 0.2s;
 }
 
