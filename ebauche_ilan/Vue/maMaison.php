@@ -49,7 +49,16 @@
   		</div>
   		
   		<div id="chart-container">
-			<canvas id="mycanvas"></canvas>
+			<canvas id="mycanvas_humidite"></canvas>
+  		</div>
+  		
+  		<div id="chart-container">
+			<canvas id="mycanvas_luminosite"></canvas>
+  		</div>
+  		
+  		
+  		<div id="chart-container">
+			<canvas id="mycanvas_temperature"></canvas>
   		</div>
   	</div>
  
@@ -57,6 +66,9 @@
   		
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  	<script type="text/javascript" src="../stylesheet/stats.js"></script>
+  	<script type="text/javascript" src="../stylesheet/stats_humidite.js"></script>
+  	<script type="text/javascript" src="../stylesheet/stats_luminosite.js"></script>
+  	<script type="text/javascript" src="../stylesheet/stats_temperature.js"></script>
+  	
 </body>
 </html>
