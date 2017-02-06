@@ -1,9 +1,9 @@
 <?php
 
-require('Modele/gestion_utilisateur.php');
-$id =  $_SESSION['UserID'];
+require('modele/gestion_utilisateur.php');
+$id =  $_SESSION['ID'];
 $reponse = mdp($db,$_SESSION['login']);
-$modification_login = "login = '".$_POST['login']."'";
+$modification_login = "nom = '".$_POST['nom']."'";
 $modification_adresse = "adresse = '".$_POST['adresse']."'";
 $modification_mot_de_passe = "mot_de_passe = '".sha1($_POST['mdp'])."'";
 
@@ -16,7 +16,7 @@ if(sha1($_POST['old_mdp'])!=$ligne['mot_de_passe'])
 }
 else
 {
-  if (!empty($_POST['login']))
+  if (!empty($_POST['nom']))
   {
     modif_profil($modification_login,$id,$db);
   }

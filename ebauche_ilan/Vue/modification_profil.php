@@ -9,16 +9,13 @@ session_start();?>
 </head>
 <body>
   <div class="container">
-    <h1 class="text">Modification de votre profil</h1>
-    <form method="POST" action="../controleur/verif_modif_profil.php" class="basic-grey">
-      <h3>
-          Bienvenue <?php echo ($_SESSION['prenom'])  ?> dans la modification de votre profil : 
-      </h3>
+    <h1 class="titre">Modification de votre profil</h1>
+    <form method="POST" action="../controleur/verif_modif_profil.php">
       
-        <input type="text" name="nom" placeholder="NOUVEAU NOM" onblur="verifPseudo(this)"/>
+        <input type="text" name="nom" placeholder="NOUVEAU NOM"/>
       
         <p>Pays : </p>
-		      <select id="ListeElement" onchange="VerifListe();" name="pays"> 
+		      <select id="ListeElement"  name="pays"> 
 				   <option value="France">France</option> 
 				   <option value="Allemagne">Allemagne</option> 
 				   <option value="Suisse">Suisse</option> 

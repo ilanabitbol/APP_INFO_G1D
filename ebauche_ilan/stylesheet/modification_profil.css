@@ -66,3 +66,8 @@ p,
 select {
 	margin-left: 20px;
 }
+.titre{
+	font-family: verdana;
+  	color: #5175C0;
+  	text-align: center;
+}
