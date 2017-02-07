@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 //setting header to json
 header('Content-Type: application/json');
 
@@ -17,16 +16,22 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query_temperature = sprintf('SELECT 
-				donnees.valeur, donnees.date_donnees
-FROM donnees, actionneurs_capteurs, type_fonction
-WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap  
-				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction 
-				AND type_fonction.nom_fonction = "Température"
-														');
+if (isset($_SESSION['admin'])){
+	$query = sprintf("SELECT type_fonction.nom_fonction, donnees.valeur, donnees.date_donnees
+	FROM donnees, actionneurs_capteurs, type_fonction, piece
+	WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap  
+		AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction AND type_fonction.nom_fonction = 'Température' 
+		AND actionneurs_capteurs.ID_piece = piece.ID_piece AND piece.ID = '{$_SESSION['ID_choisis']}' ");
+}else {
+	$query = sprintf("SELECT type_fonction.nom_fonction, donnees.valeur, donnees.date_donnees
+			FROM donnees, actionneurs_capteurs, type_fonction, piece
+			WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap
+			AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction AND type_fonction.nom_fonction = 'Température'
+			AND actionneurs_capteurs.ID_piece = piece.ID_piece AND piece.ID = '{$_SESSION['ID']}' ");
+}
 
 //execute query
-$result = $mysqli->query($query_temperature);
+$result = $mysqli->query($query);
 
 //loop through the returned data
 $data = array();

@@ -16,7 +16,7 @@ $(document).ready(function(){
 				labels: player,
 				datasets : [
 					{
-						label: 'Temperature de la maison : ',
+						label: 'Luminosite de la maison : ',
 						backgroundColor: 'rgba(200, 200, 200, 0.75)',
 						borderColor: 'rgba(200, 200, 200, 0.75)',
 						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
