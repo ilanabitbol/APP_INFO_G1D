@@ -142,7 +142,7 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 				    </tbody>
 				</table>
 			
-
+	</div>
     
  <footer><?php include 'footer.php';?></footer>
 
