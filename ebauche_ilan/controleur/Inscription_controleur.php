@@ -22,10 +22,9 @@
 			$password_hache = sha1(htmlspecialchars($_POST['password']));
 				
 		}else $password_hache = NULL;
-		
-		if(!preg_match('#^[0-9]{5}$#', $code_postal)){
-			echo "Code postal invalide";
-		}
+		if(!preg_match("#^[0-9]{5}$#",$code_postal)){
+			header("Location: ../Vue/erreurInscription.php");
+		}else echo "test ok";
 		
 		 foreach ( $query->getEmail($connexion_base) as $line){//Verification si l'email exite deja dans la base.
 		 	if($email == $line['email']){
