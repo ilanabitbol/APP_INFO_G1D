@@ -10,6 +10,8 @@ session_start();?>
 <body>
   <div class="container">
     <h1 class="titre">Modification de votre profil</h1>
+    <h3 class="titre">(Veuillez compléter tous les champs)</h3>
+    <a href = "profil.php"><button id="retourprofil">Retour</button></a>
     <form method="POST" action="../controleur/verif_modif_profil.php">
       	
         <input type="text" name="nom" placeholder="NOUVEAU NOM"/>
