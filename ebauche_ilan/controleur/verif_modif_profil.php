@@ -18,31 +18,32 @@ $pays = isset($_POST['pays']) ? htmlspecialchars($_POST['pays']) : NULL;
 $ville = isset($_POST['ville']) ? htmlspecialchars($_POST['ville']) : NULL;
 $code_postal = isset($_POST['code_postal']) ? htmlspecialchars($_POST['code_postal']) : NULL;
 $adresse = isset($_POST['adresse']) ? htmlspecialchars($_POST['adresse']) : NULL;
-// Hachage du mot de passe
+// Hachage du nouveau mot de passe
 if ( $_POST['mdp'] != NULL AND $_POST['confirm_mdp']!=NULL AND $_POST['mdp']== $_POST['confirm_mdp']){
 	$password_hache = sha1(htmlspecialchars($_POST['mdp']));
-
 }else{ $password_hache = NULL;}
 
+
+
+
+// verification de l'ancien mot de passe
 if($_POST['old_mdp'] != NULL){
 	$oldpassword_hache = sha1(htmlspecialchars($_POST['old_mdp']));
+	//if($oldpassword_hache!=$donnees_user['password']){			
+			//	header("Location: ../Vue/err_modification_profil.php");
+//}
 }else{ $oldpassword_hache = NULL;}
-
 echo $_SESSION['ID'];
 
 $response=$connexion_base->getDb()->query('SELECT password FROM utilisateur WHERE ID = "'.$_SESSION['ID'].'"');
-$donnees_user = $response->fetch();		
+$donnees_user = $response->fetch();
 
 
-echo "test";
-echo $donnees_user['password'];
-
-if($nom != NULL  AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND $pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL AND $_POST['old_mdp'] == $donnees_user['password']){
-	
+if($nom != NULL AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND $pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL AND ($oldpassword_hache == $donnees_user['password'])){
+	echo "tout est ok";
 	$req = $connexion_base->getDb()->prepare('UPDATE utilisateur
-												SET :nom = :nom, :email = :email, :numero= :numero, :pays = :pays, :ville = :ville, :code_postal = :code_postal, :adresse= :adresse, :password= :password
-												WHERE ID= "'.$_SESSION['ID'].'"
-											');
+												SET nom = '$nom', email = '$email', numero= '$numero', pays = '$pays', ville = '$ville', code_postal = '$code_postal', adresse = '$adresse', password = '$password_hache'
+												WHERE ID = "'.$_SESSION['ID'].'"');
 	$req->execute(array(
 			'nom'=>$nom,
 			'email' => $email,
@@ -52,15 +53,22 @@ if($nom != NULL  AND $email != NULL AND $password_hache != NULL AND $numero != N
 			'ville' => $ville,
 			'code_postal' =>$code_postal,
 			'adresse' =>$adresse,
-	
 	));
-}else{ echo "erreur ";}
-
-
-
-
-
-
-
-
- ?>
+}else{ 
+	echo $nom;
+	echo $email;
+	echo $password_hache;
+	echo $numero;
+	echo $pays;
+	echo $ville;
+	echo $code_postal;
+	echo $adresse;
+	echo $oldpassword_hache;
+	echo "vieux mdp : ";
+	echo $donnees_user['password'];
+	
+	
+	
+	//header("Location: ../Vue/err_modification_profil.php");
+}
+?>

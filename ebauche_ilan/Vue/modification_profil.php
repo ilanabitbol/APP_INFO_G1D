@@ -11,7 +11,7 @@ session_start();?>
   <div class="container">
     <h1 class="titre">Modification de votre profil</h1>
     <form method="POST" action="../controleur/verif_modif_profil.php">
-      
+      	
         <input type="text" name="nom" placeholder="NOUVEAU NOM"/>
       
         <p>Pays : </p>
@@ -36,18 +36,17 @@ session_start();?>
 
         <input type="text" name="confirm_mdp"placeholder="CONFIRMER NOUVEAU MOT DE PASSE" required onblur="verif_mdp(mdp,confirm_mdp)"/>
 
-        <input type="text" name="old_mdp"placeholder="MOT DE PASSE ACTUEL" required/>
+		<input type="text" name="old_mdp"placeholder="MOT DE PASSE ACTUEL" required/>
 
       <p>
         <input type="checkbox" required /> Je certifie être le propriétaire du compte
       </p>
-      
       <button type="submit" class="modif_button" id="modif_button">Valider la modification de votre profil</button>
+    
      
     </form>
 </div>
 
 <footer><?php include 'footer.php';?></footer>
 </body>
-
 </html>
