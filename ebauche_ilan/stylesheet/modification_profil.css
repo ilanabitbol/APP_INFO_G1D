@@ -8,6 +8,7 @@ input[type="password"] {
   outline: none;
   transition: 0.2s;
   border: 1px solid black;
+  border-radius: 2px;
 }
 /* Effet de brillance au clique des champs du formulaire */
 input[type="text"]:focus,
@@ -57,14 +58,17 @@ h3{
   background-color: white;
   font-size: 1.3em;
   outline: none;
+  transition: 0.2s;
 }
 button:hover {
   color: rgba(138, 123, 179, 0.8);
   border: 1px solid rgba(138, 123, 179, 0.8);
+  transiton: 0.2s;
 }
 p,
 select {
 	margin-left: 20px;
+	font-family: verdana;
 }
 .titre{
 	font-family: verdana;
