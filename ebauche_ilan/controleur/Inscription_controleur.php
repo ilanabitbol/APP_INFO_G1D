@@ -23,6 +23,10 @@
 				
 		}else $password_hache = NULL;
 		
+		if(!preg_match('#^[0-9]{5}$#', $code_postal)){
+			echo "Code postal invalide";
+		}
+		
 		 foreach ( $query->getEmail($connexion_base) as $line){//Verification si l'email exite deja dans la base.
 		 	if($email == $line['email']){
 		 		 $same_email = true;	//Alors on active le flag same_email si on detecte un mail present deja en base	.		 
