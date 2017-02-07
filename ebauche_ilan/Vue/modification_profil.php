@@ -1,5 +1,6 @@
 <?php include 'entete.php';
-session_start();?>
+session_start();
+print_r($_SESSION)?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

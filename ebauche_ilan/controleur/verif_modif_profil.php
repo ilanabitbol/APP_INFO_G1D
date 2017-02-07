@@ -1,5 +1,6 @@
 <?php
 session_start();
+print_r($_SESSION);
 /**
 * Controle des informations envoyes lors de l'inscription.
 */
@@ -41,34 +42,21 @@ $donnees_user = $response->fetch();
 
 if($nom != NULL AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND $pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL AND ($oldpassword_hache == $donnees_user['password'])){
 	echo "tout est ok";
-	$req = $connexion_base->getDb()->prepare('UPDATE utilisateur
-												SET nom = '$nom', email = '$email', numero= '$numero', pays = '$pays', ville = '$ville', code_postal = '$code_postal', adresse = '$adresse', password = '$password_hache'
-												WHERE ID = "'.$_SESSION['ID'].'"');
+	echo $_SESSION['ID'];
+	$req = $connexion_base->getDb()->prepare('	UPDATE utilisateur
+												SET nom = '.$nom.', email = '.$email.', numero= '.$numero.', pays = '.$pays.', ville = '.$ville.', code_postal = '.$code_postal.', adresse = '.$adresse.', password = '.$password_hache.'
+												WHERE ID ='.$_SESSION['ID'].'');
 	$req->execute(array(
 			'nom'=>$nom,
-			'email' => $email,
-			'password' => $password_hache,
-			'numero'=> $numero,
-			'pays' => $pays,
-			'ville' => $ville,
-			'code_postal' =>$code_postal,
-			'adresse' =>$adresse,
+			'email'=>$email,
+			'password'=>$password_hache,
+			'numero'=>$numero,
+			'pays' =>$pays,
+			'ville'=>$ville,
+			'code_postal'=>$code_postal,
+			'adresse'=>$adresse,
 	));
-}else{ 
-	echo $nom;
-	echo $email;
-	echo $password_hache;
-	echo $numero;
-	echo $pays;
-	echo $ville;
-	echo $code_postal;
-	echo $adresse;
-	echo $oldpassword_hache;
-	echo "vieux mdp : ";
-	echo $donnees_user['password'];
-	
-	
-	
-	//header("Location: ../Vue/err_modification_profil.php");
+	print_r($req);
+}else{ header("Location: ../Vue/err_modification_profil.php");
 }
 ?>
