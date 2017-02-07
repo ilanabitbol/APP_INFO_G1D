@@ -21,11 +21,16 @@
 						<a class="link-2" href="../Vue/envoi_mail.php">Nous contacter</a>
 				</div>
 				<div id="divfooter">
-						<a class="link-2" target="_blank" href="https://www.facebook.com/">Facebook</a>
+						<a class="link-2" target="_blank" href="https://www.facebook.com/"><img class="logosocial" src=../images/facebook2.png></a>
 					
-						<a class="link-2" target="_blank" href="https://www.instagram.com/">Instagram</a>
+						<a class="link-2" target="_blank" href="https://www.instagram.com/"><img class="logosocial" src=../images/instagram2.png></a>
 					
-						<a class="link-2" target="_blank" href="https://www.twitter.com/">Twitter</a>
+						<a class="link-2" target="_blank" href="https://www.twitter.com/"><img class="logosocial" src=../images/twitter2.png></a>
+						
+						<a class="link-2" target="_blank" href="https://www.linkedin.com/"><img class="logosocial" src=../images/linkedin2.png></a>
+					
+						<a class="link-2" target="_blank" href="https://plus.google.com/"><img class="logosocial" src=../images/google-plus2.png></a>
+					
 				</div>
 
 				
