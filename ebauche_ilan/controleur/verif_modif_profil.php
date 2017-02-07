@@ -40,7 +40,7 @@ echo $donnees_user['password'];
 if($nom != NULL  AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND $pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL AND $_POST['old_mdp'] == $donnees_user['password']){
 	
 	$req = $connexion_base->getDb()->prepare('UPDATE utilisateur
-												SET nom = :nom, email = :email, numero= :numero, pays = :pays, ville = :ville, code_postal = :code_postal, adresse= :adresse, password= :password
+												SET :nom = :nom, :email = :email, :numero= :numero, :pays = :pays, :ville = :ville, :code_postal = :code_postal, :adresse= :adresse, :password= :password
 												WHERE ID= "'.$_SESSION['ID'].'"
 											');
 	$req->execute(array(
