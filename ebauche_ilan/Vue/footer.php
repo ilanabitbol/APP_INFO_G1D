@@ -14,7 +14,7 @@
 		<nav id="nav-3">
 			
 				<div id="divfooter">
-						<a class="link-2" href="../Vue/about.php">Mentions légales</a>
+						<a class="link-2" href="../Vue/mentions.php">Mentions légales</a>
 					
 						<a class="link-2" href="../Vue/about.php">Qui sommes nous ?</a>
 					
