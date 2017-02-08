@@ -12,19 +12,16 @@
 		$nom = isset($_POST['nom']) ? htmlspecialchars($_POST['nom']) : NULL;
 		$prenom = isset($_POST['prenom']) ? htmlspecialchars($_POST['prenom']) : NULL;
 		$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
-		$numero = isset($_POST['numero']) ? htmlspecialchars($_POST['numero']) : NULL;
+		$numero = isset($_POST['numero']) ? ctype_digit($_POST['numero']) && strlen($_POST['numero'])==10 ? htmlspecialchars($_POST['numero']) : NULL : NULL;
 		$pays = isset($_POST['pays']) ? htmlspecialchars($_POST['pays']) : NULL;
 		$ville = isset($_POST['ville']) ? htmlspecialchars($_POST['ville']) : NULL;
-		$code_postal = isset($_POST['code_postal']) ? htmlspecialchars($_POST['code_postal']) : NULL;
+		$code_postal = isset($_POST['code_postal']) ?  ctype_digit($_POST['code_postal']) && strlen($_POST['code_postal'])==5 ?htmlspecialchars($_POST['code_postal']) : NULL : NULL;
 		$adresse = isset($_POST['adresse']) ? htmlspecialchars($_POST['adresse']) : NULL;
 		// Hachage du mot de passe
 		if ( $_POST['password'] != NULL ){
 			$password_hache = sha1(htmlspecialchars($_POST['password']));
 				
 		}else $password_hache = NULL;
-		if(!preg_match("#^[0-9]{5}$#",$code_postal)){
-			header("Location: ../Vue/erreurInscription.php");
-		}else echo "test ok";
 		
 		 foreach ( $query->getEmail($connexion_base) as $line){//Verification si l'email exite deja dans la base.
 		 	if($email == $line['email']){

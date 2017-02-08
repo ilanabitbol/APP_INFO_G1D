@@ -21,7 +21,7 @@
 		<div>
 			
 			<form id="signup-form" method="post" action="../controleur/Inscription_controleur.php">
-			  <input type="text" placeholder="NUMERO DE COMANDE" name="numero"/>
+			  <input type="text" placeholder="NUMERO DE COMANDE" name="numero_commande"/>
 		      <input type="text" placeholder="NOM" name="nom"/>
 			  <input type="text" placeholder="PRENOM" name= "prenom"/>
 			  <input type="email" placeholder="EMAIL" name="email"/>

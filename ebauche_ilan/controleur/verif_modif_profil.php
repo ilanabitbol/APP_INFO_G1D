@@ -10,10 +10,10 @@ $query = new Query();
 $same_email = false;
 $nom = isset($_POST['nom']) ? htmlspecialchars($_POST['nom']) : NULL;
 $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : NULL;
-$numero = isset($_POST['numero']) ? htmlspecialchars($_POST['numero']) : NULL;
+$numero = isset($_POST['numero']) ? ctype_digit($_POST['numero']) && strlen($_POST['numero'])==10 ? htmlspecialchars($_POST['numero']) : NULL : NULL;
 $pays = isset($_POST['pays']) ? htmlspecialchars($_POST['pays']) : NULL;
 $ville = isset($_POST['ville']) ? htmlspecialchars($_POST['ville']) : NULL;
-$code_postal = isset($_POST['code_postal']) ? htmlspecialchars($_POST['code_postal']) : NULL;
+$code_postal = isset($_POST['code_postal']) ?  ctype_digit($_POST['code_postal']) && strlen($_POST['code_postal'])==5 ?htmlspecialchars($_POST['code_postal']) : NULL : NULL;
 $adresse = isset($_POST['adresse']) ? htmlspecialchars($_POST['adresse']) : NULL;
 
 // Hachage du nouveau mot de passe avec la verification de du nouveau mot de passe

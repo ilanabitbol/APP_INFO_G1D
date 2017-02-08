@@ -21,6 +21,7 @@
 		<div>
 			
 			<form id="signup-form" method="post" action="../controleur/Inscription_controleur.php">
+			  <input type="text" placeholder="NUMERO DE COMANDE" name="numero_commande"/>
 		      <input type="text" placeholder="NOM" name="nom"/>
 			  <input type="text" placeholder="PRENOM" name= "prenom"/>
 			  <input type="email" placeholder="EMAIL" name="email"/>
@@ -36,7 +37,7 @@
 		      <input type="text" placeholder="CODE POSTAL" name="code_postal"/>
 		      <input type="text" placeholder="ADRESSE" name="adresse"/>
 		      <h3 class="erreur">ERREUR</h3>
-			  <h3 class="erreur">Veuillez renseigner tous les champs d'inscription. Cet email existe déja.</h3>
+			  <h3 class="erreur">Votre formulaire n'est pas valide. V&#233rifiez vos informations.</h3>
 
 			  <button type="submit" name="signup-valider" class="submit-button">Insciption</button> 
 		   </form>
