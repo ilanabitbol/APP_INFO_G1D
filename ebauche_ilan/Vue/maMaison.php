@@ -6,7 +6,6 @@
   <title>dosmoz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-   <link rel="stylesheet" type ="text/css" href="../stylesheet/global.css">
  </head>
 
 <body>
@@ -41,7 +40,7 @@
 			<section class="rooms">	
   			<form action="maSalle.php" method="POST">
   			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
-  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="buttons" />' ?>
+  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="blancnoir" />' ?>
   			</form>
   			</section>
   		<?php }
