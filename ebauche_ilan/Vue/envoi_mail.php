@@ -7,7 +7,7 @@ session_start();
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/envoi_mail.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 <div class="container">

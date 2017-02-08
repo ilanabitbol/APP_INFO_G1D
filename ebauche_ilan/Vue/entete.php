@@ -12,7 +12,7 @@
 		
 	<?php }
 	else{?>
-		<link rel="stylesheet" type="text/css" href="../stylesheet/entete.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 		
 	<?php }?>
 	

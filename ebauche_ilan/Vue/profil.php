@@ -5,7 +5,7 @@ session_start();?>
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/profil.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 <?php include_once ('../modele/Connexion_Base.class.php');

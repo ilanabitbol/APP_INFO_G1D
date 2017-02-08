@@ -1,0 +1,673 @@
+/* ENTETE ET FOOTER */
+nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: #5175C0;
+  text-align: center;
+}
+
+.logoDMZ {
+	margin-bottom: -10px;
+}
+
+.logoPARAM {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: -10px;
+}
+
+.circleENTETE {
+	padding: 30px 20px 30px 20px;
+    width:50px;
+    background:#FFFFFF;
+    height:70px;
+    border-radius:50px;
+}
+
+.link-2 {
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Verdana', sans-sherif;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 0px 8px 0px 8px;
+}
+
+#divfooter { 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/********************/
+
+
+/* STRUCTURE GENERALE */
+
+/* Fond du site */
+body {
+  background-image :url("../images/background.png");
+  background-attachment: fixed;
+}
+
+/* Conteneurs */
+.container {
+  width: 50%;
+  margin-left: 25%;
+  padding-top: 30px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+
+#incolore {
+	background-image :url("../images/background.png");
+	background-attachment: fixed;
+	box-shadow: 0 0 0 0;
+}
+
+/* Messages d'erreur */
+.erreur{
+	text-align: center; 
+	color: red; 
+	font-size: 15px;
+	font-family: 'verdana', sans-sherif;
+}
+/*********************/
+
+
+/* BOUTONS */
+
+/* Boutons bleu */
+.boutonbleu{
+  margin-left:2%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+  width: 96%;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  transition: 0.2s;
+}
+/* Boutons blanc et noir*/
+
+/************************/
+
+/* Boutons blanc et bleu */
+input[type=submit] {
+  transition: 0.2s;
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: #5175C0;
+  margin-bottom: 10px;
+}
+/*************************/
+
+/* Hover ombre */
+button:hover {
+  transition: 0.2s;
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+input[type=submit]:hover {
+  transition: 0.2s;
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+/***************/
+
+/* Hover halo */
+
+/**************/
+
+/* Champs de saisie de texte */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 40px - 20px);
+  margin: 20px;
+  line-height: 30px;
+  padding-left: 20px;
+  outline: none;
+  transition: 0.2s;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+/*****************************/
+
+/* Hover et focus des champs de saisie */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+  box-shadow: 0 0 5px #99CDFF;
+  border: 1px solid #99CDFF;
+  transition: 0.2s;
+}
+/***************************************/
+
+/* Zone de texte */
+#textarea{
+	border: 2px solid black;
+	margin-left: -2%;	
+	width:300px;
+	border-radius: 3px;
+	transition: 0.2s;
+}
+/*****************/
+
+/* Hover et focus zone de texte */
+#textarea:focus, #textarea:hover {
+  box-shadow: 0 0 5px #99CDFF;
+  border: 2px solid #99CDFF;
+  transition: 0.2s;
+}
+/********************************/
+
+/*****************************
+ * MISES EN PAGE SPECIFIQUES *
+ *****************************/
+
+/* Mise en page Maison */
+canvas {
+    display: block;
+    margin: 0 Auto;
+}
+table {
+    width: 400px;
+    margin: 5% auto;
+    border: thin solid black;
+}
+th, td {
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: #B0B0B0;
+}
+thead {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #ddd;
+}
+tfoot {
+    text-align: center;
+    font-style: italic;
+    font-size: .75em;
+}
+
+.command_buttons{
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 50px;
+}
+
+.room_buttons{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.buttons {
+  transition: 0.2s;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: black;
+}
+
+button {
+  transition: 0.2s;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+}
+
+#retour {
+  transition: 0.2s;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1.3em;
+  outline: none;
+}
+
+input[type=submit] {
+  transition: 0.2s;
+  margin-left: 2%;
+  margin-roght: 2%;
+  width: 96%;
+  height: 40px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+
+input[type=submit]:hover {
+  transition: 0.2s;
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+#salle{
+  margin-left:2%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+  width: 96%;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  background-color: white;
+  border: 2px solid #5175C0;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-family: verdana;
+  color: #336699;
+}
+
+th {
+  border-bottom: 1px solid #5175C0;	
+}
+
+td {
+  border-bottom: 1px solid #5175C0;
+}
+
+button:hover {
+  transition: 0.2s;
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+section {
+  display: inline-block;
+  width: 45.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ajout-suppression {
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 96%;
+}
+
+form {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+select {
+  width: 40%;
+  margin: 20px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  transition: 0.2s;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+/***********************/
+
+/* Mise en page vitrine */
+* {
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-decoration:none;
+  box-sizing:border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.perspective {
+  width: 100%;
+  height: 100%;
+  perspective:1000px;
+  transform-style: preserve-3d;
+}
+
+.wrapper {
+  transform-style: preserve-3d;
+  margin: 0 auto;
+  width:100%;
+  height:100%;
+  transition: 1s all ease-in-out;
+  -webkit-transition: 1s all ease-in-out;
+  display:flex;
+}
+
+.wrapper li {
+  flex-grow: 1;
+  opacity:1;
+  width: 20%;
+  font-size:1.3em;
+  transition: 1s all ease-in-out;
+  -webkit-transition: 1s all ease-in-out;
+  text-align:center;
+  padding-top: 25%;
+  color:#5175C0;
+  cursor:pointer;
+  background-size:cover !important;
+}
+
+.produit {
+  border-radius: 5px;
+  width: 96%;
+  margin-left:2%;
+  margin-right: 2%;
+  height: 40px;
+  background-color: white;
+  transition: 0.2s;
+  font-family: verdana;
+  font-size: 1.3em;
+}
+
+.acheter {
+  height: 40px;
+  border-radius: 5px;
+  width: 80%;
+  margin-left:10%;
+  margin-right: 10%;
+  margin-top: 80%;
+  background-color: #336699;
+  color: white;
+  font-family: verdana;
+  font-size:1.3em;
+  transition: 0.2s;
+}
+
+.acheter:hover {
+  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
+  transition: 0.2s;
+}
+
+.wrapper li:nth-of-type(1) {
+  background: url(../images/thermostat_vitrine.jpg) no-repeat center center;
+}
+.wrapper li:nth-of-type(2) {
+  background: url(../images/anemometre2.jpg) no-repeat center center;
+}
+.wrapper li:nth-of-type(3) {
+  background: url(../images/camera_vitrine.jpg) no-repeat center center;
+}
+.wrapper li:nth-of-type(4) {
+  background: url(../images/pluviometre2.jpg) no-repeat center center;
+}
+.wrapper li:nth-of-type(5) {
+  background: url(../images/station_meteo_vitrine.jpg) no-repeat center center;
+}
+
+.plier {
+  transform: rotateX(20deg);
+  transform-origin:bottom;
+}
+.wrapper li.active {
+  transition-delay:1s;
+}
+
+.active{
+  transform: rotateX(0deg);
+  transform-origin:bottom;
+  flex-grow: 30 !important;
+  cursor:default;
+  opacity:1 !important;
+}
+/************************/
+
+/* Mise en page du shop */
+.container_global {
+  width: 600px;
+  padding: 50px;
+  margin-top: 110px;
+  box-sizing: border-box;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 10px 0px 17px 0px rgba(0, 0, 0, 0.7);
+}
+
+#container .innercontainer{
+  position: relative;
+  margin: center;
+  width: 400px;
+  height: 200px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#content{  
+  display: inline-block;
+  margin: auto;
+  width: 400px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-family: verdana;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#image{
+  width: 100px;
+  margin-top: 40px;
+  width: 25%;
+  position: relative;
+  margin-left: 18%;
+  border-radius: 5px;
+}
+
+#infos{
+  display: inline-block;
+  width: 45%;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-family: verdana;
+  color: white;
+}
+
+.arrondi {
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+section {
+  display: inline-block;
+  width: 25%;
+}
+
+#container ul { 
+	list-style: none;
+	
+}
+
+#container .list li { 
+	width: 100%;
+	border-bottom: 1px dotted #CCC; 
+	margin-bottom: 10px; 
+	padding-bottom: 10px;
+}
+
+#container .grid li { 
+	float: left; 
+	width: 20%; 
+	height: 50px; 
+	border-right: 1px dotted #CCC; 
+	border-bottom: 1px dotted #CCC; 
+	padding: 10px;
+}
+
+.list{
+	margin: center;
+}
+/************************/
+
+/* Mise en page About et Mentions Légales */
+p {
+  font-family: 'Verdana', Sans-sérif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.embossedtext {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.embossedtextmentions {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.embossed {
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset -2px 2px 1px rgba(0, 0, 0, 0.2), -2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(200,200,255,0.6);
+}
+
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+
+.circle p {
+  padding-top: 53px;
+  padding-left: 6px;
+  font-size: 30px;
+}
+
+.circle .embossedtextmentions {
+  padding-top: 53px;
+  padding-left: 6px;
+  font-size: 25px;
+}
+
+.content {
+  font-size: 18px;
+  padding: 15px;
+}
+
+.fa {
+  padding: 10px 15px 0;
+}
+/******************************************/
+
+p {
+  font-family: verdana;
+  color: #5175C0;
+  text-align: center;
+}
+
+
+form {
+  /*   border: 1px solid black; */
+  border-radius: 5px;
+}
+
+#contact-form{
+  display: block;
+}
+
+
+
+label {
+  line-height: 18px;
+  padding-left: 5px;
+}
+
+#param-button{
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.submit-button {
+  width: 120px;
+  height: 40px;
+  margin-left: 30%;
+  margin-top: 40px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1.3em;
+  outline: none;
+  transition: 0.2s;
+}
