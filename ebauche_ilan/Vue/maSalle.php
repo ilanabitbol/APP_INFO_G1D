@@ -57,8 +57,6 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
   <title>dosmoz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
-	
-   <link rel="stylesheet" type ="text/css" href="../stylesheet/global.css">
  </head>
  
  <body>
