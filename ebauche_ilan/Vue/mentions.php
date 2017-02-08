@@ -18,7 +18,7 @@ $reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, a
 </head>
 <body>
 	
-		<div class="container">
+		<div class="container" id="incolore">
 			  <div class="circle embossed">
 			    <p class="embossedtextmentions">Mentions l&Eacutegales</p>
 			  </div>

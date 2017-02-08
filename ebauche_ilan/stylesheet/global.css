@@ -131,8 +131,6 @@ input[type=submit] {
 /************************/
 
 /* Boutons blanc et bleu */
-
-
 button {
   transition: 0.2s;
   margin-left:2%;
@@ -552,7 +550,7 @@ html, body {
 
 /* Mise en page About et Mentions Légales */
 p {
-  font-family: 'Verdana', Sans-sérif;
+  font-family: verdana;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-weight: bold;
@@ -560,14 +558,14 @@ p {
 }
 
 .embossedtext {
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .embossedtextmentions {
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
-  font-size: 15px;
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
+	font-size: 15px;
 }
 
 .embossed {
@@ -585,15 +583,14 @@ p {
 }
 
 .circle p {
-  padding-top: 53px;
-  padding-left: 6px;
-  font-size: 30px;
+	padding-top: 40%;
+	padding-left: 6px;
+	font-size: 30px;
 }
 
 .circle .embossedtextmentions {
-  padding-top: 53px;
-  padding-left: 6px;
-  font-size: 25px;
+	padding-top: 35%;
+	font-size: 25px;
 }
 
 .content {
