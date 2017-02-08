@@ -46,14 +46,18 @@ nav {
 
 /* STRUCTURE GENERALE */
 
+
+/* Police */
+p {
+	font-family: verdana;
+	text-align: center;
+}
+/**********/
+
 /* Fond du site */
 body {
   background-image :url("../images/background.png");
   background-attachment: fixed;
-}
-
-p {
-	font-family: verdana;
 }
 
 /* Conteneurs */
@@ -172,9 +176,8 @@ input[type="password"] {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
-  padding-left: 10px;
   line-height: 30px;
-  margin-top: 5px;
+  padding-top: 5px;
   outline: none;
   transition: 0.2s;
   border: 1px solid black;
@@ -567,23 +570,34 @@ html, body {
 /************************/
 
 /* Mise en page About et Mentions Légales */
+.uppercasetext {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: bold;
+}
 
 .embossedtext {
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	font-weight: bold;
 	color: rgba(255, 255, 255, 0.9);
 	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .embossedtextmentions {
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	font-weight: bold;
 	color: rgba(255, 255, 255, 0.9);
 	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
 	font-size: 15px;
 }
 
 .embossed {
-  border: 3px solid rgba(255, 255, 255, 0.6);
-  box-shadow: inset -2px 2px 1px rgba(0, 0, 0, 0.2), -2px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  background-color: #5175C0;
+	border: 3px solid rgba(255, 255, 255, 0.6);
+	box-shadow: inset -2px 2px 1px rgba(0, 0, 0, 0.2), -2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	background-color: #5175C0;
 }
 
 .circle {
