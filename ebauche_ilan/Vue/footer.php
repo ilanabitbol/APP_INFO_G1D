@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-		
-		<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
-	
-</head>
-<body>
-    
-		
-		
+</body>
 		<nav id="nav-3">
 			
 				<div id="divfooter">
@@ -36,6 +24,4 @@
 				
 			
 		</nav>
-
-</body>
 </html>

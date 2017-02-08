@@ -17,7 +17,6 @@
 	<?php }?>
 	
 </head>
-<body>
 		<nav id="nav-2">
 			<a class="circleENTETE"><img class="logoDMZ" src=../images/logo_dosmoz.jpg height=40 width=40></a>
 		  <?php 
@@ -52,7 +51,4 @@
 		  <?php }
 		  	?>
 		</nav>
-	
-</body>
-
-</html>
+<body>
