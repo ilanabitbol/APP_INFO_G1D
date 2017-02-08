@@ -66,15 +66,15 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
  	<div class="container">
  			
  			<div class="command-buttons">
-  				<a href = "maMaison.php"><button id="salle">Retour</button></a>
+  				<a href = "maMaison.php"><button class="boutonbleu">Retour</button></a>
   				<form action='ajout_capteur.php' method='POST'>
   					<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
-  					<input type="submit" value= "Ajouter un capteur" class="buttons" />
+  					<input type="submit" value= "Ajouter un capteur" class="blancnoir" />
   				</form>
   				
   				<form action='suppression_capteur.php' method='POST'>
   					<?php echo '<input type="hidden" name="ID_piece" value= "'.$_POST['ID_piece'].'"/>'?>
-  					<input type="submit" value= "Supprimer un capteur" class="buttons" />
+  					<input type="submit" value= "Supprimer un capteur" class="blancnoir" />
   				</form>  				
   			</div>
   			
