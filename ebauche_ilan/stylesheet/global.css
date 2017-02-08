@@ -1,8 +1,8 @@
 /* ENTETE ET FOOTER */
 nav {
   margin-top: 20px;
-  margin-bottom: 20px;
   padding-bottom: 20px;
+  margin-bottom: 20px;
   padding-top: 5px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   background: #5175C0;
@@ -81,6 +81,21 @@ body {
 
 /* BOUTONS */
 
+/* Type submit */
+input[type=submit] {
+  transition: 0.2s;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+/***************/
+
 /* Boutons bleu */
 .boutonbleu{
   margin-left:2%;
@@ -96,23 +111,37 @@ body {
   color: white;
   transition: 0.2s;
 }
+
 /* Boutons blanc et noir*/
-
-/************************/
-
-/* Boutons blanc et bleu */
-input[type=submit] {
+.blancnoir {
   transition: 0.2s;
-  margin: auto;
-  width: 300px;
+  width: 100%;
   height: 40px;
-  border: none;
+  border: 1px solid black;
   box-sizing: border-box;
   background-color: white;
   border-radius: 5px;
   font-size: 1.3em;
-  color: #5175C0;
+  color: black;
   margin-bottom: 10px;
+}
+/************************/
+
+/* Boutons blanc et bleu */
+
+
+button {
+  transition: 0.2s;
+  margin-left:2%;
+  margin-right:2%;
+  width: 45.5%;
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #5175C0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  color: white;
 }
 /*************************/
 
@@ -225,33 +254,9 @@ tfoot {
 	margin-right: 2%;
 }
 
-.buttons {
-  transition: 0.2s;
-  margin-left:2%;
-  margin-right:2%;
-  width: 45.5%;
-  height: 60px;
-  border: none;
-  box-sizing: border-box;
-  background-color: #5175C0;
-  border-radius: 5px;
-  font-size: 1.3em;
-  color: black;
-}
 
-button {
-  transition: 0.2s;
-  margin-left:2%;
-  margin-right:2%;
-  width: 45.5%;
-  height: 60px;
-  border: none;
-  box-sizing: border-box;
-  background-color: #5175C0;
-  border-radius: 5px;
-  font-size: 1.3em;
-  color: white;
-}
+
+
 
 #retour {
   transition: 0.2s;
@@ -267,24 +272,6 @@ button {
   outline: none;
 }
 
-input[type=submit] {
-  transition: 0.2s;
-  margin-left: 2%;
-  margin-roght: 2%;
-  width: 96%;
-  height: 40px;
-  border: none;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: white;
-  font-size: 1.3em;
-  outline: none;
-}
-
-input[type=submit]:hover {
-  transition: 0.2s;
-  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
-}
 
 #salle{
   margin-left:2%;
@@ -320,12 +307,7 @@ td {
   border-bottom: 1px solid #5175C0;
 }
 
-button:hover {
-  transition: 0.2s;
-  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
-}
-
-section {
+.rooms {
   display: inline-block;
   width: 45.5%;
   margin-left: 2%;
@@ -534,7 +516,7 @@ html, body {
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
-section {
+ {
   display: inline-block;
   width: 25%;
 }
@@ -621,18 +603,6 @@ p {
 }
 /******************************************/
 
-p {
-  font-family: verdana;
-  color: #5175C0;
-  text-align: center;
-}
-
-
-form {
-  /*   border: 1px solid black; */
-  border-radius: 5px;
-}
-
 #contact-form{
   display: block;
 }
@@ -644,30 +614,5 @@ label {
   padding-left: 5px;
 }
 
-#param-button{
-  margin: auto;
-  width: 300px;
-  height: 40px;
-  border: none;
-  box-sizing: border-box;
-  background-color: #5175C0;
-  border-radius: 5px;
-  font-size: 1.3em;
-  color: white;
-  margin-bottom: 10px;
-  transition: 0.2s;
-}
 
-.submit-button {
-  width: 120px;
-  height: 40px;
-  margin-left: 30%;
-  margin-top: 40px;
-  position: relative;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: white;
-  font-size: 1.3em;
-  outline: none;
-  transition: 0.2s;
-}
+
