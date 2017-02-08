@@ -451,6 +451,11 @@ html, body {
 }
 /************************/
 
+/* Mise en page logo contact */
+.logoContact {
+	margin-left: 20%;
+}
+/*****************************/
 /* Mise en page du shop */
 .container_global {
   width: 600px;
@@ -572,7 +577,7 @@ p {
   border: 3px solid rgba(255, 255, 255, 0.6);
   box-shadow: inset -2px 2px 1px rgba(0, 0, 0, 0.2), -2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  background-color: rgba(200,200,255,0.6);
+  background-color: #5175C0;
 }
 
 .circle {

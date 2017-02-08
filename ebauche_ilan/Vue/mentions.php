@@ -14,7 +14,6 @@ $reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, a
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 	

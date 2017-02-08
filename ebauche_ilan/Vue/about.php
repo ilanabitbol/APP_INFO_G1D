@@ -48,7 +48,7 @@
 				Gr&#226ce &#224 sa forte dimension internationale, elle a su &#233toffer ses effectifs et ainsi avoir la renom&#233e qu'elle a aujourd'hui.
 				
 				 DOMISEP, constamment class&#233e en t&#234te du fameux Customers Electronics Show  est tr&#232s largement pl&#233biscit&#233e 
-				  par les m&#233 qui reconnaissent le talents des &#233quipes de tr&#232s haut niveau d'ing&#233nieurs que poss&#232 la soci&#233t&#233.
+				  par les m&#233 qui reconnaissent le talents des &#233quipes de tr&#232s haut niveau d'ing&#233nieurs que poss&#232de la soci&#233t&#233.
 			</p>			  					
 		</div>
 	</div>
