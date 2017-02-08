@@ -4,14 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 	
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		
-		<img  class="logo" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
+		<img  class="logoConnexion" src=../images/logo_dosmoz.jpg alt="Background de la page de connexion.">
 		<!--Ajout des boutons de connexion et d'inscription.-->
 		<div>
 		  <button id="signin-button">Connexion</button>

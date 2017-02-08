@@ -52,6 +52,10 @@ body {
   background-attachment: fixed;
 }
 
+p {
+	font-family: verdana;
+}
+
 /* Conteneurs */
 .container {
   width: 50%;
@@ -165,10 +169,12 @@ input[type=submit]:hover {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: calc(100% - 40px - 20px);
-  margin: 20px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-left: 10px;
   line-height: 30px;
-  padding-left: 20px;
+  margin-top: 5px;
   outline: none;
   transition: 0.2s;
   border: 1px solid black;
@@ -456,6 +462,13 @@ html, body {
 	margin-left: 20%;
 }
 /*****************************/
+
+/* Mise en page logo connexion */
+.logoConnexion {
+	margin-left: 35%
+}
+/*******************************/
+
 /* Mise en page du shop */
 .container_global {
   width: 600px;
@@ -554,13 +567,6 @@ html, body {
 /************************/
 
 /* Mise en page About et Mentions Légales */
-p {
-  font-family: verdana;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-weight: bold;
-  text-align: center;
-}
 
 .embossedtext {
 	color: rgba(255, 255, 255, 0.9);
