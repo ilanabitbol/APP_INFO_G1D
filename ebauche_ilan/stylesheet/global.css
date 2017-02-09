@@ -266,6 +266,7 @@ canvas {
 
 th, td {
     text-align: center;
+    border-bottom: 1px solid #5175C0;
 }
 tr:nth-child(even) {
     background-color: #ddd;
@@ -298,39 +299,6 @@ tfoot {
 	margin-right: 2%;
 }
 
-
-
-
-
-#retour {
-  transition: 0.2s;
-  margin-left:2%;
-  margin-right:2%;
-  width: 45.5%;
-  height: 60px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  font-size: 1.3em;
-  outline: none;
-}
-
-
-#salle{
-  margin-left:2%;
-  margin-right: 2%;
-  margin-bottom: 10px;
-  width: 96%;
-  height: 40px;
-  border: none;
-  box-sizing: border-box;
-  background-color: #5175C0;
-  border-radius: 5px;
-  font-size: 1.3em;
-  color: white;
-}
-
 table {
   width: 80%;
   margin-left: 10%;
@@ -345,14 +313,6 @@ table {
   color: #336699;
 }
 
-th {
-  border-bottom: 1px solid #5175C0;	
-}
-
-td {
-  border-bottom: 1px solid #5175C0;
-}
-
 .rooms {
   display: inline-block;
   width: 45.5%;
@@ -361,13 +321,6 @@ td {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.ajout-suppression {
-	margin-left: 2%;
-	margin-right: 2%;
-	width: 96%;
-}
-
 
 
 select {
