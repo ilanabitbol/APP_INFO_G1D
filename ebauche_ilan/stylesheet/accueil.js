@@ -9,15 +9,14 @@ $('.wrapper li').on('click', function(){
 	$(this).toggleClass('active');
 });
 
-$('.wrapper li').on('click', function(){
-	  $('.description').toggleClass('active');
+$(".wrapper li").on("click", function() {
+		$(".description").slideUp(400, function() {
+		    $(".description").css("display", "bnone");
+		}); 
 	});
 
 $(".wrapper li").on("click", function() {
-		$(".description").slideUp(400, function() {
-		    $(".description").css("display", "none");
-		});
-	  	$(".active .description").slideDown(400, function() {
-	  		$(".active .description").css("display", "block");
-	  	});	  
-	});
+  	$(".active .description").slideDown(400, function() {
+  		$(".active .description").css("display", "block");
+  	});	  
+});
