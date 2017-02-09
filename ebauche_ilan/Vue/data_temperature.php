@@ -1,8 +1,8 @@
 <?php session_start();
-//setting header to json
+//Appelle de la librairie json
 header('Content-Type: application/json');
 
-//database
+//connexion à la base de donnee avec mysql
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root');
@@ -15,7 +15,7 @@ if(!$mysqli){
 	die("Connection failed: " . $mysqli->error);
 }
 
-//query to get data from the table
+//requetes pour recuperer la donnee associee à la date correspondante
 if (isset($_SESSION['admin'])){
 	$query = sprintf("SELECT donnees.valeur, donnees.date_donnees
 	FROM donnees, actionneurs_capteurs, type_fonction, piece
@@ -30,24 +30,23 @@ if (isset($_SESSION['admin'])){
 			AND actionneurs_capteurs.ID_piece = piece.ID_piece AND piece.ID = '{$_SESSION['ID']}' ");
 }
 
-//execute query
+//execution de la requete
 $result = $mysqli->query($query);
 
-//loop through the returned data
+//boucle pour recuperer les donnees 
 $data = array();
 foreach ($result as $row) {
 	$data[] = $row;
 }
 
-//free memory associated with result
 $result->close();
 
-//close connection
+//fermeture de la  connexion
 $mysqli->close();
 
-//now print the data
+//affichage des donnees sous forme de balise json
 print json_encode($data);
-
+?>
 
 
 
