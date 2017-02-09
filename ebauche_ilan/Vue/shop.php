@@ -1,6 +1,6 @@
 <?php include 'entete.php';?>
 
-	<div class="container">
+	<div class="container_global">
 		<?php
 				include_once ('../modele/Connexion_Base.class.php');
 				$connexion_base= new Connexion_Base();
@@ -8,6 +8,7 @@
 				$reponse= $connexion_base->getDb()->query('SELECT nom_produit, prix, stock FROM catalogue');?>
 				
 				<?php while($donnes = $reponse->fetch()){?>
+				<div id="container">
 					<ul class="list">
 				        <li>
 					        <div class="innercontainer">
@@ -47,23 +48,14 @@
 										?>
 									</section>
 								</div>
-								<?php 
-									if ($_SESSION == NULL){?>
-										<form action="../Vue/sign_in-up.php">
-										<input type="submit" value="Acheter" class="buttons">
-										</form>
-									<?php }else{?>
-										<form action="../Vue/paiement.php">
-										<input type="submit" value="Acheter" class="buttons">
-										</form>
-									<?php }
-									?>
+								<a href="panier.php?action=ajout&amp;l=<?php echo($donnes['nom_produit']); ?>&amp;q=1&amp;p=<?php echo($donnes['prix']); ?>" onclick="window.open(this.href, '', 'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a></td>
 							
 													
 							</div>
 						</li>
 							
 		    		</ul>
+				</div>
 				<?php 
 				}
 				$reponse->closeCursor(); // Termine le traitement de la requête
