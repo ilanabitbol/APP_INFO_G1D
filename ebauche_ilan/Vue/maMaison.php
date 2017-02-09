@@ -1,15 +1,4 @@
 <?php include 'entete.php';?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>dosmoz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
- </head>
-
-<body>
-  	
   	<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
@@ -40,7 +29,7 @@
 			<section class="rooms">	
   			<form action="maSalle.php" method="POST">
   			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
-  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="blancnoir" />' ?>
+  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="bouton_maison" />' ?>
   			</form>
   			</section>
   		<?php }
@@ -60,14 +49,10 @@
 			<canvas id="mycanvas_temperature"></canvas>
   		</div>
   	</div>
- 
-<footer><?php include 'footer.php';?></footer>
   		
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   	<script type="text/javascript" src="../stylesheet/stats_humidite.js"></script>
   	<script type="text/javascript" src="../stylesheet/stats_luminosite.js"></script>
   	<script type="text/javascript" src="../stylesheet/stats_temperature.js"></script>
-  	
-</body>
-</html>
+<?php include 'footer.php';?>

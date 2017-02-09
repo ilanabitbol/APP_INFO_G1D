@@ -147,7 +147,7 @@ input[type=submit] {
 /************************************/
 
 /* Boutons blanc et noir*/
-.blancnoir {
+.blancnoir {			
   transition: 0.2s;
   margin-left: 10%;
   margin-right: 10%;
@@ -162,6 +162,20 @@ input[type=submit] {
   margin-bottom: 10px;
 }
 /************************/
+.bouton_maison{
+transition: 0.2s;		
+margin-left:2%;		
+margin-right:2%;		
+width: 45.5%;		
+height: 60px;		
+border: none;		
+box-sizing: border-box;		
+background-color: #5175C0;		
+border-radius: 5px;		
+font-size: 1.3em;		
+color: black;		
+}
+
 
 /* Boutons blanc et bleu */
 .petitbleu {
@@ -205,6 +219,22 @@ input[type="password"] {
   transition: 0.2s;
   border: 1px solid black;
   border-radius: 2px;
+}
+
+input[type="text"] .nom_piece{
+  width: 40%;
+  margin: 20px;
+  line-height: 30px;
+  padding-left: 20px;
+  outline: none;
+  transition: 0.2s;
+  border: 1px solid black;
+  border-radius: 3px;	
+}
+
+input[type="text"] .nom_piece:focus,input[type="text"] .nom_piece:hover{
+  box-shadow: 0 0 5px #99CDFF;
+  border: 1px solid #99CDFF;
 }
 /*****************************/
 

@@ -1,13 +1,4 @@
-<?php include 'entete.php' ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Dosmoz form</title>
-<link rel="stylesheet" type ="text/css" href="../stylesheet/global.css">
-</head>
-<body>
-
+<?php include 'entete.php'?>
 <?php include ('../controleur/ajout_capteur_controleur.php');?>
 
 	<div class="container">
@@ -31,14 +22,6 @@
 			<button type="submit" name="boutton" class="submit-button">Ajouter</button>
 		</form>
 		</section>
-		</div>
-		
-		
-		
-		
+		</div>		
 	</div>
-
-
-</body>
-
-</html>		
+<?php include 'footer.php'?>	

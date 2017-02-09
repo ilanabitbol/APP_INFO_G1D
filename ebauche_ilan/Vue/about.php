@@ -9,13 +9,7 @@
 														GROUP BY donnees.ID_ac_cap
                                                         ');
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
+
 	
 	<div class="container" id="incolore">
 		<div class="circle embossed">
@@ -51,9 +45,4 @@
 			</p>			  					
 		</div>
 	</div>
-
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>

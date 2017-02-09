@@ -1,16 +1,4 @@
-<?php include 'entete.php';?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>dosmoz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-   <link rel="stylesheet" type ="text/css" href="../stylesheet/global.css">
- </head>
-
-<body>
-  	
+<?php include 'entete.php';?> 	
   	<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
@@ -34,8 +22,4 @@
   		?>
   		</div>
   	</div>
-
-<footer><?php include 'footer.php';?></footer>
-  		
-</body>
-</html>
+<?php include 'footer.php';?>

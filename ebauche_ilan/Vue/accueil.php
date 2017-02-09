@@ -1,14 +1,5 @@
 <?php include 'entete.php' ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
-	
-</head>
-<body>
-	
+
 		<div class="perspective">
 	  
 	  		<ul class="wrapper">
@@ -35,8 +26,4 @@
 		 	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 			<script type="text/javascript" src="../stylesheet/accueil.js"></script>
 		
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>
