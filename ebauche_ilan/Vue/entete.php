@@ -36,7 +36,7 @@
 		  <a class="link-2" href="../Vue/accueil.php">Accueil</a>
 		  <a class="link-2" href="../Vue/envoi_mail.php">Contact</a>
 		  <?php 
-		  	if (empty($_SESSION['prenom'])){?>
+		  	if (empty($_SESSION['prenom']) AND empty($_SESSION['admin']) ){?>
 		  		<a class="link-2" href="../Vue/sign_in-up.php">Connexion-Inscription</a>
 		  <?php } ?>
 		  <?php 

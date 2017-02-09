@@ -1,5 +1,5 @@
 body {
-  background-image :url("../images/fond_admin.jpeg");
+  background-image :url("../images/background.png");
   background-attachment: fixed;
 }
 
@@ -7,13 +7,23 @@ nav {
   margin-top: 10px;
   padding: 20px 20px 20px 20px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  background: #d10606;
+  background: #5175C0;
   /*position:fixed;*/
 }
 
 #nav-2 {
+  margin-top: 10px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: #5175C0;
   text-align: center;
   line-height: 500%;
+  /*position:fixed;*/
+}
+#nav-3 {
+  text-align: center;
+  line-height: 500%;
+  margin-top: 40%;
   /*position:fixed;*/
 }
 
@@ -25,7 +35,7 @@ nav {
 }
 
 .circleENTETE {
-	padding: 40px 20px 20px 20px;
+	padding: 30px 20px 30px 20px;
     width:50px;
     background:#FFFFFF;
     height:70px;
