@@ -124,7 +124,20 @@ input[type=submit] {
 
 /* Boutons de connexion/inscription */
 #signin-button,#signup-button {
-  width: 30%;
+width: 130px;
+height: 40px;
+border: none;
+box-sizing: border-box;
+background-color: white;
+border-bottom: 3px solid white;
+outline: none;
+font-size: 1.3em;
+font-color: black;
+margin-bottom: 10px;
+transition: 0.2s;
+	
+	
+ /* width: 30%;
   margin: 9.5%;
   border-radius: 0px;
   height: 40px;
@@ -137,11 +150,17 @@ input[type=submit] {
   font-size: 1.3em;
   margin-bottom: 10px;
   margin-top: 0px;
-  transition: 0.2s;
+  transition: 0.2s;*/
 }
-
+/* Mise en page des boutons de Connexion et Inscription dans la page sign_in-up.php */
+#signin-button {
+  margin-left: 35%;
+}
 #signin-button:hover, #signup-button:hover {
-  border-bottom: 3px solid grey;
+  /*border-bottom: 3px solid grey;
+  transition: 0.2s;*/
+  color: rgba(138, 123, 179, 0.8);
+  border: 1px solid #99CDFF/*rgba(138, 123, 179, 0.8)*/;
   transition: 0.2s;
 }
 /************************************/
@@ -477,15 +496,15 @@ html, body {
 }
 /************************/
 
-/* Mise en page logo contact */
+/* Mise en page du logo dans la page envoi_mail.php */
 .logoContact {
-	margin-left: 20%;
+	margin-left: 27%;
 }
 /*****************************/
 
-/* Mise en page logo connexion */
+/* Mise en page du logo dans la page sign_in-up.php */
 .logoConnexion {
-	margin-left: 35%
+	margin-left: 39%
 }
 /*******************************/
 
