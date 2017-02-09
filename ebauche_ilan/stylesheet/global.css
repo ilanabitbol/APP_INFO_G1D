@@ -214,7 +214,8 @@ color: black;
 
 /* Pour la vitrine */
 #vitrine {
-	margin-top: 90%;
+	width: 80%;
+	margin-top: 20px;
 }
 /*******************/
 
@@ -426,41 +427,36 @@ html, body {
   transition: 1s all ease-in-out;
   -webkit-transition: 1s all ease-in-out;
   text-align:center;
-  padding-top: 25%;
+  padding-top: 60px;
   color:#5175C0;
   cursor:pointer;
   background-size:cover !important;
 }
 
 .produit {
-  border-radius: 5px;
-  width: 96%;
-  margin-left:2%;
-  margin-right: 2%;
+  border-radius: 0px;
+  width: 100%;
+  margin-left:0%;
+  margin-right: 0%;
   height: 40px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
   transition: 0.2s;
   font-family: verdana;
   font-size: 1.3em;
 }
 
-.acheter {
-  height: 40px;
-  border-radius: 5px;
-  width: 80%;
-  margin-left:10%;
-  margin-right: 10%;
-  margin-top: 80%;
-  background-color: #336699;
-  color: white;
-  font-family: verdana;
-  font-size:1.3em;
-  transition: 0.2s;
-}
-
-.acheter:hover {
-  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
-  transition: 0.2s;
+.description {
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	margin-left: 0%;
+	margin-right: 0%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: black;
+	font-size: 0.8em;
+	border-radius: 0px;
+	display: block;
 }
 
 .wrapper li:nth-of-type(1) {
@@ -483,6 +479,7 @@ html, body {
   transform: rotateX(20deg);
   transform-origin:bottom;
 }
+
 .wrapper li.active {
   transition-delay:1s;
 }
@@ -494,6 +491,7 @@ html, body {
   cursor:default;
   opacity:1 !important;
 }
+
 /************************/
 
 /* Mise en page du logo dans la page envoi_mail.php */
