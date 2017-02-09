@@ -1,6 +1,5 @@
 </body>
-		<nav id="nav-3">
-			
+		<nav id="nav-3">			
 				<div id="divfooter">
 						<a class="link-2" href="../Vue/mentions.php">Mentions légales</a>
 					
@@ -19,9 +18,6 @@
 					
 						<a class="link-2" target="_blank" href="https://plus.google.com/"><img class="logosocial" src=../images/google-plus2.png></a>
 					
-				</div>
-
-				
-			
+				</div>		
 		</nav>
 </html>
