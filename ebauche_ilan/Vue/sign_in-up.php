@@ -1,12 +1,4 @@
-<?php include 'entete.php'?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
-	
+<?php include 'entete.php'?>	
 		
 	<div class="container"><!--Creation de l'unique section de la page.-->
 		
@@ -48,11 +40,6 @@
 		</div>
 
 	</div>
-
-<footer><?php include 'footer.php';?></footer>
-
+<?php include 'footer.php';?>
   	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript" src="../stylesheet/sign_in-up.js"></script>
-</body>
-
-</html>

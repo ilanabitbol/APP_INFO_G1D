@@ -1,14 +1,7 @@
 <?php 
-include("entete.php");
+include('entete.php');
 session_start();
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
 <div class="container">
 
 		<img  class="logoContact" src=../images/logo_dosmoz_contact.jpg alt="Background de la page de connexion.">
@@ -49,11 +42,7 @@ session_start();
 				<br>
 </div>
 
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>
 <?php
 unset($_SESSION['success']);
 unset($_SESSION['inputs']);

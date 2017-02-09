@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Dosmoz form</title>
-<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
-</head>
-<body>
-
-
+<?php include 'entete.php'?>
 <div class="container"><!--Creation de l'unique section de la page.-->
 	  	<form id="signin-form" method="post" action="../controleur/admin_controleur.php">
 
@@ -16,8 +7,4 @@
 
 	 	</form>
 	</div>
-
-
-</body>
-
-</html>
+<?php include 'footer.php'?>

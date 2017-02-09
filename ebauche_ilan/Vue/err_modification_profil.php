@@ -1,13 +1,6 @@
 <?php include 'entete.php';
 session_start();?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
-</head>
-<body>
+
   <div class="container">
     <h1 class="titre">Modification de votre profil</h1>
     <form method="POST" action="../controleur/verif_modif_profil.php">
@@ -48,7 +41,4 @@ session_start();?>
      
     </form>
 </div>
-
-<footer><?php include 'footer.php';?></footer>
-</body>
-</html>
+<?php include 'footer.php';?>

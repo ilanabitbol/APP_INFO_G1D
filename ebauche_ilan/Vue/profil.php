@@ -1,12 +1,5 @@
 <?php include 'entete.php';
 session_start();?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
 <?php include_once ('../modele/Connexion_Base.class.php');
 $connexion_base= new Connexion_Base();
 $reponse= $connexion_base->getDb()->query('SELECT * FROM utilisateur	 WHERE ID = "'.$_SESSION['ID'].'" ');?>
@@ -77,9 +70,4 @@ $reponse= $connexion_base->getDb()->query('SELECT * FROM utilisateur	 WHERE ID =
     </div>
     
 </div>
-
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>

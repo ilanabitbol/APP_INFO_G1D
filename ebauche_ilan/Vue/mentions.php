@@ -8,15 +8,7 @@ $reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, a
                                                         WHERE piece.ID = "'.$_SESSION['ID'].'"  AND donnees.ID_ac_cap = actionneurs_capteurs.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'" AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
 														GROUP BY donnees.ID_ac_cap
                                                         ');
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
-	
+?>	
 		<div class="container" id="incolore">
 			  <div class="circle embossed">
 			    <p class="embossedtextmentions">Mentions l&Eacutegales</p>
@@ -52,9 +44,4 @@ $reponse= $connexion_base->getDb()->query('SELECT  type_fonction.nom_fonction, a
 				[...]
 			  </div>
 </div>
-
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>

@@ -2,11 +2,17 @@
 //Appelle de la librairie json
 header('Content-Type: application/json');
 
-//connexion à la base de donnee avec mysql
+//connexion à la base de donnee avec mysql en local
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_NAME', 'APP_G1D_BASE');
+
+//connexion à la base de donnee avec mysql en ligne
+//define('DB_HOST', 'mysql.hostinger.fr');
+//define('DB_USERNAME', 'u691514939_eqyde');
+//define('DB_PASSWORD', 'Cr19952002.');
+//define('DB_NAME', 'u691514939_abyve');
 
 //get connection
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);

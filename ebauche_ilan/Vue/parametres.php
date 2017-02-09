@@ -1,13 +1,6 @@
 <?php include 'entete.php';
 session_start();?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
-		
+
 	<div class="container">
 	
 		<div>
@@ -28,9 +21,4 @@ session_start();?>
 		</div>
 		</form>
 	</div>
-			
-<footer><?php include 'footer.php';?></footer>
-	
-</body>
-
-</html>
+<?php include 'footer.php';?>

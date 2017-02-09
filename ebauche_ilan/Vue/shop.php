@@ -1,11 +1,5 @@
 <?php include 'entete.php';?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
+
 	<div class="container">
 		<?php
 				include_once ('../modele/Connexion_Base.class.php');
@@ -76,9 +70,4 @@
 		?>
 		
 	</div>	  
-	
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-
-</html>
+<?php include 'footer.php';?>

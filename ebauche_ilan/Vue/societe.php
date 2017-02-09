@@ -1,11 +1,5 @@
 <?php include 'entete.php' ;?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Dosmoz form</title>
-</head>
-<body>
+
 		<div class="container">
 			  <div class="circle embossed">
 			    <p class="embossedtext">Dosmoz</p>
@@ -23,8 +17,4 @@ Gr&#226ce &#224 sa forte dimension internationale, elle a su &#233toffer ses eff
   					</p>			  					
   			  </div>
 </div>
-
-<footer><?php include 'footer.php';?></footer>
-
-</body>
-</html>
+<?php include 'footer.php';?>

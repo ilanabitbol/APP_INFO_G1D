@@ -227,7 +227,7 @@ input[type="password"] {
   border-radius: 2px;
 }
 
-input[type="text"] .nom_piece{
+input[type="text"] #nom_piece{
   width: 40%;
   margin: 20px;
   line-height: 30px;
@@ -238,7 +238,8 @@ input[type="text"] .nom_piece{
   border-radius: 3px;	
 }
 
-input[type="text"] .nom_piece:focus,input[type="text"] .nom_piece:hover{
+input[type="text"] #nom_piece:focus,
+input[type="text"] #nom_piece:hover{
   box-shadow: 0 0 5px #99CDFF;
   border: 1px solid #99CDFF;
 }
