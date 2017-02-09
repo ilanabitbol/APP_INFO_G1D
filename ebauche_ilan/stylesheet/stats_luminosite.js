@@ -4,16 +4,16 @@ $(document).ready(function(){
 		method: "GET",
 		success: function(data) {
 			console.log(data);
-			var player = [];
-			var score = [];
+			var date = [];
+			var donnee = [];
 
 			for(var i in data) {
-				player.push(data[i].date_donnees);
-				score.push(data[i].valeur);
+				date.push(data[i].date_donnees);
+				donnee.push(data[i].valeur);
 			}
 
 			var chartdata = {
-				labels: player,
+				labels: date,
 				datasets : [
 					{
 						label: 'Luminosite de la maison : ',
@@ -21,7 +21,7 @@ $(document).ready(function(){
 						borderColor: 'rgba(200, 200, 200, 0.75)',
 						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
 						hoverBorderColor: 'rgba(200, 200, 200, 1)',
-						data: score
+						data: donnee
 					}
 				]
 			};
