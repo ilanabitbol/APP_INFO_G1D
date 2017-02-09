@@ -179,6 +179,12 @@ input[type=submit] {
 }
 /*************************/
 
+/* Pour la vitrine */
+#vitrine {
+	margin-top: 90%;
+}
+/*******************/
+
 /* Hover ombre */
 .blancnoir:hover, .boutonbleu:hover, .petitbleu:hover, input[type=submit]:hover {
   transition: 0.2s;
