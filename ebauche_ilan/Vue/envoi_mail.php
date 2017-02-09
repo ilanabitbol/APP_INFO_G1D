@@ -40,13 +40,13 @@ session_start();
                </p>
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
                                 placeholder="Entrez ici votre demande."><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : '' ?></textarea>
-                        	<button type="submit" class="send_button" id="send_button">Envoyer</button>
+                        	<button type="submit" class="boutonbleu" id="send_button">Envoyer</button>
     </form>
-<br></br><br></br>
-				<address>
-				  <strong>Notre adresse postale</strong><br>
-				  <a href="https://www.google.fr/maps/place/ISEP/@48.824529,2.2798536,15z/data=!4m5!3m4!1s0x0:0xe0d3eb2ad501cb27!8m2!3d48.824529!4d2.2798536" class="footerlist_link" target="_blank">10 Rue de Vanves, Issy-les-Moulineaux,France</a><br>
-				</address>	
+				<p>
+				  Notre adresse postale :<br>
+				  <a href="https://www.google.fr/maps/place/ISEP/@48.824529,2.2798536,15z/data=!4m5!3m4!1s0x0:0xe0d3eb2ad501cb27!8m2!3d48.824529!4d2.2798536" class="footerlist_link" target="_blank">10 Rue de Vanves, Issy-les-Moulineaux, France</a><br>
+				</p>
+				<br>
 </div>
 
 <footer><?php include 'footer.php';?></footer>

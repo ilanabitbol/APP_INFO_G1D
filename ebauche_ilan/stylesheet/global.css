@@ -92,9 +92,9 @@ body {
 /* Type submit */
 input[type=submit] {
   transition: 0.2s;
-  margin-left: 2%;
-  margin-right: 2%;
-  width: 96%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
   height: 40px;
   border: 1px solid black;
   box-sizing: border-box;
@@ -107,9 +107,9 @@ input[type=submit] {
 
 /* Boutons bleu */
 .boutonbleu{
-  margin-left:2%;
-  margin-right: 2%;
-  width: 96%;
+  margin-left:10%;
+  margin-right: 10%;
+  width: 80%;
   margin-bottom: 10px;
   height: 40px;
   border: none;
@@ -121,12 +121,35 @@ input[type=submit] {
   transition: 0.2s;
 }
 
+/* Boutons de connexion/inscription */
+#signin-button,#signup-button {
+  width: 30%;
+  margin: 9.5%;
+  border-radius: 0px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: white;
+  border-bottom: 3px solid white;
+  outline: none;
+  color: black;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+#signin-button:hover, #signup-button:hover {
+  border-bottom: 3px solid grey;
+  transition: 0.2s;
+}
+/************************************/
+
 /* Boutons blanc et noir*/
 .blancnoir {
   transition: 0.2s;
-  margin-left: 2%;
-  margin-right: 2%;
-  width: 96%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
   height: 40px;
   border: 1px solid black;
   box-sizing: border-box;
@@ -155,7 +178,7 @@ button {
 /*************************/
 
 /* Hover ombre */
-button:hover {
+.blancnoir:hover, .boutonbleu:hover {
   transition: 0.2s;
   box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
 }
@@ -176,8 +199,10 @@ input[type="password"] {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   line-height: 30px;
-  padding-top: 5px;
+  padding-left: 2%;
   outline: none;
   transition: 0.2s;
   border: 1px solid black;
@@ -199,17 +224,19 @@ input[type="password"]:hover {
 /***************************************/
 
 /* Zone de texte */
-#textarea{
+textarea{
 	border: 2px solid black;
-	margin-left: -2%;	
-	width:300px;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 30px;
 	border-radius: 3px;
 	transition: 0.2s;
 }
 /*****************/
 
 /* Hover et focus zone de texte */
-#textarea:focus, #textarea:hover {
+textarea:focus, textarea:hover {
   box-shadow: 0 0 5px #99CDFF;
   border: 2px solid #99CDFF;
   transition: 0.2s;
@@ -219,6 +246,13 @@ input[type="password"]:hover {
 /*****************************
  * MISES EN PAGE SPECIFIQUES *
  *****************************/
+
+/* Mise en page form connexion/inscription */
+#signin-form,
+#signup-form{
+  display: none;
+}
+/*******************************************/
 
 /* Mise en page Maison */
 canvas {
