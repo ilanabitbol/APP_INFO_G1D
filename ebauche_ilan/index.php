@@ -1,5 +1,5 @@
-<?php include 'gabarit.php' ?>
-<?php include 'about.php'?>
+<?php include '../Vue/entete.php' ?>
+<?php include '../Vue/about.php'?>
 </body>
-<footer><?php include 'Vue/footer.php';?></footer>
+<footer><?php include '../Vue/footer.php';?></footer>
 </html>
