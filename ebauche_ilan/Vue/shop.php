@@ -4,10 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
-	<div class="container_global">
+	<div class="container">
 		<?php
 				include_once ('../modele/Connexion_Base.class.php');
 				$connexion_base= new Connexion_Base();
@@ -15,7 +14,6 @@
 				$reponse= $connexion_base->getDb()->query('SELECT nom_produit, prix, stock FROM catalogue');?>
 				
 				<?php while($donnes = $reponse->fetch()){?>
-				<div id="container">
 					<ul class="list">
 				        <li>
 					        <div class="innercontainer">
@@ -72,7 +70,6 @@
 						</li>
 							
 		    		</ul>
-				</div>
 				<?php 
 				}
 				$reponse->closeCursor(); // Termine le traitement de la requête
