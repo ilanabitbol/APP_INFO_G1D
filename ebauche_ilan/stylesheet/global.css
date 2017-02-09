@@ -164,7 +164,7 @@ input[type=submit] {
 /************************/
 
 /* Boutons blanc et bleu */
-button {
+.petitbleu {
   transition: 0.2s;
   margin-left:2%;
   margin-right:2%;
@@ -180,11 +180,7 @@ button {
 /*************************/
 
 /* Hover ombre */
-.blancnoir:hover, .boutonbleu:hover {
-  transition: 0.2s;
-  box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
-}
-input[type=submit]:hover {
+.blancnoir:hover, .boutonbleu:hover, .petitbleu:hover, input[type=submit]:hover {
   transition: 0.2s;
   box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
 }

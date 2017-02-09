@@ -5,7 +5,6 @@ session_start();?>
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 <?php include_once ('../modele/Connexion_Base.class.php');
@@ -15,46 +14,66 @@ $reponse= $connexion_base->getDb()->query('SELECT * FROM utilisateur	 WHERE ID =
   <div class="container">
   
     <div class="profil_list">
+    
         <h3>
+        <p>
           Bienvenue <?php while($donnes = $reponse->fetch()){ echo $donnes['prenom'];?> voici vos informations :
+        </p>
         </h3><br>
 
       <div>
+      <p>
         Pr&#233nom : <?php echo $donnes['prenom'];?>
+      </p>
       </div><br>
 
       <div>
+      <p>
         Nom : <?php echo $donnes['nom'];?>
+      </p>
       </div><br>
 
       <div>
+      <p>
         Email : <?php echo $donnes['email'];?>
+      </p>
       </div><br>
 
       <div>
+      <p>
         Num&#233ro de t&#233l&#233phone : <?php echo $donnes['numero'];?>
+      </p>
       </div><br>
 
       <div>
+      <p>
         Adresse : <?php echo $donnes['adresse'];?>
+      </p>
       </div><br>
       
       <div>
+      <p>
         Pays : <?php echo $donnes['pays']; ?>
+      </p>
       </div><br>
 
       <div>
+      <p>
         Ville : <?php echo $donnes['ville'];?>
+      </p>
       </div><br>
 
       <div>
+      <p>
         Code postal : <?php echo $donnes['code_postal']; } ?>
+      </p>
       </div><br>
       
       <form method="POST" action="modification_profil.php">
-      <button type="submit" class="modif_button" id="modif_button">Modifier votre profil</button>
+      <button type="submit" class="boutonbleu" id="modif_button">Modifier votre profil</button>
       </form>
       
+   
     </div>
     
 </div>
