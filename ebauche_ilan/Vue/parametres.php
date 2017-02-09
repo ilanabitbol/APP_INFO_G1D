@@ -5,7 +5,6 @@ session_start();?>
 <head>
 	<meta charset="UTF-8">
 	<title>Dosmoz form</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 		
@@ -13,19 +12,19 @@ session_start();?>
 	
 		<div>
 		<form method="POST" action="profil.php">
-		  <button id="param-button">Profil</button>
+		  <button class="boutonbleu">Profil</button>
 		</form>
 		</div>
 		<!--Outil pas encore disponible-->
 		<form method="POST" action="profil.php">
 		<div>
-		  <button id="param-button">Ajouter un utilisateur</button>
+		  <button class="boutonbleu">Ajouter un utilisateur</button>
 		</div>
 		</form>
 		<!--Outil pas encore disponible-->
 		<form method="POST" action="profil.php">
 		<div>
-		  <button id="param-button">Modifier les utilisateurs</button>
+		  <button class="boutonbleu">Modifier les utilisateurs</button>
 		</div>
 		</form>
 	</div>
