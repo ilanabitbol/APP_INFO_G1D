@@ -33,7 +33,7 @@ $donnees_user = $response->fetch();
 //verification de tout le formulaire de modification du profil
 if($nom != NULL AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND $pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL AND ($oldpassword_hache == $donnees_user['password'])){
 //update de la table utilisateur de la base de donnee
-	$req = $connexion_base->getDb()->prepare('	UPDATE utilisateur
+	$req = $connexion_base->getDb()->query('	UPDATE utilisateur
 												SET nom = "'.$nom.'", email = "'.$email.'", numero= "'.$numero.'", pays = "'.$pays.'", ville = "'.$ville.'", code_postal = "'.$code_postal.'", adresse = "'.$adresse.'", password = "'.$password_hache.'"
 												WHERE ID ="'.$_SESSION['ID'].'"');
 		header("Location: ../Vue/profil.php");

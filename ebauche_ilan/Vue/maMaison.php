@@ -1,4 +1,16 @@
 <?php include 'entete.php';?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>dosmoz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <link rel="stylesheet" type ="text/css" href="../stylesheet/stylemaison.css">
+ </head>
+
+<body>
+  	
   	<?php
 		include_once ('../modele/Connexion_Base.class.php');
 		$connexion_base= new Connexion_Base();
@@ -19,9 +31,9 @@
 				<a href = "admin.php"><button id="salle">Retour</button></a>
 			<?php }
 			?>
-			<button class="petitbleu" onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Ajouter une piece</button>
+			<button onclick="window.open('ajout_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Ajouter une piece</button>
 			
-			<button class="petitbleu" onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
+			<button onclick="window.open('supprimer_piece.php', 'dosmoz', 'height = 300px,left = 450px, width = 500px, top = 300px, toolbar = no, location = false, menubar = no, status = no');">Supprimer une piece</button>
 		</div>
 		<div class='room_buttons'>
 		<?php while($donnes = $reponse->fetch()){?>
@@ -29,7 +41,7 @@
 			<section class="rooms">	
   			<form action="maSalle.php" method="POST">
   			<?php echo '<input type="hidden" name="ID_piece" value= "'.$donnes['ID_piece'].'"/>'?>
-  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="bouton_maison" />' ?>
+  			<?php echo '<input type="submit" value= "'.$donnes['nom_piece'].'" class="buttons" />' ?>
   			</form>
   			</section>
   		<?php }
@@ -49,10 +61,14 @@
 			<canvas id="mycanvas_temperature"></canvas>
   		</div>
   	</div>
+ 
+<footer><?php include 'footer.php';?></footer>
   		
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   	<script type="text/javascript" src="../stylesheet/stats_humidite.js"></script>
   	<script type="text/javascript" src="../stylesheet/stats_luminosite.js"></script>
   	<script type="text/javascript" src="../stylesheet/stats_temperature.js"></script>
-<?php include 'footer.php';?>
+  	
+</body>
+</html>

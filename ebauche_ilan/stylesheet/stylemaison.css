@@ -176,7 +176,7 @@ footer {
 }
 
 section {
-  display: inline-block;
+  display: block;
   width: 45.5%;
   margin-left: 2%;
   margin-right: 2%;

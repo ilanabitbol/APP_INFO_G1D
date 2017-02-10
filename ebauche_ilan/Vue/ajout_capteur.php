@@ -1,13 +1,22 @@
-<?php include 'entete.php'?>
+<?php include 'entete.php' ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dosmoz form</title>
+<link rel="stylesheet" type ="text/css" href="../stylesheet/stylemaison.css">
+</head>
+<body>
+
 <?php include ('../controleur/ajout_capteur_controleur.php');?>
 
 	<div class="container">
-		<div class="command-buttons">
+		<div class="command_buttons">
 			<a href = "maSalle.php"><button id='salle'>Retour</button></a>
 		</div>
-		<div class="room-buttons">
+		<div class="room_buttons">
 		<section class="ajout-suppression">
-		<form id="signin-form" method="POST" action="../controleur/ajout_capteur_controleur.php">
+		<form method="POST" action="../controleur/ajout_capteur_controleur.php">
 			<select  name="liste_capteur" >
 			<?php 
 				while($donnes_cap = $reponse_cap->fetch()){
@@ -22,6 +31,14 @@
 			<button type="submit" name="boutton" class="submit-button">Ajouter</button>
 		</form>
 		</section>
-		</div>		
+		</div>
+		
+		
+		
+		
 	</div>
-<?php include 'footer.php'?>	
+
+
+</body>
+
+</html>		
