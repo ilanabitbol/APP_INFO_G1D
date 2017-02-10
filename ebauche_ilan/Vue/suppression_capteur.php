@@ -1,4 +1,13 @@
 <?php include 'entete.php' ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dosmoz form</title>
+<link rel="stylesheet" type ="text/css" href="../stylesheet/stylemaison.css">
+</head>
+<body>
+
 <?php include ('../controleur/suppression_capteur_controleur.php');?>
 
 	<div class="container">
@@ -7,7 +16,7 @@
 		</div>
 		<div class="room-buttons">
 		<section class="ajout-suppression">
-		<form id="signin-form" method="POST" action="../controleur/suppression_capteur_controleur.php">
+		<form method="POST" action="../controleur/suppression_capteur_controleur.php">
 			<select  name="liste_capteur" >
 			<?php 
 				while($donnes_cap = $reponse_cap->fetch()){
@@ -29,4 +38,8 @@
 		
 		
 	</div>
-<?php include 'footer.php'?>
+
+
+</body>
+
+</html>

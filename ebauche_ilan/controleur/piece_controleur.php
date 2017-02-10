@@ -22,19 +22,19 @@ $nom_piece_supprimer= isset($_POST['nom_piece_supprimer']) ? $_POST['nom_piece_s
 	
 	<?php
 	if ($nom_piece != NULL && $id_user != NULL){
-		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID) VALUES(:nom_piece,:ID)');
+		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID) VALUES(:nom_piece, :ID) ');
 		$req->execute(array(
 				'nom_piece' => $nom_piece,
 				'ID' =>$id_user,
 		));?>
-			<p>Votre salle a bien Ã©tÃ© ajoutÃ©e !</p>
+			<p>Votre salle a bien été ajoutée !</p>
 	<?php }else if( $nom_piece != NULL && $_SESSION['admin'] != NULL ){
-		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece,ID) VALUES(:nom_piece,:ID)');
+		$req = $connexion_base->getDb()->prepare('INSERT INTO piece(nom_piece, ID) VALUES(:nom_piece, :ID) ');
 		$req->execute(array(
 				'nom_piece' => $nom_piece,
 				'ID' =>$_SESSION['ID_choisis'],
 		));?>
-			<p>La salle de a bien Ã©tÃ© ajoutÃ©e !</p>
+			<p>La salle de a bien été ajoutée !</p>
 	<?php }?>
 	
 	<?php 

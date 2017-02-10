@@ -1,4 +1,5 @@
-<?php include 'entete.php'?>
+<link rel="stylesheet" type="text/css" href="../stylesheet/contact.css">
+<body>
 <div class="container"><!--Creation de l'unique section de la page.-->
 	  	<form id="signin-form" method="post" action="../controleur/piece_controleur.php">
 
@@ -7,4 +8,4 @@
 
 	 	</form>
 </div>
-<?php include 'footer.php'?>
+</body>
