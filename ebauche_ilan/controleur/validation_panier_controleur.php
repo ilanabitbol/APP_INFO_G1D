@@ -1,4 +1,5 @@
 <?php 
+include '../Vue/entete.php';
 //Inclusion de l'object permettant de recuperer la connexion à la base.
 include_once ('../modele/Connexion_Base.class.php');
 include_once ('../modele/Query.class.php');
@@ -38,7 +39,7 @@ if ($nom != NULL AND $prenom != NULL AND $numero != NULL AND $date_livraison != 
 			'prix' =>$prix_total,
 	
 	));
-	echo"<p >Votre commande a bien ete enregistree et son numero est le suivant ".$numero_commande.". Veuillez bien le conserver afin de pouvoir effectuer votre inscription</p>";
+	echo'<div class="container"><p>Votre commande a bien ete enregistree et son numero est le suivant "'.$numero_commande.'". Veuillez bien le conserver afin de pouvoir effectuer votre inscription</p></div>';
 	
-}else {echo "<p>Votre commande n'a pas ete correctement enregistree</p>";}
+}else {echo '<div class="container"><p>Votre commande n\'a pas ete correctement enregistree</p></div>';}
 ?>
