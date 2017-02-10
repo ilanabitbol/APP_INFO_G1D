@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Ven 10 Février 2017 à 00:10
+-- Généré le :  Ven 10 Février 2017 à 14:19
 -- Version du serveur :  5.6.33
 -- Version de PHP :  7.0.12
 
@@ -35,9 +35,13 @@ CREATE TABLE `actionneurs_capteurs` (
 --
 
 INSERT INTO `actionneurs_capteurs` (`ID_ac_cap`, `adresse_mac`, `etat`, `batterie`, `ID_commande`, `ID_piece`, `ID_fonction`) VALUES
-(5, '3A:4F:45:5T', NULL, NULL, NULL, 1, 1),
-(11, 'AHAHHA', NULL, NULL, NULL, 1, 2),
-(13, 'aeffze', NULL, NULL, NULL, 1, 2);
+(5, 'A3:F4:C5:T5:R1:N8', NULL, NULL, NULL, 1, 1),
+(11, 'F4:G3:M9:P0:D3:H7', NULL, NULL, NULL, 1, 2),
+(13, 'X2:S6:K9:G7:Z2:V5', NULL, NULL, NULL, 1, 2),
+(14, 'A3:E3:Q7:L8:J0:Y8', NULL, NULL, NULL, 6, 2),
+(15, 'Q9:U8:B5:W3:F1:L0', NULL, NULL, NULL, 2, 1),
+(16, 'L6:H5:Z1:O0:K8:R2', NULL, NULL, NULL, 5, 3),
+(17, 'fgdfgd', NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -58,12 +62,9 @@ CREATE TABLE `catalogue` (
 --
 
 INSERT INTO `catalogue` (`ID`, `nom_produit`, `prix`, `stock`, `image`) VALUES
-
-(4, 'Anemometre', 30, 33, ''),
-(5, 'Station_meteo', 22, 32, ''),
-(6, 'Thermostat', 35, 66, ''),
-(7, 'Pluviometre', 56, 11, ''),
-(8, 'Camera', 100, 4, '');
+(1, 'hydrometre', 40, 10, ''),
+(2, 'thermometre', 100, 38, ''),
+(3, 'pressiometre', 10, 380, '');
 
 -- --------------------------------------------------------
 
@@ -113,7 +114,11 @@ INSERT INTO `donnees` (`ID_donnees`, `valeur`, `date_donnees`, `ID_ac_cap`) VALU
 (2, 8, '2017-01-20 00:00:00', 11),
 (7, 24, '2017-01-20 06:12:00', 11),
 (8, 21, '2017-01-23 00:00:00', 11),
-(10, 10, '2017-02-04 00:00:00', 11);
+(10, 10, '2017-02-04 00:00:00', 11),
+(11, 21, '2017-02-09 05:18:11', 5),
+(12, 19, '2017-02-10 03:14:44', 15),
+(14, 22, '2017-02-05 09:14:36', 15),
+(15, 150, '2017-02-02 14:29:15', 16);
 
 -- --------------------------------------------------------
 
@@ -134,7 +139,8 @@ CREATE TABLE `piece` (
 INSERT INTO `piece` (`ID_piece`, `nom_piece`, `ID`) VALUES
 (1, 'chambre', 13),
 (2, 'salon', 13),
-(5, 'salle de bain', 13);
+(5, 'salle de bain', 13),
+(6, 'cuisine', 13);
 
 -- --------------------------------------------------------
 
@@ -195,7 +201,7 @@ INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `email`, `password`, `numero`,
 (9, 'boulet', 'staline', 'jsp@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 20300303, 'FRANCE', 'Berlin', 8383, '90 allee du couvent'),
 (12, 'dupont', 'Ilan', 'fosfor12345@hotmail.fr', 'da23614e02469a0d7c7bd1bdab5c9c474b1904dc', 7928384, 'France', 'Ivry', 78400, '33 allée de la tour rdv'),
 (13, 'POILLEUX', 'Corentin', 'c.poilleux@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 9876, 'France', 'Les Pavillons-sous-Bois', 93320, '25 Allée Jean Baptiste Clément'),
-(14, 'AIMSA', 'Maxime', 'rien@gmail.com', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 792838401, 'France', 'Lannion', 28400, '33 allée de la tour rdv');
+(14, 'dupont', 'Maxime', 'rien@gmail.com', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98', 792838401, 'France', 'Ivry', 89200, '5 allée du rocher');
 
 --
 -- Index pour les tables exportées
@@ -264,7 +270,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `actionneurs_capteurs`
 --
 ALTER TABLE `actionneurs_capteurs`
-  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID_ac_cap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pour la table `catalogue`
 --
@@ -279,12 +285,12 @@ ALTER TABLE `commande`
 -- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
-  MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID_donnees` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `piece_type`
 --
