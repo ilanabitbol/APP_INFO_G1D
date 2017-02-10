@@ -127,7 +127,7 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 				</table>
 				
 			   <table>
-				    <caption>Temperature</caption>
+				    <caption>Temp&#233rature</caption>
 				    <thead>
 				        <tr>
 				            <th scope="col">Date</th>
