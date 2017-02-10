@@ -25,7 +25,7 @@ session_start();
                             <input name="nom" type="text" class="form-control" id="name" placeholder="NOM" value="<?= isset($_SESSION['inputs']['nom']) ? $_SESSION['inputs']['nom'] : ''; ?>" required="required" />
                             <input name="email" type="email" class="form-control" id="email" placeholder="EMAIL" required="required" value="<?= isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : ''; ?>" />
 							<input name="objet" type="text" class="form-control" id="name" placeholder="OBJET" value="<?= isset($_SESSION['inputs']['objet']) ? $_SESSION['inputs']['objet'] : ''; ?>" required="required" />                            
-			   <p>Service &#224 contacter : <select>
+			   <p><strong>Service &#224 contacter :</strong> <select>
 				                            <option value="direction">Direction</option>
 				                            <option value="sav">SAV</option>
 				                            <option value="mohai">Webdesigner</option>
@@ -36,7 +36,7 @@ session_start();
                         	<button type="submit" class="boutonbleu" id="send_button">Envoyer</button>
     </form>
 				<p>
-				  Notre adresse postale :<br>
+				  <strong>Notre adresse postale :</strong><br>
 				  <a href="https://www.google.fr/maps/place/ISEP/@48.824529,2.2798536,15z/data=!4m5!3m4!1s0x0:0xe0d3eb2ad501cb27!8m2!3d48.824529!4d2.2798536" class="footerlist_link" target="_blank">10 Rue de Vanves, Issy-les-Moulineaux, France</a><br>
 				</p>
 				<br>

@@ -8,57 +8,57 @@ $reponse= $connexion_base->getDb()->query('SELECT * FROM utilisateur	 WHERE ID =
   
     <div class="profil_list">
     
-        <h3>
+        <h1>
         <p>
           Bienvenue <?php while($donnes = $reponse->fetch()){ echo $donnes['prenom'];?> voici vos informations :
         </p>
-        </h3><br>
-
+        </h1><br>
+	<a href = "parametres.php"><button class="boutonbleu">Retour</button></a>
       <div>
       <p>
-        Pr&#233nom : <?php echo $donnes['prenom'];?>
+        <strong>Pr&#233nom :</strong> <?php echo $donnes['prenom'];?>
       </p>
       </div><br>
 
       <div>
       <p>
-        Nom : <?php echo $donnes['nom'];?>
+        <strong>Nom :</strong> <?php echo $donnes['nom'];?>
       </p>
       </div><br>
 
       <div>
       <p>
-        Email : <?php echo $donnes['email'];?>
+        <strong>Email :</strong> <?php echo $donnes['email'];?>
       </p>
       </div><br>
 
       <div>
       <p>
-        Num&#233ro de t&#233l&#233phone : <?php echo $donnes['numero'];?>
+        <strong>Num&#233ro de t&#233l&#233phone :</strong> <?php echo $donnes['numero'];?>
       </p>
       </div><br>
 
       <div>
       <p>
-        Adresse : <?php echo $donnes['adresse'];?>
+        <strong>Adresse :</strong> <?php echo $donnes['adresse'];?>
       </p>
       </div><br>
       
       <div>
       <p>
-        Pays : <?php echo $donnes['pays']; ?>
+        <strong>Pays :</strong> <?php echo $donnes['pays']; ?>
       </p>
       </div><br>
 
       <div>
       <p>
-        Ville : <?php echo $donnes['ville'];?>
+        <strong>Ville :</strong> <?php echo $donnes['ville'];?>
       </p>
       </div><br>
 
       <div>
       <p>
-        Code postal : <?php echo $donnes['code_postal']; } ?>
+        <strong>Code postal :</strong> <?php echo $donnes['code_postal']; } ?>
       </p>
       </div><br>
       

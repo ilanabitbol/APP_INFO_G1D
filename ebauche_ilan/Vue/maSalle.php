@@ -50,17 +50,7 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 		
 		
 		?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>dosmoz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
- </head>
- 
- <body>
- 		
+	
  	<div class="container">
  			
  			<div class="command-buttons">
@@ -141,9 +131,6 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 				</table>
 			
 	</div>
-    
- <footer><?php include 'footer.php';?></footer>
-
- </body>
+<?php include 'footer.php';?>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
  
- </html>

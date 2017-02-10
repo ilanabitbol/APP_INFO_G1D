@@ -13,7 +13,7 @@
 				        <li>
 					        <div class="innercontainer">
 						        <div id="content">
-						        	<section id="image">
+						        	<section id="image_shop">
 							        	<?php 
 											switch ($donnes['nom_produit'])
 											{

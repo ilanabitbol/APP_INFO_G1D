@@ -3,13 +3,13 @@ session_start();?>
 
   <div class="container">
     <h1 class="titre">Modification de votre profil</h1>
-    <h3 class="titre">(Veuillez compléter tous les champs)</h3>
-    <a href = "profil.php"><button id="retourprofil">Retour</button></a>
+    <h3 class="titre">(Veuillez compléter tous les champs)</h3><br>
+    <a href = "profil.php"><button class="boutonbleu">Retour</button></a>
     <form method="POST" action="../controleur/verif_modif_profil.php">
       	
         <input type="text" name="nom" placeholder="NOUVEAU NOM"/>
       
-        <p>Pays : </p>
+        <p class="pays_form">Pays : </p>
 		      <select id="ListeElement"  name="pays"> 
 				   <option value="France">France</option> 
 				   <option value="Allemagne">Allemagne</option> 
@@ -35,8 +35,8 @@ session_start();?>
 
       <p>
         <input type="checkbox" required /> Je certifie être le propriétaire du compte
-      </p>
-      <button type="submit" class="modif_button" id="modif_button">Valider la modification de votre profil</button>
+      </p><br>
+      <button type="submit" class="boutonbleu" id="modif_button">Valider la modification de votre profil</button>
     
      
     </form>

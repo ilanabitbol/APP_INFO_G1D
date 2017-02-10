@@ -18,7 +18,7 @@
 			  <input type="email" placeholder="EMAIL" name="email"/>
 		      <input type="password" placeholder="PASSWORD" name="password"/>
 		      <input type="text" placeholder="NUMERO" name="numero" />
-		      <p>Pays : </p>
+		      <p class="pays_form">Pays : </p>
 		      <select id="ListeElement" onchange="VerifListe();" name="pays"> 
 				   <option value="France">France</option> 
 				   <option value="Allemagne">Allemagne</option> 
