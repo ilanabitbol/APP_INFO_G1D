@@ -27,16 +27,16 @@ session_start();?>
         
         <input type="email" name="email" placeholder="NOUVELLE ADRESSE MAIL"/>
 
-        <input type="text" name="mdp"placeholder="NOUVEAU MOT DE PASSE"/>
+        <input type="password" name="mdp"placeholder="NOUVEAU MOT DE PASSE"/>
 
-        <input type="text" name="confirm_mdp"placeholder="CONFIRMER NOUVEAU MOT DE PASSE" required onblur="verif_mdp(mdp,confirm_mdp)"/>
+        <input type="password" name="confirm_mdp"placeholder="CONFIRMER NOUVEAU MOT DE PASSE" required onblur="verif_mdp(mdp,confirm_mdp)"/>
 
-		<input type="text" name="old_mdp"placeholder="MOT DE PASSE ACTUEL" required/>
+		<input type="password" name="old_mdp"placeholder="MOT DE PASSE ACTUEL" required/>
 
       <p>
         <input type="checkbox" required /> Je certifie être le propriétaire du compte
       </p>
-      <button type="submit" class="modif_button" id="modif_button">Valider la modification de votre profil</button>
+      <button type="submit" class="boutonbleu">Valider la modification de votre profil</button>
     
      
     </form>

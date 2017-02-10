@@ -31,7 +31,7 @@ $reponse_humidite= $connexion_base->getDb()->query('SELECT type_fonction.nom_fon
 FROM donnees, actionneurs_capteurs, type_fonction
 WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'"
 				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
-				AND type_fonction.nom_fonction = "Humidité"
+				AND type_fonction.nom_fonction = "Humidite"
 														');
 $reponse_temperature = $connexion_base->getDb()->query('SELECT type_fonction.nom_fonction, actionneurs_capteurs.adresse_mac,
 				donnees.valeur, donnees.date_donnees
@@ -45,7 +45,7 @@ $reponse_luminosite = $connexion_base->getDb()->query('SELECT type_fonction.nom_
 FROM donnees, actionneurs_capteurs, type_fonction
 WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteurs.ID_piece = "'.$_POST['ID_piece'].'"
 				AND actionneurs_capteurs.ID_fonction = type_fonction.ID_fonction
-				AND type_fonction.nom_fonction = "Luminosité"
+				AND type_fonction.nom_fonction = "Luminosite"
 														');
 
 
@@ -95,11 +95,11 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
   			<?php }
   				?>
 				<table>
-				    <caption>Humidité</caption>
+				    <caption>Humidit&#233</caption>
 				    <thead>
 				        <tr>
 				            <th scope="col">Date</th>
-				            <th scope="col">Données</th>
+				            <th scope="col">Donn&#233es</th>
 				        </tr>
 				    </thead>
 				    <tbody><?php while($donnes_humidite = $reponse_humidite->fetch()){ ?>
@@ -111,11 +111,11 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 				</table>
 				
 				<table>
-				    <caption>Luminosité</caption>
+				    <caption>Luminosit&#233</caption>
 				    <thead>
 				        <tr>
 				            <th scope="col">Date</th>
-				            <th scope="col">Données</th>
+				            <th scope="col">Donn&#233es</th>
 				        </tr>
 				    </thead>
 				    <tbody><?php while($donnes_luminosite = $reponse_luminosite->fetch()){ ?>
@@ -131,7 +131,7 @@ WHERE actionneurs_capteurs.ID_ac_cap = donnees.ID_ac_cap AND actionneurs_capteur
 				    <thead>
 				        <tr>
 				            <th scope="col">Date</th>
-				            <th scope="col">Données</th>
+				            <th scope="col">Donn&#233es</th>
 				        </tr>
 				    </thead>
 				    <tbody><?php while($donnes_temperature = $reponse_temperature->fetch()){ ?>

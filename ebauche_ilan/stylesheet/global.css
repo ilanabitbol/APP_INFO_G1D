@@ -608,6 +608,12 @@ html, body {
 	border-bottom: 2px solid black; 
 	margin-bottom: 10px;
 }
+
+input[type="date"] {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
 /************************/
 
 /* Mise en page About et Mentions Légales */
