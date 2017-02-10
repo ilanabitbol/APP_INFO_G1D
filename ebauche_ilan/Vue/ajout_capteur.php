@@ -1,4 +1,3 @@
-<?php include 'entete.php' ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,11 +32,8 @@
 		</section>
 		</div>
 		
-		
-		
-		
 	</div>
-
+	<footer><?php include '../Vue/footer.php';?></footer>
 
 </body>
 

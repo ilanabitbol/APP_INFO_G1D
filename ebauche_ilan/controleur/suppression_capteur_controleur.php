@@ -1,4 +1,5 @@
 <?php
+include '../Vue/entete.php';
 session_start();
 include_once ('../modele/Connexion_Base.class.php');
 include_once ('../modele/Query.class.php');

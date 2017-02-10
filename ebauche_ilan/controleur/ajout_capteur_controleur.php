@@ -1,4 +1,5 @@
 <?php
+include '../Vue/entete.php';
 session_start();
 include_once ('../modele/Connexion_Base.class.php');
 include_once ('../modele/Query.class.php');
@@ -35,9 +36,13 @@ if($adresse_mac!=NULL && $id_piece!=NULL && $id_fonction!=NULL){
 			'ID_fonction' =>$id_fonction,
 	));
 	?>
-		<p>Votre capteur a bien ete ajoute !</p>
+	<div class="container">
+		<p>Votre capteur a bien &#233t&#233 ajout&#233 !</p>
+		<br>
 		<div>
-		<a href='../Vue/maMaison.php'><button id='param-button' >Fermer</button></a>
-		</div><?php 
+		<a href='../Vue/maMaison.php'><button class="boutonbleu" >Fermer</button></a>
+		</div>
+	</div>
+	<?php 
 	}
 	?>
