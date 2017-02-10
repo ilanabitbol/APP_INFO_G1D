@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
@@ -62,9 +62,12 @@ CREATE TABLE `catalogue` (
 --
 
 INSERT INTO `catalogue` (`ID`, `nom_produit`, `prix`, `stock`, `image`) VALUES
-(1, 'hydrometre', 40, 10, ''),
-(2, 'thermometre', 100, 38, ''),
-(3, 'pressiometre', 10, 380, '');
+
+(4, 'Anemometre', 30, 33, ''),
+(5, 'Station_meteo', 22, 32, ''),
+(6, 'Thermostat', 35, 66, ''),
+(7, 'Pluviometre', 56, 11, ''),
+(8, 'Camera', 100, 4, '');
 
 -- --------------------------------------------------------
 
