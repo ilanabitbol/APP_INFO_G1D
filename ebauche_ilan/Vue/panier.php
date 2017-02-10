@@ -61,19 +61,20 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 <head>
 <title>Votre panier</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheet/global.css">
 </head>
 <body>
 
 <form method="post" action="panier.php">
-<table style="width: 400px">
+<table>
 	<tr>
-		<td colspan="4">Votre panier</td>
+		<td colspan="4"><h1>Votre panier</h1></td>
 	</tr>
 	<tr>
-		<td>Libellé</td>
-		<td>Quantité</td>
-		<td>Prix Unitaire</td>
-		<td>Action</td>
+		<td><h3>Libellé</h3></td>
+		<td><h3>Quantité</h3></td>
+		<td><h3>Prix Unitaire</h3></td>
+		<td><h3>Action</h3></td>
 	</tr>
 
 
@@ -88,7 +89,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 	      for ($i=0 ;$i < $nbArticles ; $i++)
 	      {
 	         echo "<tr>";
-	         echo "<td>".htmlspecialchars($_SESSION['panier']['libelleProduit'][$i])."</ td>";
+	         echo "<td><strong>".htmlspecialchars($_SESSION['panier']['libelleProduit'][$i])."</strong></ td>";
 	         echo "<td><input type=\"text\" size=\"4\" name=\"q[]\" value=\"".htmlspecialchars($_SESSION['panier']['qteProduit'][$i])."\"/></td>";
 	         echo "<td>".htmlspecialchars($_SESSION['panier']['prixProduit'][$i])."</td>";
 	         echo "<td><a href=\"".htmlspecialchars("panier.php?action=suppression&l=".rawurlencode($_SESSION['panier']['libelleProduit'][$i]))."\">Supprimer cet article</a></td>";
@@ -102,7 +103,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 	      echo "</td></tr>";
 
 	      echo "<tr><td colspan=\"4\">";
-	      echo "<input type=\"submit\" value=\"Rafraichir\"/>";
+	      echo "<br><input type=\"submit\" value=\"Rafraichir\"/>";
 	      echo "<input type=\"hidden\" name=\"action\" value=\"refresh\"/>";
 
 	      echo "</td></tr>";
@@ -115,7 +116,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 
 <form method="post" action="validation_panier.php">
 <?php 
-echo "<input type=\"submit\" value=\"Valider\"/>";
+echo "<br><input type=\"submit\" value=\"Valider votre panier\"/>";
 echo "<input type=\"hidden\" name=\"prix_total\" value=".$prix_total."/>";
 ?>
 </form>

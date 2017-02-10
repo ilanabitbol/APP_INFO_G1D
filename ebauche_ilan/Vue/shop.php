@@ -48,7 +48,7 @@
 										?>
 									</section>
 								</div>
-								<a href="panier.php?action=ajout&amp;l=<?php echo($donnes['nom_produit']); ?>&amp;q=1&amp;p=<?php echo($donnes['prix']); ?>" onclick="window.open(this.href, '', 'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a></td>
+								<a href="panier.php?action=ajout&amp;l=<?php echo($donnes['nom_produit']); ?>&amp;q=1&amp;p=<?php echo($donnes['prix']); ?>" onclick="window.open(this.href, '', 'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;"><button class="blancnoir"> Ajouter au panier</button></a></td>
 							
 													
 							</div>

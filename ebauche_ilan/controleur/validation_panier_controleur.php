@@ -38,7 +38,7 @@ if ($nom != NULL AND $prenom != NULL AND $numero != NULL AND $date_livraison != 
 			'prix' =>$prix_total,
 	
 	));
-	echo"Votre commande a bien ete enregistree et son numero est le suivant ".$numero_commande.". Veuillez bien le conserver afin de pouvoir effectuer votre inscription";
+	echo"<p >Votre commande a bien ete enregistree et son numero est le suivant ".$numero_commande.". Veuillez bien le conserver afin de pouvoir effectuer votre inscription</p>";
 	
-}else {echo "Votre commande n'a pas ete correctement enregistree";}
+}else {echo "<p>Votre commande n'a pas ete correctement enregistree</p>";}
 ?>

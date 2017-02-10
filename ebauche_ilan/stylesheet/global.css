@@ -135,32 +135,14 @@ font-size: 1.3em;
 font-color: black;
 margin-bottom: 10px;
 transition: 0.2s;
-	
-	
- /* width: 30%;
-  margin: 9.5%;
-  border-radius: 0px;
-  height: 40px;
-  border: none;
-  box-sizing: border-box;
-  background-color: white;
-  border-bottom: 3px solid white;
-  outline: none;
-  color: black;
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  margin-top: 0px;
-  transition: 0.2s;*/
 }
 /* Mise en page des boutons de Connexion et Inscription dans la page sign_in-up.php */
 #signin-button {
   margin-left: 35%;
 }
 #signin-button:hover, #signup-button:hover {
-  /*border-bottom: 3px solid grey;
-  transition: 0.2s;*/
   color: rgba(138, 123, 179, 0.8);
-  border: 1px solid #99CDFF/*rgba(138, 123, 179, 0.8)*/;
+  border: 1px solid #99CDFF;
   transition: 0.2s;
 }
 /************************************/
@@ -238,7 +220,15 @@ color: black;
   box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.7);
 }
 /***************/
-
+/*Mise en page du formulaire de la validation du projet*/
+.date_livraison{
+	font-family: verdana;
+	margin-left:-31%;
+}
+input[type="date"]{
+margin-left:57%;	
+}
+/* ****************** */
 /* Hover halo */
 
 /**************/
