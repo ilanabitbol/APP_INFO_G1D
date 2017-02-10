@@ -35,7 +35,7 @@
 				'ID_fonction' =>$id_fonction,
 		));
 		?>
-		<p>Votre capteur a bien été ajouté !</p>
+		<div class="container"><p>Votre capteur a bien été ajouté !</p></div>
 		<div>
 		<a href='../Vue/maMaison.php'><button id='param-button' >Fermer</button></a>
 		</div><?php 
