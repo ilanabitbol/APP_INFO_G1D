@@ -33,7 +33,9 @@ $boundary = "-----=".md5(rand());
 
 $sujet = "Message client of Dosmoz";
 
-$email2=isset($_POST['email']) ? filter_var($email2, FILTER_VALIDATE_EMAIL) ? htmlspecialchars($_POST['email']) : NULL : NULL;
+$email = 'email';
+
+$email2=isset($_POST[$email]) ? filter_var($email2, FILTER_VALIDATE_EMAIL) ? htmlspecialchars($_POST[$email]) : NULL : NULL;
 $header = 'From: '.$passage_ligne.'\"Client from dosmoz\"'.$email2.$passage_ligne; //adresse du client
 $header.= "Reply-to: \"Huawei\" <app.g1d.2019@gmail.com>".$passage_ligne; //adresse des webdesigner
 $header.= "MIME-Version: 1.0".$passage_ligne;
