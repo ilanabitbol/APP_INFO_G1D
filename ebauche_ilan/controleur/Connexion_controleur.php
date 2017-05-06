@@ -12,7 +12,7 @@
 		
 		
 		// Verification du remplissage des champs et vérification de la table
-		if (!$query->connexion_query($connexion_base, $email, $password_hache) AND $email == NULL AND $password_hache == NULL)
+		if (!$query->connexion_query($connexion_base, $email, $password_hache) && $email == NULL && $password_hache == NULL)
 		{
 			header("Location: ../Vue/erreurConnexion.php");
 		}else{
