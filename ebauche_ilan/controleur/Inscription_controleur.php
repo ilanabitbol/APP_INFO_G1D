@@ -20,8 +20,8 @@
 		$adresse = isset($_POST['adresse']) ? htmlspecialchars($_POST['adresse']) : NULL;
 			
 		//Insertion
-		if ($nom != NULL AND $prenom != NULL AND $email != NULL AND $password_hache != NULL AND $numero != NULL AND
-				$pays != NULL AND $ville != NULL AND $code_postal != NULL AND $adresse != NULL){
+		if ($nom != NULL && $prenom != NULL && $email != NULL && $password_hache != NULL && $numero != NULL &&
+				$pays != NULL && $ville != NULL && $code_postal != NULL && $adresse != NULL){
 		$query->inscription_query($connexion_base, $nom,  $prenom, $email, $password_hache, $numero, $pays,
 								$ville, $code_postal, $adresse);
 			header("Location: ../Vue/about.php");

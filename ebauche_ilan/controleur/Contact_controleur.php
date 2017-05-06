@@ -8,7 +8,7 @@
 		$demande = isset($_POST['demande']) ? htmlspecialchars($_POST['demande']) : NULL;
 		
 		//Insertion
-		if( $email != NULL AND $demande != NULL){
+		if( $email != NULL && $demande != NULL){
 		$query->assistance_query($connexion_base,$email,$demande);
 		header("Location: ../Vue/about.php");
 		}
