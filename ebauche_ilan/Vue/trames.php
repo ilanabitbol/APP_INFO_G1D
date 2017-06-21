@@ -1,6 +1,7 @@
 <?php
 
 
+
 //Inclusion des modeles objets.
 		include_once ('../modele/Connexion_Base.class.php');
 		include_once ('../modele/Query.class.php');
@@ -8,7 +9,15 @@
 		$query = new Query();
 		
 		
-
+		$req = $connexion_base->getDb()->prepare("SELECT ID_ac_cap , adresse_mac FROM actionneurs_capteurs");
+		$response1=$req->fetch();
+		$id_accap = response1['ID_ac_cap'];
+		$id_mac = response1['adresse_mac'];
+		echo caaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaa;
+		echo $id_mac;
+		echo $id_accap; 
+		echo poooooooooooooooopooooooooooooooooooooo;
+		
 $ch = curl_init();
 curl_setopt(
 $ch,
@@ -25,7 +34,8 @@ echo("$data");
 //mettre les données sous forme d'un tableau 
 
 $data_tab = str_split($data,33);
-$data_mac = []; 
+$data_mac = array(array()); 
+$k = 0; 
 echo "Tabular Data:<br />";
 for($i=0, $size=count($data_tab); $i<$size; $i++){
 	//decoder une trame
@@ -53,22 +63,32 @@ for($i=0, $size=count($data_tab); $i<$size; $i++){
 	echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 echo "Trame $i: $data_tab[$i]<br />";
 
-$req = $connexion_base->getDb()->prepare("SELECT 'ID_ac_cap' FROM 'actionneurs_capteurs' WHERE 'adresse_mac' =: 'mac'");
-$req->execute(array(
-		'mac' => $o . $n,
-));
 
-$req=$response1->fetch();
-$id_cap =  $req['ID_ac_cap'];
-/*
+
+
+$flag = 0; 
+
 for($j = 0; $j<count(data_mac); $j++){
-	if(data_mac[$j] != $o . $n){
-		/*$data_mac = array(array( $o . $n => $id_cap));
-		
+	if($data_mac[$j] != $o . $n){
+		$flag = 1;
 	}
-}*/
+}
+
+
+
+
+
+if($flag == 1){
+	$data_mac[$k][0]= $o . $n; 
+	$data_mac[$k][1]= $id_cap; 
+	$k++; 
+}
+
+	
+
 echo "-------------------------------------------------";
-echo $id_cap;
+echo $data_mac[0][0];
+echo $data_mac[0][1];
 echo "-------------------------------------------------";
 }
 
